@@ -87,11 +87,15 @@ export function getAllNiches(): NicheData[] {
   return Object.values(nichesData);
 }
 
+// Cached category arrays (since niche data is static)
+const premiumNichesCache = Object.values(nichesData).filter((niche) => niche.category === "premium");
+const economicoNichesCache = Object.values(nichesData).filter((niche) => niche.category === "economico");
+
 /**
  * Get niches by category
  * @param category - The category to filter by ("premium" or "economico")
  * @returns Array of niche data objects for the specified category
  */
 export function getNichesByCategory(category: "premium" | "economico"): NicheData[] {
-  return Object.values(nichesData).filter((niche) => niche.category === category);
+  return category === "premium" ? premiumNichesCache : economicoNichesCache;
 }

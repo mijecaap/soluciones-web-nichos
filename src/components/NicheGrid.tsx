@@ -42,7 +42,9 @@ const iconMap: Record<string, React.ReactNode> = {
   // New icons for economic niches
   clothing: (
     <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6h18" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 10a4 4 0 01-8 0" />
     </svg>
   ),
   craft: (
@@ -52,7 +54,8 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
   transport: (
     <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h8m-8 4h8m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm3 18v-2m8 2v-2" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 17a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 11V7a2 2 0 012-2h8l4 4v4M3 13h18v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2z" />
     </svg>
   ),
   cleaning: (
