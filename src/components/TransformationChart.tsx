@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface TransformationData {
   before: {
@@ -27,13 +28,15 @@ export default function TransformationChart({
   subtitle = "Resultados reales que puedes esperar",
   data,
 }: TransformationChartProps) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
@@ -45,9 +48,8 @@ export default function TransformationChart({
           {/* Before */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -93,9 +95,8 @@ export default function TransformationChart({
           {/* After */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -163,8 +164,7 @@ export default function TransformationChart({
         {/* ROI Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-12 text-center"
         >
