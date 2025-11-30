@@ -29,18 +29,42 @@ const testimonials = [
       "Los no-shows bajaron de 45% a 12% gracias a los recordatorios automáticos. Mis estilistas están más ocupadas que nunca.",
     rating: 5,
   },
+  {
+    name: "Lucía Fernández",
+    role: "Propietaria",
+    company: "Boutique Elegance",
+    content:
+      "Antes solo vendía por Instagram. Ahora mis clientas ven todo el catálogo organizado y me contactan más seguras.",
+    rating: 5,
+  },
+  {
+    name: "José Ramírez",
+    role: "Propietario",
+    company: "Taxi Seguro 24h",
+    content:
+      "Antes solo me llamaban conocidos. Ahora recibo llamadas de gente que me encontró buscando taxi en Google.",
+    rating: 5,
+  },
+  {
+    name: "Andrea Soto",
+    role: "Consultora de Marketing",
+    company: "AS Consulting",
+    content:
+      "Mi sitio web profesional me diferencia de otros consultores. Los clientes ven mis casos de éxito y confían en contratarme.",
+    rating: 5,
+  },
 ];
 
 export default function Home() {
   return (
     <>
       <HeroSection
-        title="Páginas Web Profesionales que Generan Clientes"
-        subtitle="Creamos sitios web optimizados para negocios locales. Más visibilidad en Google, más citas automáticas, más ingresos. ROI en 1-2 meses."
-        ctaText="Ver Soluciones"
+        title="Páginas Web Profesionales para Todo Tipo de Negocio"
+        subtitle="Desde soluciones económicas para emprendedores (S/700) hasta sistemas avanzados para negocios establecidos. Más visibilidad en Google, más clientes, más ingresos."
+        ctaText="Ver Soluciones Premium"
         ctaLink="#nichos"
-        secondaryCtaText="Contactar"
-        secondaryCtaLink="/contacto"
+        secondaryCtaText="Ver Económicas (desde S/700)"
+        secondaryCtaLink="#economicos"
       />
 
       {/* Problem Section */}
@@ -56,7 +80,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
                 icon: (
@@ -138,6 +162,26 @@ export default function Home() {
                 description:
                   "Sabes que podrías atender más clientes pero no tienes cómo atraerlos.",
               },
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                ),
+                title: "Presupuesto Limitado",
+                description:
+                  "Crees que una web profesional es muy cara para tu pequeño negocio.",
+              },
             ].map((problem, index) => (
               <div
                 key={index}
@@ -181,7 +225,7 @@ export default function Home() {
             url: "https://soluciones-web-nichos.vercel.app",
             logo: "https://soluciones-web-nichos.vercel.app/logo.png",
             description:
-              "Desarrollo de páginas web profesionales para negocios locales. Especialistas en clínicas veterinarias, salones de belleza, restaurantes, odontología y agencias de viajes.",
+              "Desarrollo de páginas web profesionales para negocios locales. Desde soluciones económicas para emprendedores hasta sistemas avanzados para negocios establecidos.",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+51-999-999-999",
@@ -217,7 +261,241 @@ export default function Home() {
               addressLocality: "Lima",
               addressCountry: "PE",
             },
-            priceRange: "S/3,000 - S/12,000",
+            priceRange: "S/700 - S/12,000",
+          }),
+        }}
+      />
+
+      {/* JSON-LD Schema for Services */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Desarrollo Web",
+            provider: {
+              "@type": "Organization",
+              name: "Soluciones Web Profesionales",
+              url: "https://soluciones-web-nichos.vercel.app",
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "Perú",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Servicios de Desarrollo Web",
+              itemListElement: [
+                {
+                  "@type": "OfferCatalog",
+                  name: "Soluciones Premium",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Clínicas Veterinarias",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 3500,
+                        maxPrice: 8000,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Salones de Belleza",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 3000,
+                        maxPrice: 7000,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Restaurantes",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 4000,
+                        maxPrice: 9500,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Consultorios Odontológicos",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 5000,
+                        maxPrice: 12000,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Agencias de Viajes",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 5500,
+                        maxPrice: 12000,
+                      },
+                    },
+                  ],
+                },
+                {
+                  "@type": "OfferCatalog",
+                  name: "Soluciones Económicas",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Tiendas de Ropa",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 800,
+                        maxPrice: 1200,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Artesanía",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 900,
+                        maxPrice: 1300,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Servicios de Transporte",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 700,
+                        maxPrice: 1000,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Servicios de Limpieza",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 800,
+                        maxPrice: 1200,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Cafeterías",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 1000,
+                        maxPrice: 1500,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Instructores y Coaches",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 800,
+                        maxPrice: 1200,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Servicios de Reparación",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 700,
+                        maxPrice: 1000,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Productores Agrícolas",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 900,
+                        maxPrice: 1300,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Salones de Belleza Pequeños",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 1000,
+                        maxPrice: 1500,
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Páginas Web para Freelancers y Consultores",
+                      },
+                      priceSpecification: {
+                        "@type": "PriceSpecification",
+                        priceCurrency: "PEN",
+                        minPrice: 800,
+                        maxPrice: 1200,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
           }),
         }}
       />

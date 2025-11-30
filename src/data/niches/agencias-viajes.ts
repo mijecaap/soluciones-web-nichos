@@ -7,6 +7,7 @@ export const agenciasViajesData: NicheData = {
   subtitle: "Llega a turistas que buscan en línea, automatiza reservas de tours y crea un negocio que vende sin que estés.",
   metaTitle: "Páginas Web para Agencias de Viajes | Sistema de Reservas de Tours",
   metaDescription: "Desarrollamos páginas web para agencias de viajes. Catálogo de tours, reservas online y pagos internacionales. Desde S/5,500.",
+  category: "premium",
   problems: [
     {
       icon: "search",

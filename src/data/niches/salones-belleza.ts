@@ -7,6 +7,7 @@ export const salonesBellezaData: NicheData = {
   subtitle: "Reduce el caos de teléfono, aumenta la ocupación de tus estilistas y convierte tus clientes en promotores del salón.",
   metaTitle: "Páginas Web para Salones de Belleza | Sistema de Reservas Online",
   metaDescription: "Desarrollamos páginas web para salones de belleza y spa. Reservas online 24/7, galería de trabajos y programa de fidelización. Desde S/3,000.",
+  category: "premium",
   problems: [
     {
       icon: "phone",
