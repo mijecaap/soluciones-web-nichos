@@ -1,0 +1,189 @@
+import type { NicheData } from "./types";
+
+export const agenciasViajesData: NicheData = {
+  slug: "agencias-viajes",
+  title: "Agencias de Viajes",
+  headline: "Agencia de Viajes Digital: Vende Más Tours. Reservas Automáticas. Alcanza el Mundo.",
+  subtitle: "Llega a turistas que buscan en línea, automatiza reservas de tours y crea un negocio que vende sin que estés.",
+  metaTitle: "Páginas Web para Agencias de Viajes | Sistema de Reservas de Tours",
+  metaDescription: "Desarrollamos páginas web para agencias de viajes. Catálogo de tours, reservas online y pagos internacionales. Desde S/5,500.",
+  problems: [
+    {
+      icon: "search",
+      title: "Turistas no te encuentran",
+      description: "Buscan tours en Google pero encuentran a otras agencias, no a ti.",
+    },
+    {
+      icon: "clock",
+      title: "No vendes sin estar presente",
+      description: "Pierdes ventas de turistas en otras zonas horarias mientras duermes.",
+    },
+    {
+      icon: "document",
+      title: "Catálogo confuso",
+      description: "Tu oferta de tours no es clara y los clientes se confunden.",
+    },
+    {
+      icon: "creditCard",
+      title: "Sin pagos internacionales",
+      description: "Turistas extranjeros no pueden pagarte con sus tarjetas.",
+    },
+  ],
+  solutions: [
+    {
+      icon: "translate",
+      title: "Web multiidioma en Google",
+      description: "Aparece en búsquedas de turistas en su propio idioma.",
+      highlight: "+50% turistas",
+    },
+    {
+      icon: "image",
+      title: "Catálogo de tours interactivo",
+      description: "Fotos, videos, itinerarios claros y precios transparentes.",
+    },
+    {
+      icon: "calendar",
+      title: "Sistema de reservas online",
+      description: "Turistas reservan y pagan 24/7 desde cualquier país.",
+      highlight: "+250% reservas",
+    },
+    {
+      icon: "creditCard",
+      title: "Pagos internacionales",
+      description: "Acepta tarjetas de todo el mundo con conversión automática.",
+    },
+    {
+      icon: "cog",
+      title: "Panel administrativo",
+      description: "Gestiona disponibilidad, reservas y pagos en tiempo real.",
+    },
+    {
+      icon: "star",
+      title: "Sistema de reseñas",
+      description: "Reseñas verificadas de clientes que generan confianza.",
+    },
+  ],
+  transformation: {
+    before: {
+      metric1: { label: "Tours vendidos/mes", value: "15-20" },
+      metric2: { label: "Ocupación", value: "40%" },
+      metric3: { label: "Ingresos mensuales", value: "S/18,000" },
+    },
+    after: {
+      metric1: { label: "Tours vendidos/mes", value: "50-60", improvement: "+250%" },
+      metric2: { label: "Ocupación", value: "85%", improvement: "+112%" },
+      metric3: { label: "Ingresos mensuales", value: "S/55,000", improvement: "+205%" },
+    },
+    roi: "Recuperas tu inversión en 1 mes",
+  },
+  pricing: [
+    {
+      name: "Básico",
+      price: "S/5,500",
+      description: "Para agencias que inician",
+      features: [
+        "Web de 8 páginas",
+        "Catálogo de hasta 10 tours",
+        "Galería de destinos",
+        "Formulario de consultas",
+        "WhatsApp integrado",
+        "SEO básico",
+        "Google Maps rutas",
+        "Entrega en 20 días",
+      ],
+    },
+    {
+      name: "Profesional",
+      price: "S/8,000",
+      description: "Para agencias en crecimiento",
+      features: [
+        "Todo lo del plan Básico",
+        "Catálogo ilimitado de tours",
+        "Sistema de reservas online",
+        "Calendario de disponibilidad",
+        "Multi-idioma (3 idiomas)",
+        "Panel de administración",
+        "SEO avanzado internacional",
+        "Entrega en 30 días",
+      ],
+      highlighted: true,
+      badge: "Más Popular",
+    },
+    {
+      name: "Completo",
+      price: "S/12,000",
+      description: "Para agencias establecidas",
+      features: [
+        "Todo lo del plan Profesional",
+        "Pasarela de pago internacional",
+        "Sistema de reseñas verificadas",
+        "Multi-moneda",
+        "Multi-idioma (5 idiomas)",
+        "Reportes y analytics",
+        "App móvil PWA",
+        "Soporte prioritario",
+        "Entrega en 40 días",
+      ],
+      badge: "Recomendado",
+    },
+  ],
+  maintenanceNote: "Mantenimiento mensual desde S/600/mes incluye hosting, actualizaciones y soporte técnico.",
+  checklist: [
+    "Catálogo de tours con itinerarios",
+    "Galería de fotos por destino",
+    "Sistema de reservas online",
+    "Calendario de disponibilidad",
+    "Integración con pasarelas de pago",
+    "Soporte multi-idioma",
+    "SEO internacional",
+    "Sistema de reseñas",
+    "Blog de viajes",
+    "Integración con redes sociales",
+  ],
+  faqs: [
+    {
+      question: "¿Puedo gestionar disponibilidad por fecha?",
+      answer: "Sí, el sistema permite configurar cupos, fechas bloqueadas y precios por temporada.",
+    },
+    {
+      question: "¿Qué pasarelas de pago internacionales incluyen?",
+      answer: "Integramos Stripe, PayPal, Mercado Pago y otras opciones según tu mercado objetivo.",
+    },
+    {
+      question: "¿El sistema soporta múltiples monedas?",
+      answer: "Sí, en el plan Completo los turistas ven precios en su moneda local con conversión automática.",
+    },
+    {
+      question: "¿Puedo agregar tours nuevos yo mismo?",
+      answer: "Sí, el panel de administración es intuitivo y te permite gestionar todo tu catálogo.",
+    },
+    {
+      question: "¿Las reseñas son verificadas?",
+      answer: "Sí, solo pueden dejar reseñas clientes que efectivamente realizaron el tour.",
+    },
+  ],
+  testimonials: [
+    {
+      name: "Juan Carlos Quispe",
+      role: "Director",
+      company: "Peru Adventure Tours",
+      content: "Pasamos de 20 a 55 tours mensuales. La web en inglés y español nos abrió al mercado internacional.",
+      rating: 5,
+    },
+    {
+      name: "Sandra Delgado",
+      role: "Gerente",
+      company: "Cusco Magic Travel",
+      content: "Las reservas automáticas nos permiten vender mientras dormimos. Turistas de Europa reservan de madrugada.",
+      rating: 5,
+    },
+    {
+      name: "Miguel Torres",
+      role: "Propietario",
+      company: "Amazonia Tours",
+      content: "El sistema de pagos internacionales fue clave. Ahora aceptamos tarjetas de cualquier país sin problema.",
+      rating: 5,
+    },
+  ],
+  gradientColors: "from-violet-600 to-purple-700",
+};

@@ -1,0 +1,184 @@
+import type { NicheData } from "./types";
+
+export const odontologiaData: NicheData = {
+  slug: "odontologia",
+  title: "Consultorios Odontológicos",
+  headline: "Consultorio Digital: Más Pacientes. Citas Confirmadas. Reputación de Confianza.",
+  subtitle: "Atrae pacientes nuevos con presencia profesional, automatiza citas y construye credibilidad.",
+  metaTitle: "Páginas Web para Dentistas | Sistema de Citas Odontológicas",
+  metaDescription: "Desarrollamos páginas web para consultorios odontológicos. Sistema de citas online, blog educativo y presencia profesional. Desde S/5,000.",
+  problems: [
+    {
+      icon: "search",
+      title: "Pacientes no te encuentran",
+      description: "Buscan dentista en Google y aparece tu competencia, no tú.",
+    },
+    {
+      icon: "document",
+      title: "Web poco profesional",
+      description: "Tu página actual no transmite la confianza que merece tu consultorio.",
+    },
+    {
+      icon: "calendar",
+      title: "Sin citas online",
+      description: "Los pacientes deben llamar para agendar, muchos desisten.",
+    },
+    {
+      icon: "phone",
+      title: "Teléfono saturado",
+      description: "Tu asistente pasa horas atendiendo llamadas de agenda.",
+    },
+  ],
+  solutions: [
+    {
+      icon: "globe",
+      title: "Web profesional y confiable",
+      description: "Diseño que transmite profesionalismo y genera confianza desde el primer click.",
+      highlight: "+250% pacientes nuevos",
+    },
+    {
+      icon: "calendar",
+      title: "Sistema de citas online",
+      description: "Pacientes agendan 24/7 eligiendo tratamiento, doctor y horario.",
+      highlight: "-85% llamadas",
+    },
+    {
+      icon: "document",
+      title: "Formulario de salud digital",
+      description: "Historial médico online que el paciente completa antes de su cita.",
+    },
+    {
+      icon: "book",
+      title: "Blog educativo",
+      description: "Contenido que educa pacientes y mejora tu posicionamiento SEO.",
+    },
+    {
+      icon: "bell",
+      title: "Recordatorios automáticos",
+      description: "SMS y WhatsApp que reducen no-shows y citas olvidadas.",
+    },
+  ],
+  transformation: {
+    before: {
+      metric1: { label: "Pacientes nuevos/mes", value: "12-15" },
+      metric2: { label: "Ocupación", value: "50%" },
+      metric3: { label: "Ingresos mensuales", value: "S/15,000" },
+    },
+    after: {
+      metric1: { label: "Pacientes nuevos/mes", value: "35-45", improvement: "+250%" },
+      metric2: { label: "Ocupación", value: "85%", improvement: "+70%" },
+      metric3: { label: "Ingresos mensuales", value: "S/28,000", improvement: "+87%" },
+    },
+    roi: "Recuperas tu inversión en 1.5 meses",
+  },
+  pricing: [
+    {
+      name: "Básico",
+      price: "S/5,000",
+      description: "Para consultorios que inician",
+      features: [
+        "Web de 6 páginas",
+        "Diseño profesional médico",
+        "Catálogo de tratamientos",
+        "Perfiles de doctores",
+        "WhatsApp integrado",
+        "SEO básico local",
+        "Google Maps",
+        "Entrega en 15 días",
+      ],
+    },
+    {
+      name: "Profesional",
+      price: "S/7,500",
+      description: "El más solicitado",
+      features: [
+        "Todo lo del plan Básico",
+        "Sistema de citas online",
+        "Recordatorios automáticos",
+        "Formulario de salud digital",
+        "Blog integrado",
+        "SEO avanzado",
+        "Antes/después de casos",
+        "Panel de administración",
+        "Entrega en 25 días",
+      ],
+      highlighted: true,
+      badge: "Recomendado",
+    },
+    {
+      name: "Premium",
+      price: "S/12,000",
+      description: "Para clínicas odontológicas",
+      features: [
+        "Todo lo del plan Profesional",
+        "Multi-doctor",
+        "Historial de pacientes",
+        "Portal de pacientes",
+        "Pagos en línea",
+        "Sistema de seguimiento",
+        "App móvil PWA",
+        "Soporte prioritario",
+        "Entrega en 35 días",
+      ],
+    },
+  ],
+  maintenanceNote: "Mantenimiento mensual desde S/500/mes incluye hosting, actualizaciones y soporte técnico.",
+  checklist: [
+    "Diseño profesional médico",
+    "Catálogo de tratamientos",
+    "Galería de casos (antes/después)",
+    "Perfiles del equipo médico",
+    "Sistema de citas online",
+    "Blog de salud dental",
+    "Testimonios de pacientes",
+    "Certificaciones visibles",
+    "SEO médico local",
+    "HTTPS y seguridad",
+  ],
+  faqs: [
+    {
+      question: "¿El sistema cumple con normas de privacidad médica?",
+      answer: "Sí, implementamos protocolos de seguridad y protección de datos de pacientes según normativas locales.",
+    },
+    {
+      question: "¿Puedo mostrar casos de antes/después?",
+      answer: "Sí, incluimos galería especial para mostrar resultados de tratamientos con consentimiento del paciente.",
+    },
+    {
+      question: "¿El blog mejora mi posicionamiento en Google?",
+      answer: "Sí, contenido educativo optimizado para SEO te ayuda a aparecer en búsquedas relacionadas.",
+    },
+    {
+      question: "¿Funciona para clínicas con varios especialistas?",
+      answer: "Sí, el plan Premium permite gestionar múltiples doctores con agendas independientes.",
+    },
+    {
+      question: "¿Los pacientes pueden pagar online?",
+      answer: "Sí, en el plan Premium integramos pasarela de pago para pagos parciales o totales.",
+    },
+  ],
+  testimonials: [
+    {
+      name: "Dra. Valeria Mendoza",
+      role: "Ortodoncista",
+      company: "Dental Smile Center",
+      content: "Los pacientes nuevos aumentaron de 15 a 40 por mes. La web profesional genera mucha confianza.",
+      rating: 5,
+    },
+    {
+      name: "Dr. Carlos Ruiz",
+      role: "Director",
+      company: "Clínica Dental Perú",
+      content: "El blog de salud dental nos posiciona como expertos. Los pacientes llegan más informados.",
+      rating: 5,
+    },
+    {
+      name: "Dra. Patricia Suárez",
+      role: "Endodoncista",
+      company: "Consultorio Dental PS",
+      content: "El sistema de citas redujo las llamadas en un 80%. Mi asistente ahora se enfoca en atención.",
+      rating: 5,
+    },
+  ],
+  gradientColors: "from-cyan-600 to-blue-700",
+};
