@@ -21,7 +21,7 @@ export function generateNicheMetadata(nicheData: NicheData): Metadata {
     openGraph: {
       title: nicheData.metaTitle,
       description: nicheData.metaDescription,
-      url: `https://soluciones-web-nichos.vercel.app/${nicheData.slug}`,
+      url: `https://webparatunegocio.pe/${nicheData.slug}`,
       type: "website",
     },
     twitter: {
@@ -107,8 +107,8 @@ export default function NichePage({ nicheData }: NichePageProps) {
             description: nicheData.metaDescription,
             provider: {
               "@type": "Organization",
-              name: "Soluciones Web Profesionales",
-              url: "https://soluciones-web-nichos.vercel.app",
+              name: "Web Para Tu Negocio",
+              url: "https://webparatunegocio.pe",
             },
             serviceType: "Desarrollo Web",
             areaServed: {
@@ -138,13 +138,13 @@ export default function NichePage({ nicheData }: NichePageProps) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Inicio",
-                item: "https://soluciones-web-nichos.vercel.app",
+                item: "https://webparatunegocio.pe",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: nicheData.title,
-                item: `https://soluciones-web-nichos.vercel.app/${nicheData.slug}`,
+                item: `https://webparatunegocio.pe/${nicheData.slug}`,
               },
             ],
           }),

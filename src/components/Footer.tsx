@@ -17,10 +17,10 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">SW</span>
+                <span className="text-white font-bold text-xl">WN</span>
               </div>
               <span className="font-bold text-xl text-white">
-                Soluciones Web
+                Web Para Tu Negocio
               </span>
             </Link>
             <p className="text-gray-400 mb-4 max-w-md">
@@ -41,7 +41,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:contacto@solucionesweb.com"
+                href="mailto:contacto@webparatunegocio.pe"
                 className="text-gray-400 hover:text-blue-500 transition-colors"
                 aria-label="Email"
               >
@@ -113,7 +113,7 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                contacto@solucionesweb.com
+                contacto@webparatunegocio.pe
               </li>
               <li className="flex items-center gap-2">
                 <svg
@@ -143,7 +143,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
           <p>
-            © {new Date().getFullYear()} Soluciones Web Profesionales. Todos los
+            © {new Date().getFullYear()} Web Para Tu Negocio. Todos los
             derechos reservados.
           </p>
         </div>

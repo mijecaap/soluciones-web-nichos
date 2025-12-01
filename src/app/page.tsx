@@ -221,9 +221,9 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Soluciones Web Profesionales",
-            url: "https://soluciones-web-nichos.vercel.app",
-            logo: "https://soluciones-web-nichos.vercel.app/logo.png",
+            name: "Web Para Tu Negocio",
+            url: "https://webparatunegocio.pe",
+            logo: "https://webparatunegocio.pe/logo.png",
             description:
               "Desarrollo de páginas web profesionales para negocios locales. Desde soluciones económicas para emprendedores hasta sistemas avanzados para negocios establecidos.",
             contactPoint: {
@@ -251,10 +251,10 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Soluciones Web Profesionales",
-            image: "https://soluciones-web-nichos.vercel.app/og-image.jpg",
-            "@id": "https://soluciones-web-nichos.vercel.app",
-            url: "https://soluciones-web-nichos.vercel.app",
+            name: "Web Para Tu Negocio",
+            image: "https://webparatunegocio.pe/og-image.jpg",
+            "@id": "https://webparatunegocio.pe",
+            url: "https://webparatunegocio.pe",
             telephone: "+51-999-999-999",
             address: {
               "@type": "PostalAddress",
@@ -276,8 +276,8 @@ export default function Home() {
             serviceType: "Desarrollo Web",
             provider: {
               "@type": "Organization",
-              name: "Soluciones Web Profesionales",
-              url: "https://soluciones-web-nichos.vercel.app",
+              name: "Web Para Tu Negocio",
+              url: "https://webparatunegocio.pe",
             },
             areaServed: {
               "@type": "Country",

@@ -1,6 +1,6 @@
-# Soluciones Web Profesionales
+# Web Para Tu Negocio
 
-Página web profesional de servicios de desarrollo web enfocada en 5 nichos específicos. Optimizada para SEO, conversión y promoción.
+Página web profesional de servicios de desarrollo web enfocada en múltiples nichos específicos. Optimizada para SEO, conversión y promoción.
 
 ## 🎯 Nichos de Negocio
 
@@ -79,13 +79,13 @@ Crear un archivo `.env.local` con las siguientes variables (opcional):
 
 ```env
 # URL base del sitio
-NEXT_PUBLIC_SITE_URL=https://soluciones-web-nichos.vercel.app
+NEXT_PUBLIC_SITE_URL=https://webparatunegocio.pe
 
 # Número de WhatsApp
 NEXT_PUBLIC_WHATSAPP_NUMBER=51999999999
 
 # Email de contacto
-NEXT_PUBLIC_CONTACT_EMAIL=contacto@solucionesweb.com
+NEXT_PUBLIC_CONTACT_EMAIL=contacto@webparatunegocio.pe
 ```
 
 ## 📱 Características SEO
@@ -131,4 +131,4 @@ NEXT_PUBLIC_CONTACT_EMAIL=contacto@solucionesweb.com
 
 ## 📝 Licencia
 
-MIT © 2024 Soluciones Web Profesionales
+MIT © 2024 Web Para Tu Negocio
