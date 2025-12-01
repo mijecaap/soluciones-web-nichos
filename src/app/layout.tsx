@@ -4,10 +4,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://soluciones-web-nichos.vercel.app"),
+  metadataBase: new URL("https://webparatunegocio.pe"),
   title: {
-    default: "Desarrollo Web Profesional para Negocios | Soluciones Digitales",
-    template: "%s | Soluciones Web Profesionales",
+    default: "Desarrollo Web Profesional para Negocios | Web Para Tu Negocio",
+    template: "%s | Web Para Tu Negocio",
   },
   description:
     "Creamos páginas web profesionales para clínicas veterinarias, salones de belleza, restaurantes, consultorios odontológicos y agencias de viajes. Optimizadas para SEO y conversión.",
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     "odontología",
     "agencias de viajes",
   ],
-  authors: [{ name: "Soluciones Web Nichos" }],
-  creator: "Soluciones Web Nichos",
+  authors: [{ name: "Web Para Tu Negocio" }],
+  creator: "Web Para Tu Negocio",
   openGraph: {
     type: "website",
     locale: "es_PE",
-    url: "https://soluciones-web-nichos.vercel.app",
-    siteName: "Soluciones Web Profesionales",
+    url: "https://webparatunegocio.pe",
+    siteName: "Web Para Tu Negocio",
     title: "Desarrollo Web Profesional para Negocios",
     description:
       "Creamos páginas web profesionales optimizadas para SEO y conversión para negocios específicos.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Soluciones Web Profesionales",
+        alt: "Web Para Tu Negocio",
       },
     ],
   },
@@ -62,6 +62,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "tu-codigo-de-verificacion",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo.png",
   },
 };
 

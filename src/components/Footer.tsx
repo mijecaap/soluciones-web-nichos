@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 
-const nichos = [
+const nichosPremium = [
   { name: "Veterinarias", href: "/veterinarias" },
   { name: "Salones de Belleza", href: "/salones-belleza" },
   { name: "Restaurantes", href: "/restaurantes" },
@@ -8,19 +9,36 @@ const nichos = [
   { name: "Agencias de Viajes", href: "/agencias-viajes" },
 ];
 
+const nichosEconomicos = [
+  { name: "Tiendas de Ropa", href: "/tiendas-ropa" },
+  { name: "Artesanía", href: "/artesania" },
+  { name: "Transporte", href: "/transporte" },
+  { name: "Limpieza", href: "/limpieza" },
+  { name: "Cafeterías", href: "/cafeterias" },
+  { name: "Instructores", href: "/instructores" },
+  { name: "Reparaciones", href: "/reparaciones" },
+  { name: "Agrícola", href: "/agricola" },
+  { name: "Belleza Económico", href: "/belleza-economico" },
+  { name: "Freelancers", href: "/freelancers" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo y descripción */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">SW</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Web Para Tu Negocio"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-bold text-xl text-white">
-                Soluciones Web
+                Web Para Tu Negocio
               </span>
             </Link>
             <p className="text-gray-400 mb-4 max-w-md">
@@ -41,7 +59,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:contacto@solucionesweb.com"
+                href="mailto:contacto@webparatunegocio.pe"
                 className="text-gray-400 hover:text-blue-500 transition-colors"
                 aria-label="Email"
               >
@@ -62,15 +80,32 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Servicios */}
+          {/* Servicios Premium */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Servicios</h3>
+            <h3 className="text-white font-semibold mb-4">Premium</h3>
             <ul className="space-y-2">
-              {nichos.map((nicho) => (
+              {nichosPremium.map((nicho) => (
                 <li key={nicho.href}>
                   <Link
                     href={nicho.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  >
+                    {nicho.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Servicios Económicos */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Económicos</h3>
+            <ul className="space-y-2">
+              {nichosEconomicos.map((nicho) => (
+                <li key={nicho.href}>
+                  <Link
+                    href={nicho.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {nicho.name}
                   </Link>
@@ -113,7 +148,7 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                contacto@solucionesweb.com
+                contacto@webparatunegocio.pe
               </li>
               <li className="flex items-center gap-2">
                 <svg
@@ -143,7 +178,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
           <p>
-            © {new Date().getFullYear()} Soluciones Web Profesionales. Todos los
+            © {new Date().getFullYear()} Web Para Tu Negocio. Todos los
             derechos reservados.
           </p>
         </div>

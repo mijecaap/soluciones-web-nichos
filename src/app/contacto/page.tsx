@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description:
     "Contáctanos para obtener una cotización gratis para tu página web profesional. Respuesta en menos de 24 horas. WhatsApp disponible.",
   openGraph: {
-    title: "Contacto | Soluciones Web Profesionales",
+    title: "Contacto | Web Para Tu Negocio",
     description:
       "Solicita tu cotización gratis. Respuesta en menos de 24 horas.",
-    url: "https://soluciones-web-nichos.vercel.app/contacto",
+    url: "https://webparatunegocio.pe/contacto",
     type: "website",
   },
 };
@@ -61,7 +61,7 @@ export default function ContactoPage() {
 
             {/* Email */}
             <a
-              href="mailto:contacto@solucionesweb.com"
+              href="mailto:contacto@webparatunegocio.pe"
               className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
@@ -84,7 +84,7 @@ export default function ContactoPage() {
                 Respuesta en 24h
               </p>
               <p className="text-blue-600 font-medium mt-2">
-                contacto@solucionesweb.com
+                contacto@webparatunegocio.pe
               </p>
             </a>
 
@@ -133,15 +133,15 @@ export default function ContactoPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contacto - Soluciones Web Profesionales",
+            name: "Contacto - Web Para Tu Negocio",
             description:
               "Página de contacto para solicitar cotizaciones de desarrollo web.",
-            url: "https://soluciones-web-nichos.vercel.app/contacto",
+            url: "https://webparatunegocio.pe/contacto",
             mainEntity: {
               "@type": "Organization",
-              name: "Soluciones Web Profesionales",
+              name: "Web Para Tu Negocio",
               telephone: "+51-999-999-999",
-              email: "contacto@solucionesweb.com",
+              email: "contacto@webparatunegocio.pe",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Lima",
