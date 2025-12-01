@@ -7,6 +7,7 @@ export const restaurantesData: NicheData = {
   subtitle: "Aumenta tus mesas ocupadas, reduce esperas, y llega a clientes nuevos que te buscan en Google.",
   metaTitle: "Páginas Web para Restaurantes | Menú Digital y Reservas Online",
   metaDescription: "Desarrollamos páginas web para restaurantes y bares. Menú digital interactivo, sistema de reservas y pedidos online. Desde S/4,000.",
+  category: "premium",
   problems: [
     {
       icon: "search",

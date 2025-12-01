@@ -5,6 +5,7 @@ export interface NicheData {
   subtitle: string;
   metaTitle: string;
   metaDescription: string;
+  category: "premium" | "economico";
   problems: {
     icon: string;
     title: string;

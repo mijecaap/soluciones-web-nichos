@@ -7,6 +7,7 @@ export const odontologiaData: NicheData = {
   subtitle: "Atrae pacientes nuevos con presencia profesional, automatiza citas y construye credibilidad.",
   metaTitle: "Páginas Web para Dentistas | Sistema de Citas Odontológicas",
   metaDescription: "Desarrollamos páginas web para consultorios odontológicos. Sistema de citas online, blog educativo y presencia profesional. Desde S/5,000.",
+  category: "premium",
   problems: [
     {
       icon: "search",

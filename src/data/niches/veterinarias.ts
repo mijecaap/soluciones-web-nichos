@@ -7,6 +7,7 @@ export const veterinariasData: NicheData = {
   subtitle: "Convierte tu clínica en un negocio digital que atrae 30-40 clientes nuevos cada mes automatizando reservas y mejorando tu visibilidad en Google.",
   metaTitle: "Páginas Web para Clínicas Veterinarias | Sistema de Citas Online",
   metaDescription: "Desarrollamos páginas web profesionales para clínicas veterinarias. Sistema de citas online 24/7, gestión de pacientes y SEO local. Desde S/3,500.",
+  category: "premium",
   problems: [
     {
       icon: "phone",
