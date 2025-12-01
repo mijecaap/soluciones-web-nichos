@@ -18,12 +18,14 @@ interface CTASectionProps {
   whatsappNumber?: string;
 }
 
+const defaultWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51999999999";
+
 export default function CTASection({
   title = "¿Listo para Transformar tu Negocio?",
   subtitle = "Agenda una llamada gratuita y descubre cómo podemos ayudarte",
   primaryCta = { text: "Agendar Demo Gratis", href: "/contacto" },
   secondaryCta,
-  whatsappNumber = "51999999999",
+  whatsappNumber = defaultWhatsappNumber,
 }: CTASectionProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });

@@ -14,6 +14,20 @@ export const metadata: Metadata = {
   },
 };
 
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51999999999";
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@webparatunegocio.pe";
+
+// Función para formatear el número de teléfono
+const formatPhoneNumber = (num: string) => {
+  // Formato: +51 999 999 999
+  return `+${num.slice(0, 2)} ${num.slice(2, 5)} ${num.slice(5, 8)} ${num.slice(8)}`;
+};
+
+const formatPhoneSchema = (num: string) => {
+  // Formato para schema.org: +51-999-999-999
+  return `+${num.slice(0, 2)}-${num.slice(2, 5)}-${num.slice(5, 8)}-${num.slice(8)}`;
+};
+
 export default function ContactoPage() {
   return (
     <>
@@ -36,7 +50,7 @@ export default function ContactoPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20una%20página%20web%20para%20mi%20negocio"
+              href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20una%20página%20web%20para%20mi%20negocio`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
@@ -55,13 +69,13 @@ export default function ContactoPage() {
                 Respuesta inmediata
               </p>
               <p className="text-green-600 font-medium mt-2">
-                +51 999 999 999
+                {formatPhoneNumber(whatsappNumber)}
               </p>
             </a>
 
             {/* Email */}
             <a
-              href="mailto:contacto@webparatunegocio.pe"
+              href={`mailto:${contactEmail}`}
               className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
@@ -84,7 +98,7 @@ export default function ContactoPage() {
                 Respuesta en 24h
               </p>
               <p className="text-blue-600 font-medium mt-2">
-                contacto@webparatunegocio.pe
+                {contactEmail}
               </p>
             </a>
 
@@ -140,8 +154,8 @@ export default function ContactoPage() {
             mainEntity: {
               "@type": "Organization",
               name: "Web Para Tu Negocio",
-              telephone: "+51-999-999-999",
-              email: "contacto@webparatunegocio.pe",
+              telephone: formatPhoneSchema(whatsappNumber),
+              email: contactEmail,
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Lima",
