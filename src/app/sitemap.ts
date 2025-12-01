@@ -3,6 +3,43 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://webparatunegocio.pe";
 
+  // Rutas premium (mayor prioridad)
+  const premiumRoutes = [
+    "veterinarias",
+    "salones-belleza",
+    "restaurantes",
+    "odontologia",
+    "agencias-viajes",
+  ];
+
+  // Rutas económicas
+  const economicRoutes = [
+    "tiendas-ropa",
+    "artesania",
+    "transporte",
+    "limpieza",
+    "cafeterias",
+    "instructores",
+    "reparaciones",
+    "agricola",
+    "belleza-economico",
+    "freelancers",
+  ];
+
+  const premiumNicheRoutes = premiumRoutes.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
+
+  const economicNicheRoutes = economicRoutes.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -10,41 +47,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${baseUrl}/veterinarias`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/salones-belleza`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/restaurantes`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/odontologia`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/agencias-viajes`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+    ...premiumNicheRoutes,
+    ...economicNicheRoutes,
     {
       url: `${baseUrl}/contacto`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
   ];
 }
