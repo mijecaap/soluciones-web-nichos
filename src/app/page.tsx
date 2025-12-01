@@ -4,6 +4,13 @@ import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import CTASection from "@/components/CTASection";
 
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51999999999";
+
+// Función para formatear el número de teléfono para schema.org
+const formatPhoneSchema = (num: string) => {
+  return `+${num.slice(0, 2)}-${num.slice(2, 5)}-${num.slice(5, 8)}-${num.slice(8)}`;
+};
+
 const testimonials = [
   {
     name: "María González",
@@ -228,7 +235,7 @@ export default function Home() {
               "Desarrollo de páginas web profesionales para negocios locales. Desde soluciones económicas para emprendedores hasta sistemas avanzados para negocios establecidos.",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+51-999-999-999",
+              telephone: formatPhoneSchema(whatsappNumber),
               contactType: "sales",
               availableLanguage: ["Spanish"],
             },
@@ -238,7 +245,7 @@ export default function Home() {
               addressCountry: "PE",
             },
             sameAs: [
-              "https://wa.me/51999999999",
+              `https://wa.me/${whatsappNumber}`,
             ],
           }),
         }}
@@ -255,7 +262,7 @@ export default function Home() {
             image: "https://webparatunegocio.pe/og-image.jpg",
             "@id": "https://webparatunegocio.pe",
             url: "https://webparatunegocio.pe",
-            telephone: "+51-999-999-999",
+            telephone: formatPhoneSchema(whatsappNumber),
             address: {
               "@type": "PostalAddress",
               addressLocality: "Lima",
