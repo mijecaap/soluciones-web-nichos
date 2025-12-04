@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { trackFAQOpen } from "@/lib/analytics";
 
 interface FAQItem {
   question: string;
@@ -48,7 +49,13 @@ export default function FAQAccordion({
               className="border border-gray-200 rounded-xl overflow-hidden"
             >
               <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => {
+                  const newIndex = openIndex === index ? null : index;
+                  setOpenIndex(newIndex);
+                  if (newIndex !== null) {
+                    trackFAQOpen(item.question, index);
+                  }
+                }}
                 className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
               >
                 <span className="font-medium text-gray-900">{item.question}</span>

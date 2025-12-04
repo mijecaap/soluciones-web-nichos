@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { trackCTAClick, trackWhatsAppClick } from "@/lib/analytics";
 
 interface CTASectionProps {
   title?: string;
@@ -44,6 +45,11 @@ export default function CTASection({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={primaryCta.href}
+              onClick={() => trackCTAClick({
+                location: 'cta_section',
+                ctaText: primaryCta.text,
+                destination: primaryCta.href,
+              })}
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg"
             >
               {primaryCta.text}
@@ -66,6 +72,7 @@ export default function CTASection({
               href={`https://wa.me/${whatsappNumber}?text=Hola,%20me%20interesa%20una%20página%20web%20para%20mi%20negocio`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick({ location: 'cta_section' })}
               className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-colors shadow-lg"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

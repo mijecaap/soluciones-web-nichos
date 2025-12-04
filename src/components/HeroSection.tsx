@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 interface HeroSectionProps {
   title: string;
@@ -52,6 +53,11 @@ export default function HeroSection({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={ctaLink}
+              onClick={() => trackCTAClick({
+                location: 'hero',
+                ctaText: ctaText,
+                destination: ctaLink,
+              })}
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
             >
               {ctaText}

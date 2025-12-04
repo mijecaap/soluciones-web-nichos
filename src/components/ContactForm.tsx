@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { trackContactFormSubmitted, trackContactFormError } from "@/lib/analytics";
 
 interface ContactFormProps {
   title?: string;
@@ -54,6 +55,13 @@ export default function ContactForm({
         message: data.message,
       });
 
+      // Tracking de conversión
+      trackContactFormSubmitted({
+        niche: formData.niche,
+        hasBusiness: !!formData.business,
+        hasMessage: !!formData.message,
+      });
+
       // Limpiar formulario
       setFormData({
         name: "",
@@ -64,10 +72,12 @@ export default function ContactForm({
         message: "",
       });
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Error desconocido";
       setStatus({
         type: "error",
-        message: error instanceof Error ? error.message : "Error desconocido",
+        message: errorMessage,
       });
+      trackContactFormError(errorMessage);
     }
   };
 

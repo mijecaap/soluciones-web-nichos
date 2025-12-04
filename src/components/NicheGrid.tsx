@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { trackNicheCardClick } from "@/lib/analytics";
 
 interface Niche {
   title: string;
@@ -226,9 +227,10 @@ interface NicheGridSectionProps {
   niches: Niche[];
   badge?: string;
   badgeColor?: string;
+  isPremium?: boolean;
 }
 
-function NicheGridSection({ niches, badge, badgeColor = "bg-blue-600" }: NicheGridSectionProps) {
+function NicheGridSection({ niches, badge, badgeColor = "bg-blue-600", isPremium = false }: NicheGridSectionProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -243,6 +245,11 @@ function NicheGridSection({ niches, badge, badgeColor = "bg-blue-600" }: NicheGr
         >
           <Link
             href={niche.href}
+            onClick={() => trackNicheCardClick({
+              niche: niche.title,
+              isPremium: isPremium,
+              priceRange: niche.priceRange,
+            })}
             className="group block h-full bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div
@@ -320,7 +327,7 @@ export default function NicheGrid() {
             </p>
           </motion.div>
 
-          <NicheGridSection niches={premiumNiches} />
+          <NicheGridSection niches={premiumNiches} isPremium={true} />
         </div>
       </section>
 
@@ -383,7 +390,7 @@ export default function NicheGrid() {
             </p>
           </motion.div>
 
-          <NicheGridSection niches={economicNiches} />
+          <NicheGridSection niches={economicNiches} isPremium={false} />
         </div>
       </section>
     </>

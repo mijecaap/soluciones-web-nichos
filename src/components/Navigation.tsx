@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackCTAClick, trackServiceSelected, trackServicesMenuOpen } from "@/lib/analytics";
 
 const nichosPremium = [
   { name: "Veterinarias", href: "/veterinarias" },
@@ -61,7 +62,10 @@ export default function Navigation() {
             {/* Dropdown Nichos */}
             <div
               className="relative"
-              onMouseEnter={() => setIsNichosOpen(true)}
+              onMouseEnter={() => {
+                setIsNichosOpen(true);
+                trackServicesMenuOpen();
+              }}
               onMouseLeave={() => setIsNichosOpen(false)}
             >
               <button className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1">
@@ -96,6 +100,7 @@ export default function Navigation() {
                         <Link
                           key={nicho.href}
                           href={nicho.href}
+                          onClick={() => trackServiceSelected(nicho.name, true)}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {nicho.name}
@@ -108,6 +113,7 @@ export default function Navigation() {
                         <Link
                           key={nicho.href}
                           href={nicho.href}
+                          onClick={() => trackServiceSelected(nicho.name, false)}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {nicho.name}
@@ -128,6 +134,11 @@ export default function Navigation() {
 
             <Link
               href="/contacto"
+              onClick={() => trackCTAClick({
+                location: 'navigation',
+                ctaText: 'Cotización Gratis',
+                destination: '/contacto',
+              })}
               className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
             >
               Cotización Gratis

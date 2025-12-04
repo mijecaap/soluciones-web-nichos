@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { trackPricingClick } from "@/lib/analytics";
 
 interface PricingTier {
   name: string;
@@ -130,6 +131,10 @@ export default function PricingCards({
 
               <Link
                 href={tier.ctaLink || "/contacto"}
+                onClick={() => trackPricingClick({
+                  planName: tier.name,
+                  isHighlighted: tier.highlighted || false,
+                })}
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-colors ${
                   tier.highlighted
                     ? "bg-white text-blue-600 hover:bg-blue-50"
