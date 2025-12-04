@@ -8,6 +8,11 @@ interface ContactFormProps {
   subtitle?: string;
 }
 
+interface FormStatus {
+  type: "idle" | "loading" | "success" | "error";
+  message?: string;
+}
+
 export default function ContactForm({
   title = "Contáctanos",
   subtitle = "Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas",
@@ -20,21 +25,50 @@ export default function ContactForm({
     niche: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<FormStatus>({ type: "idle" });
   
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
+    setStatus({ type: "loading" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Error al enviar el formulario");
+      }
+
+      setStatus({
+        type: "success",
+        message: data.message,
+      });
+
+      // Limpiar formulario
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        business: "",
+        niche: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Error desconocido",
+      });
+    }
   };
 
   const handleChange = (
@@ -46,7 +80,8 @@ export default function ContactForm({
     });
   };
 
-  if (submitted) {
+  // Mostrar pantalla de éxito
+  if (status.type === "success") {
     return (
       <section className="py-20 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -74,9 +109,15 @@ export default function ContactForm({
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               ¡Mensaje Enviado!
             </h3>
-            <p className="text-gray-600">
-              Gracias por contactarnos. Te responderemos en menos de 24 horas.
+            <p className="text-gray-600 mb-6">
+              {status.message || "Gracias por contactarnos. Te responderemos en menos de 24 horas."}
             </p>
+            <button
+              onClick={() => setStatus({ type: "idle" })}
+              className="text-blue-600 hover:text-blue-700 font-medium"
+            >
+              Enviar otro mensaje
+            </button>
           </motion.div>
         </div>
       </section>
@@ -97,6 +138,28 @@ export default function ContactForm({
           </h2>
           <p className="text-xl text-gray-600">{subtitle}</p>
         </motion.div>
+
+        {/* Mensaje de error */}
+        {status.type === "error" && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg flex items-center gap-3"
+          >
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>{status.message}</span>
+            <button
+              onClick={() => setStatus({ type: "idle" })}
+              className="ml-auto text-red-500 hover:text-red-700"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </motion.div>
+        )}
 
         <motion.form
           initial={{ opacity: 0, y: 20 }}
@@ -227,10 +290,10 @@ export default function ContactForm({
 
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={status.type === "loading"}
             className="w-full bg-blue-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
-            {isSubmitting ? (
+            {status.type === "loading" ? (
               <>
                 <svg
                   className="animate-spin w-5 h-5"
