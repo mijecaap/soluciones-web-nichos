@@ -184,11 +184,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>
-            © {new Date().getFullYear()} Web Para Tu Negocio. Todos los
-            derechos reservados.
-          </p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} Web Para Tu Negocio. Todos los
+              derechos reservados.
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href="/privacidad"
+                className="text-gray-500 hover:text-white text-sm transition-colors"
+              >
+                Política de Privacidad
+              </Link>
+              <Link
+                href="/terminos"
+                className="text-gray-500 hover:text-white text-sm transition-colors"
+              >
+                Términos y Condiciones
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

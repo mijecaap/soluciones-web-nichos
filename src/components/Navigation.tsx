@@ -133,6 +133,13 @@ export default function Navigation() {
             </Link>
 
             <Link
+              href="/nosotros"
+              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+            >
+              Nosotros
+            </Link>
+
+            <Link
               href="/contacto"
               onClick={() => trackCTAClick({
                 location: 'navigation',
