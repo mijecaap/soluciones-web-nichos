@@ -62,6 +62,42 @@ const testimonials = [
   },
 ];
 
+const trustMetrics = [
+  {
+    label: "Proyectos entregados",
+    value: "120+",
+    description: "Negocios locales y marcas emergentes.",
+  },
+  {
+    label: "Tiempo promedio",
+    value: "15-21 días",
+    description: "De la estrategia al lanzamiento.",
+  },
+  {
+    label: "Calificación de clientes",
+    value: "4.9/5",
+    description: "Basado en reseñas y recomendaciones.",
+  },
+];
+
+const processSteps = [
+  {
+    title: "Diagnóstico + Estrategia",
+    description:
+      "Entendemos tu negocio, tus clientes y la oportunidad digital para definir un plan claro.",
+  },
+  {
+    title: "Diseño + Contenido",
+    description:
+      "Creamos una experiencia visual con copy persuasivo, enfocada en confianza y conversión.",
+  },
+  {
+    title: "Lanzamiento + Optimización",
+    description:
+      "Publicamos tu web, medimos resultados y afinamos para que siga creciendo.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -72,18 +108,72 @@ export default function Home() {
         ctaLink="#nichos"
         secondaryCtaText="Ver Económicas (desde S/700)"
         secondaryCtaLink="#economicos"
+        eyebrow="Estrategia digital hecha en Perú"
+        highlights={[
+          "SEO local listo para posicionar",
+          "Diseño editorial que vende confianza",
+          "Implementación rápida y sin fricción",
+        ]}
+        metrics={[
+          { label: "Entrega promedio", value: "15-21 días" },
+          { label: "Ticket de entrada", value: "Desde S/700" },
+          { label: "Clientes felices", value: "120+ negocios" },
+        ]}
+        deliverables={[
+          "Arquitectura web lista para campañas",
+          "Textos y mensajes por servicio",
+          "Panel de reservas o contacto a medida",
+        ]}
       />
 
+      {/* Trust Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
+            <div className="max-w-xl">
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
+                Confianza comprobada
+              </p>
+              <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-slate-900">
+                Un equipo que combina diseño, estrategia y ejecución rápida
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Trabajamos con negocios locales que quieren verse y vender como
+                marcas grandes sin perder su esencia.
+              </p>
+            </div>
+            <div className="grid flex-1 gap-6 md:grid-cols-3">
+              {trustMetrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm"
+                >
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                    {metric.label}
+                  </p>
+                  <p className="mt-3 text-3xl font-semibold text-slate-900">
+                    {metric.value}
+                  </p>
+                  <p className="mt-2 text-sm text-slate-600">
+                    {metric.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Problem Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              ¿Tu Negocio Tiene Estos Problemas?
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
+              Lo Que Está Frenando Tu Crecimiento Digital
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Si te identificas con alguno de estos desafíos, necesitas una
-              presencia digital profesional
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Detectamos los puntos críticos que hacen que un negocio pierda
+              clientes semana a semana.
             </p>
           </div>
 
@@ -105,9 +195,9 @@ export default function Home() {
                     />
                   </svg>
                 ),
-                title: "Invisibilidad en Google",
+                title: "Poca visibilidad",
                 description:
-                  "Tus clientes potenciales buscan tus servicios pero encuentran a tu competencia.",
+                  "Tus clientes potenciales te buscan y terminan eligiendo a la competencia.",
               },
               {
                 icon: (
@@ -125,9 +215,9 @@ export default function Home() {
                     />
                   </svg>
                 ),
-                title: "Teléfono Saturado",
+                title: "Canales desordenados",
                 description:
-                  "Pierdes tiempo contestando llamadas mientras tu negocio necesita atención.",
+                  "Respondes llamadas, WhatsApp e Instagram sin un flujo claro.",
               },
               {
                 icon: (
@@ -145,9 +235,9 @@ export default function Home() {
                     />
                   </svg>
                 ),
-                title: "Citas Canceladas",
+                title: "Citas perdidas",
                 description:
-                  "Los no-shows te cuestan dinero y tiempo que podrías dedicar a otros clientes.",
+                  "Los no-shows y las reprogramaciones te cuestan ingresos reales.",
               },
               {
                 icon: (
@@ -165,9 +255,9 @@ export default function Home() {
                     />
                   </svg>
                 ),
-                title: "Crecimiento Estancado",
+                title: "Crecimiento lento",
                 description:
-                  "Sabes que podrías atender más clientes pero no tienes cómo atraerlos.",
+                  "Tu negocio puede atender más clientes, pero no llega al público correcto.",
               },
               {
                 icon: (
@@ -185,22 +275,22 @@ export default function Home() {
                     />
                   </svg>
                 ),
-                title: "Presupuesto Limitado",
+                title: "Inversión confusa",
                 description:
-                  "Crees que una web profesional es muy cara para tu pequeño negocio.",
+                  "No tienes claridad sobre cuánto invertir ni qué resultados esperar.",
               },
             ].map((problem, index) => (
               <div
                 key={index}
-                className="bg-red-50 p-6 rounded-xl border border-red-100"
+                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
               >
-                <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
+                <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-700 mb-4">
                   {problem.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   {problem.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{problem.description}</p>
+                <p className="text-slate-600 text-sm">{problem.description}</p>
               </div>
             ))}
           </div>
@@ -212,6 +302,55 @@ export default function Home() {
       </div>
 
       <BenefitsSection />
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] items-start">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
+                Metodología clara
+              </p>
+              <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-slate-900">
+                Un proceso pensado para que tu web venda desde el primer día
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                Cada etapa está diseñada para acelerar resultados: desde la
+                investigación hasta la optimización después del lanzamiento.
+              </p>
+              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 text-sm text-slate-600">
+                Incluye análisis competitivo, propuesta de valor y copy
+                orientado a captar reservas y contactos reales.
+              </div>
+              <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate-500">
+                <span className="rounded-full border border-slate-200 px-4 py-2">
+                  1 ronda de ajustes incluido
+                </span>
+                <span className="rounded-full border border-slate-200 px-4 py-2">
+                  Checklist para tu equipo
+                </span>
+              </div>
+            </div>
+            <div className="grid gap-6">
+              {processSteps.map((step, index) => (
+                <div
+                  key={step.title}
+                  className="rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-semibold">
+                      0{index + 1}
+                    </span>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {step.title}
+                    </h3>
+                  </div>
+                  <p className="mt-3 text-slate-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <TestimonialCarousel testimonials={testimonials} />
 
