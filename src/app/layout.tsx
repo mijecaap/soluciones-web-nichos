@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -15,13 +15,21 @@ const inter = Inter({
   preload: true,
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
+  preload: true,
+});
+
 // Viewport configuration para PWA
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#09090B",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  colorScheme: "light",
+  colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
@@ -121,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" dir="ltr" className={inter.variable}>
+    <html lang="es" dir="ltr" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -129,7 +137,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://wa.me" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased bg-[#09090B] text-slate-50`}>
         <Navigation />
         <main>{children}</main>
         <Footer />

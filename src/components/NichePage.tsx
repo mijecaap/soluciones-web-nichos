@@ -8,6 +8,7 @@ import PricingCards from "@/components/PricingCards";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
+import Breadcrumb from "@/components/Breadcrumb";
 import { NicheData } from "@/data/niches";
 
 interface NichePageProps {
@@ -18,6 +19,9 @@ export function generateNicheMetadata(nicheData: NicheData): Metadata {
   return {
     title: nicheData.metaTitle,
     description: nicheData.metaDescription,
+    alternates: {
+      canonical: `https://webparatunegocio.pe/${nicheData.slug}`,
+    },
     openGraph: {
       title: nicheData.metaTitle,
       description: nicheData.metaDescription,
@@ -35,6 +39,13 @@ export function generateNicheMetadata(nicheData: NicheData): Metadata {
 export default function NichePage({ nicheData }: NichePageProps) {
   return (
     <>
+      <Breadcrumb
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: nicheData.title, href: `/${nicheData.slug}` },
+        ]}
+      />
+
       <HeroSection
         title={nicheData.headline}
         subtitle={nicheData.subtitle}
@@ -45,11 +56,15 @@ export default function NichePage({ nicheData }: NichePageProps) {
         backgroundGradient={nicheData.gradientColors}
       />
 
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <ProblemCards
         title="¿Te Identificas con Estos Problemas?"
         subtitle="Si experimentas alguno de estos desafíos, necesitas una solución digital"
         problems={nicheData.problems}
       />
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <SolutionCards
         title="Nuestra Solución"
@@ -57,17 +72,23 @@ export default function NichePage({ nicheData }: NichePageProps) {
         solutions={nicheData.solutions}
       />
 
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <TransformationChart
         title="Tu Transformación"
         subtitle="Resultados reales que puedes esperar"
         data={nicheData.transformation}
       />
 
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <Checklist
         title="Lo Que Incluye Tu Paquete"
         subtitle="Todo esto viene incluido con tu nueva web"
         items={nicheData.checklist}
       />
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <div id="precios">
         <PricingCards
@@ -78,17 +99,23 @@ export default function NichePage({ nicheData }: NichePageProps) {
         />
       </div>
 
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <TestimonialCarousel
         title="Lo Que Dicen Nuestros Clientes"
         subtitle={`Historias de éxito de ${nicheData.title.toLowerCase()} como la tuya`}
         testimonials={nicheData.testimonials}
       />
 
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <FAQAccordion
         title="Preguntas Frecuentes"
         subtitle="Resolvemos todas tus dudas"
         items={nicheData.faqs}
       />
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <CTASection
         title="¿Listo para Transformar tu Negocio?"

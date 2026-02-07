@@ -25,7 +25,7 @@ export default function FAQAccordion({
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section ref={sectionRef} className="py-24 bg-[#09090B]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,65 +33,74 @@ export default function FAQAccordion({
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-600">{subtitle}</p>
+          <p className="text-xl text-slate-400">{subtitle}</p>
         </motion.div>
 
-        <div className="space-y-4">
-          {items.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="border border-gray-200 rounded-xl overflow-hidden"
-            >
-              <button
-                onClick={() => {
-                  const newIndex = openIndex === index ? null : index;
-                  setOpenIndex(newIndex);
-                  if (newIndex !== null) {
-                    trackFAQOpen(item.question, index);
-                  }
-                }}
-                className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+        <div className="space-y-3">
+          {items.map((item, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className={`bg-white/[0.02] border rounded-xl overflow-hidden mb-3 transition-colors ${
+                  isOpen
+                    ? "border-white/[0.06] border-l-2 border-l-indigo-500 bg-white/[0.03]"
+                    : "border-white/[0.06]"
+                }`}
               >
-                <span className="font-medium text-gray-900">{item.question}</span>
-                <svg
-                  className={`w-5 h-5 text-gray-500 transition-transform ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <button
+                  onClick={() => {
+                    const newIndex = isOpen ? null : index;
+                    setOpenIndex(newIndex);
+                    if (newIndex !== null) {
+                      trackFAQOpen(item.question, index);
+                    }
+                  }}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/[0.03] transition-colors"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+                  <span className="text-white font-medium">{item.question}</span>
+                  <svg
+                    className={`w-5 h-5 text-slate-500 transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
-                    <div className="px-6 py-4 text-gray-600 bg-white">
-                      {item.answer}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="text-slate-400 px-6 py-4">
+                        {item.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

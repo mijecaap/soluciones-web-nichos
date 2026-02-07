@@ -33,18 +33,20 @@ export default function PricingCards({
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-50">
+    <section ref={sectionRef} className="relative py-24 bg-[#09090B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            {subtitle}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -56,46 +58,43 @@ export default function PricingCards({
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-2xl p-8 h-full flex flex-col ${
                 tier.highlighted
-                  ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-2xl scale-105 z-10"
-                  : "bg-white border border-gray-200 shadow-sm"
+                  ? "bg-gradient-to-b from-indigo-500/10 to-violet-500/5 border border-indigo-500/30 shadow-[0_0_40px_rgba(99,102,241,0.12)] scale-105 z-10"
+                  : "bg-white/[0.03] border border-white/[0.06]"
               }`}
             >
+              {/* Shimmer overlay for highlighted card */}
+              {tier.highlighted && (
+                <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                  <div
+                    className="absolute inset-0 animate-[shimmer_3s_infinite]"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent)",
+                    }}
+                  />
+                </div>
+              )}
+
               {tier.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span
-                    className={`px-4 py-1 rounded-full text-sm font-semibold ${
-                      tier.highlighted
-                        ? "bg-amber-400 text-amber-900"
-                        : "bg-blue-100 text-blue-700"
-                    }`}
-                  >
-                    {tier.badge}
-                  </span>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-amber-400 to-orange-400 text-zinc-900 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
+                  {tier.badge}
                 </div>
               )}
 
               <div className="text-center mb-6">
-                <h3
-                  className={`text-xl font-bold mb-2 ${
-                    tier.highlighted ? "text-white" : "text-gray-900"
-                  }`}
-                >
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-bold mb-2 text-white">
                   {tier.name}
                 </h3>
                 <div className="flex items-baseline justify-center gap-1">
                   <span
                     className={`text-4xl font-bold ${
-                      tier.highlighted ? "text-white" : "text-gray-900"
+                      tier.highlighted ? "text-gradient-primary" : "text-white"
                     }`}
                   >
                     {tier.price}
                   </span>
                 </div>
-                <p
-                  className={`mt-2 text-sm ${
-                    tier.highlighted ? "text-blue-100" : "text-gray-500"
-                  }`}
-                >
+                <p className="mt-2 text-sm text-slate-500">
                   {tier.description}
                 </p>
               </div>
@@ -104,9 +103,7 @@ export default function PricingCards({
                 {tier.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     <svg
-                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                        tier.highlighted ? "text-green-300" : "text-green-500"
-                      }`}
+                      className="w-5 h-5 flex-shrink-0 mt-0.5 text-emerald-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -118,27 +115,23 @@ export default function PricingCards({
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span
-                      className={`text-sm ${
-                        tier.highlighted ? "text-blue-100" : "text-gray-600"
-                      }`}
-                    >
-                      {feature}
-                    </span>
+                    <span className="text-sm text-slate-400">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Link
                 href={tier.ctaLink || "/contacto"}
-                onClick={() => trackPricingClick({
-                  planName: tier.name,
-                  isHighlighted: tier.highlighted || false,
-                })}
-                className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-colors ${
+                onClick={() =>
+                  trackPricingClick({
+                    planName: tier.name,
+                    isHighlighted: tier.highlighted || false,
+                  })
+                }
+                className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all ${
                   tier.highlighted
-                    ? "bg-white text-blue-600 hover:bg-blue-50"
-                    : "bg-blue-600 text-white hover:bg-blue-700"
+                    ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]"
+                    : "bg-white/[0.05] border border-white/[0.1] text-white hover:bg-white/[0.1]"
                 }`}
               >
                 {tier.ctaText || "Solicitar Cotización"}
@@ -152,7 +145,7 @@ export default function PricingCards({
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-center text-gray-500 mt-8"
+            className="text-center text-slate-500 mt-8"
           >
             {maintenanceNote}
           </motion.p>

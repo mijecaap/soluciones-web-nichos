@@ -74,44 +74,55 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
 };
 
+const bentoSpans = [
+  "md:col-span-2",
+  "md:col-span-1",
+  "md:col-span-1",
+  "md:col-span-1",
+  "md:col-span-1",
+  "md:col-span-2",
+];
+
 export default function BenefitsSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-[#09090B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             ¿Por Qué Elegirnos?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             No solo creamos páginas web, creamos máquinas de generar clientes
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex gap-4"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className={`${bentoSpans[index]} glass-card rounded-2xl p-6 glow-border-hover`}
             >
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+              <motion.div
+                whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                transition={{ duration: 0.5 }}
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-500/15 flex items-center justify-center text-indigo-400 mb-4"
+              >
                 {iconMap[benefit.icon]}
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
+              </motion.div>
+              <h3 className="text-lg font-semibold text-white mb-1">
+                {benefit.title}
+              </h3>
+              <p className="text-slate-400">{benefit.description}</p>
             </motion.div>
           ))}
         </div>
