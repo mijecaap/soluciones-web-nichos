@@ -82,8 +82,8 @@ export default function Home() {
   return (
     <>
       <HeroSection
-        title="Páginas Web Profesionales para Negocios en Perú"
-        subtitle="Desde soluciones económicas para emprendedores (S/700) hasta sistemas avanzados para negocios establecidos en Lima y todo el Perú. Más visibilidad en Google, más clientes, más ingresos."
+        title="Diseño de Páginas Web Profesionales en Lima y Perú"
+        subtitle="Creamos páginas web que posicionan tu negocio en Google. Desde soluciones económicas para emprendedores (S/700) hasta sistemas avanzados para negocios establecidos en Lima y todo el Perú. Más visibilidad, más clientes, más ingresos."
         ctaText="Ver Soluciones Premium"
         ctaLink="#nichos"
         secondaryCtaText="Ver Económicas (desde S/700)"
@@ -126,6 +126,34 @@ export default function Home() {
       />
 
       {/* JSON-LD Schema for LocalBusiness (includes Organization properties) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Web Para Tu Negocio",
+            url: "https://webparatunegocio.pe",
+            description: "Diseño y desarrollo de páginas web profesionales en Lima y Perú. Especializados en 17+ industrias.",
+            publisher: {
+              "@type": "Organization",
+              name: "Web Para Tu Negocio",
+              url: "https://webparatunegocio.pe",
+              logo: "https://webparatunegocio.pe/logo.png",
+            },
+            inLanguage: "es-PE",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://webparatunegocio.pe/?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

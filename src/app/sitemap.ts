@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://webparatunegocio.pe";
+  const now = new Date();
 
   // Rutas premium (mayor prioridad)
   const premiumRoutes = [
@@ -26,38 +27,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "freelancers",
   ];
 
+  // Landing pages SEO (alta prioridad — keywords competitivas)
+  const seoLandingPages = [
+    { slug: "paginas-web-peru", priority: 0.95 },
+    { slug: "paginas-web-lima", priority: 0.95 },
+    { slug: "diseno-paginas-web", priority: 0.9 },
+    { slug: "desarrollo-web-peru", priority: 0.9 },
+    { slug: "cuanto-cuesta-pagina-web", priority: 0.85 },
+  ];
+
   const premiumNicheRoutes = premiumRoutes.map((slug) => ({
     url: `${baseUrl}/${slug}`,
-    lastModified: new Date("2025-06-01"),
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.9,
   }));
 
   const economicNicheRoutes = economicRoutes.map((slug) => ({
     url: `${baseUrl}/${slug}`,
-    lastModified: new Date("2025-06-01"),
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
+  }));
+
+  const seoRoutes = seoLandingPages.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: page.priority,
   }));
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date("2025-06-15"),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
+    ...seoRoutes,
     ...premiumNicheRoutes,
     ...economicNicheRoutes,
     {
       url: `${baseUrl}/contacto`,
-      lastModified: new Date("2025-06-01"),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/nosotros`,
-      lastModified: new Date("2025-05-15"),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,
     },

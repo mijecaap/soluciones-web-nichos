@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import ProblemCards from "@/components/ProblemCards";
 import SolutionCards from "@/components/SolutionCards";
@@ -16,9 +17,22 @@ interface NichePageProps {
 }
 
 export function generateNicheMetadata(nicheData: NicheData): Metadata {
+  const keywords = [
+    `página web ${nicheData.title.toLowerCase()}`,
+    `página web para ${nicheData.title.toLowerCase()}`,
+    `diseño web ${nicheData.title.toLowerCase()}`,
+    `páginas web ${nicheData.title.toLowerCase()} peru`,
+    `${nicheData.title.toLowerCase()} lima`,
+    `desarrollo web ${nicheData.title.toLowerCase()}`,
+    "páginas web peru",
+    "diseño de paginas web",
+    "diseño web lima",
+  ];
+
   return {
     title: nicheData.metaTitle,
     description: nicheData.metaDescription,
+    keywords,
     alternates: {
       canonical: `https://webparatunegocio.pe/${nicheData.slug}`,
     },
@@ -122,6 +136,47 @@ export default function NichePage({ nicheData }: NichePageProps) {
         subtitle="Agenda una consulta gratuita y descubre cómo podemos ayudarte"
         primaryCta={{ text: "Agendar Consulta Gratis", href: "/contacto" }}
       />
+
+      {/* Cross-linking section para SEO */}
+      <section className="py-12 bg-[#09090B]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-slate-500 mb-4">
+            También te puede interesar
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/paginas-web-peru"
+              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
+            >
+              Páginas Web en Perú
+            </Link>
+            <Link
+              href="/paginas-web-lima"
+              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
+            >
+              Páginas Web en Lima
+            </Link>
+            <Link
+              href="/diseno-paginas-web"
+              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
+            >
+              Diseño de Páginas Web
+            </Link>
+            <Link
+              href="/desarrollo-web-peru"
+              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
+            >
+              Desarrollo Web
+            </Link>
+            <Link
+              href="/cuanto-cuesta-pagina-web"
+              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
+            >
+              Precios de Páginas Web
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* JSON-LD Schema for Service */}
       <script
