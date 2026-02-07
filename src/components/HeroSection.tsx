@@ -61,7 +61,7 @@ export default function HeroSection({
             {words.map((word, i) => (
               <motion.span
                 key={i}
-                initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+                initial={{ opacity: 1, y: 20, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{
                   duration: 0.6,

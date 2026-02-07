@@ -159,3 +159,19 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* Respect user motion preferences - only for decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep marquee/carousel animations functional but slower */
+  .animate-fadeIn {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

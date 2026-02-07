@@ -246,22 +246,33 @@ export default function ContactForm({
             <label htmlFor="niche" className="block text-sm font-medium text-slate-400 mb-2">
               Tipo de negocio *
             </label>
-            <select
-              id="niche"
-              name="niche"
-              required
-              value={formData.niche}
-              onChange={handleChange}
-              className={`${inputClasses} bg-[#09090B]`}
-            >
-              <option value="">Selecciona una opción</option>
-              <option value="veterinaria">Clínica Veterinaria</option>
-              <option value="salon">Salón de Belleza / Spa</option>
-              <option value="restaurante">Restaurante / Bar</option>
-              <option value="odontologia">Consultorio Odontológico</option>
-              <option value="agencia-viajes">Agencia de Viajes</option>
-              <option value="otro">Otro</option>
-            </select>
+            <div className="relative">
+              <select
+                id="niche"
+                name="niche"
+                required
+                value={formData.niche}
+                onChange={handleChange}
+                className={`${inputClasses} bg-[#09090B] appearance-none cursor-pointer pr-10`}
+              >
+                <option value="" className="bg-[#09090B] text-slate-400">Selecciona una opción</option>
+                <option value="veterinaria" className="bg-[#09090B] text-white">Clínica Veterinaria</option>
+                <option value="salon" className="bg-[#09090B] text-white">Salón de Belleza / Spa</option>
+                <option value="restaurante" className="bg-[#09090B] text-white">Restaurante / Bar</option>
+                <option value="odontologia" className="bg-[#09090B] text-white">Consultorio Odontológico</option>
+                <option value="agencia-viajes" className="bg-[#09090B] text-white">Agencia de Viajes</option>
+                <option value="otro" className="bg-[#09090B] text-white">Otro</option>
+              </select>
+              <svg
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
 
           <div>

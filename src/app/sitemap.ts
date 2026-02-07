@@ -28,14 +28,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const premiumNicheRoutes = premiumRoutes.map((slug) => ({
     url: `${baseUrl}/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date("2025-06-01"),
     changeFrequency: "monthly" as const,
     priority: 0.9,
   }));
 
   const economicNicheRoutes = economicRoutes.map((slug) => ({
     url: `${baseUrl}/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date("2025-06-01"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-15"),
       changeFrequency: "weekly",
       priority: 1,
     },
@@ -51,25 +51,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...economicNicheRoutes,
     {
       url: `${baseUrl}/contacto`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/nosotros`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-05-15"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/privacidad`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-03-01"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terminos`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-03-01"),
       changeFrequency: "yearly",
       priority: 0.3,
     },

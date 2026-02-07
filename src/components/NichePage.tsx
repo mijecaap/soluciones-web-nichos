@@ -8,6 +8,7 @@ import PricingCards from "@/components/PricingCards";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
+import Breadcrumb from "@/components/Breadcrumb";
 import { NicheData } from "@/data/niches";
 
 interface NichePageProps {
@@ -18,6 +19,9 @@ export function generateNicheMetadata(nicheData: NicheData): Metadata {
   return {
     title: nicheData.metaTitle,
     description: nicheData.metaDescription,
+    alternates: {
+      canonical: `https://webparatunegocio.pe/${nicheData.slug}`,
+    },
     openGraph: {
       title: nicheData.metaTitle,
       description: nicheData.metaDescription,
@@ -35,6 +39,13 @@ export function generateNicheMetadata(nicheData: NicheData): Metadata {
 export default function NichePage({ nicheData }: NichePageProps) {
   return (
     <>
+      <Breadcrumb
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: nicheData.title, href: `/${nicheData.slug}` },
+        ]}
+      />
+
       <HeroSection
         title={nicheData.headline}
         subtitle={nicheData.subtitle}

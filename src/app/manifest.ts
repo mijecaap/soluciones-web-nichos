@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Desarrollo de páginas web profesionales para negocios locales en Perú. Veterinarias, restaurantes, salones de belleza y más.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
+    background_color: '#09090B',
     theme_color: '#2563eb',
     orientation: 'portrait-primary',
     scope: '/',
