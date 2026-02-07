@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { trackCTAClick, trackServiceSelected, trackServicesMenuOpen } from "@/lib/analytics";
 
@@ -30,9 +30,22 @@ const nichosEconomicos = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isNichosOpen, setIsNichosOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-zinc-950/80 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -45,7 +58,7 @@ export default function Navigation() {
               className="w-10 h-10 object-contain"
               priority
             />
-            <span className="font-bold text-xl text-gray-900 hidden sm:block">
+            <span className="font-[family-name:var(--font-display)] font-bold text-xl text-white hidden sm:block">
               Web Para Tu Negocio
             </span>
           </Link>
@@ -54,9 +67,10 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="relative text-slate-300 hover:text-white transition-colors font-medium group"
             >
               Inicio
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
             </Link>
 
             {/* Dropdown Nichos */}
@@ -68,10 +82,10 @@ export default function Navigation() {
               }}
               onMouseLeave={() => setIsNichosOpen(false)}
             >
-              <button className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1">
+              <button className="relative text-slate-300 hover:text-white transition-colors font-medium flex items-center gap-1 group">
                 Servicios
                 <svg
-                  className={`w-4 h-4 transition-transform ${isNichosOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transition-transform duration-300 ${isNichosOpen ? "rotate-180" : ""}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -83,38 +97,43 @@ export default function Navigation() {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
               </button>
 
               <AnimatePresence>
                 {isNichosOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-lg shadow-lg py-4 border border-gray-100 grid grid-cols-2 gap-4"
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[560px] bg-zinc-900/95 backdrop-blur-xl rounded-2xl shadow-2xl py-6 border border-white/[0.08] grid grid-cols-2 gap-2"
                   >
-                    <div>
-                      <p className="px-4 pb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Premium</p>
+                    <div className="px-4">
+                      <p className="px-3 pb-3 text-xs font-semibold text-indigo-400 uppercase tracking-wider">
+                        Premium
+                      </p>
                       {nichosPremium.map((nicho) => (
                         <Link
                           key={nicho.href}
                           href={nicho.href}
                           onClick={() => trackServiceSelected(nicho.name, true)}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-lg transition-colors"
                         >
                           {nicho.name}
                         </Link>
                       ))}
                     </div>
-                    <div>
-                      <p className="px-4 pb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Económicos</p>
+                    <div className="px-4 border-l border-white/[0.06]">
+                      <p className="px-3 pb-3 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                        Económicos
+                      </p>
                       {nichosEconomicos.map((nicho) => (
                         <Link
                           key={nicho.href}
                           href={nicho.href}
                           onClick={() => trackServiceSelected(nicho.name, false)}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-lg transition-colors"
                         >
                           {nicho.name}
                         </Link>
@@ -127,16 +146,18 @@ export default function Navigation() {
 
             <Link
               href="/contacto"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="relative text-slate-300 hover:text-white transition-colors font-medium group"
             >
               Contacto
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
             </Link>
 
             <Link
               href="/nosotros"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="relative text-slate-300 hover:text-white transition-colors font-medium group"
             >
               Nosotros
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
             </Link>
 
             <Link
@@ -146,7 +167,7 @@ export default function Navigation() {
                 ctaText: 'Cotización Gratis',
                 destination: '/contacto',
               })}
-              className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
+              className="bg-gradient-to-r from-indigo-500 to-violet-600 text-white px-6 py-2 rounded-full font-medium hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300"
             >
               Cotización Gratis
             </Link>
@@ -154,12 +175,12 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg hover:bg-white/[0.05] transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -187,30 +208,30 @@ export default function Navigation() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="md:hidden fixed inset-0 top-16 bg-zinc-950/98 backdrop-blur-xl overflow-y-auto"
             >
-              <div className="py-4 space-y-2 border-t border-gray-100">
+              <div className="py-6 px-4 space-y-2">
                 <Link
                   href="/"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg"
+                  className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-xl transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Inicio
                 </Link>
 
-                <div className="px-4 py-2">
-                  <p className="text-sm font-semibold text-gray-500 mb-2">
+                <div className="px-4 py-3">
+                  <p className="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-3">
                     Servicios Premium
                   </p>
                   {nichosPremium.map((nicho) => (
                     <Link
                       key={nicho.href}
                       href={nicho.href}
-                      className="block py-2 pl-4 text-gray-700 hover:text-blue-600"
+                      className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {nicho.name}
@@ -218,15 +239,15 @@ export default function Navigation() {
                   ))}
                 </div>
 
-                <div className="px-4 py-2">
-                  <p className="text-sm font-semibold text-gray-500 mb-2">
+                <div className="px-4 py-3 border-t border-white/[0.06]">
+                  <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-3">
                     Servicios Económicos
                   </p>
                   {nichosEconomicos.map((nicho) => (
                     <Link
                       key={nicho.href}
                       href={nicho.href}
-                      className="block py-2 pl-4 text-gray-700 hover:text-blue-600"
+                      className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {nicho.name}
@@ -236,16 +257,24 @@ export default function Navigation() {
 
                 <Link
                   href="/contacto"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg"
+                  className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-xl transition-colors border-t border-white/[0.06]"
                   onClick={() => setIsOpen(false)}
                 >
                   Contacto
                 </Link>
 
-                <div className="px-4 pt-4">
+                <Link
+                  href="/nosotros"
+                  className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-xl transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Nosotros
+                </Link>
+
+                <div className="px-4 pt-6">
                   <Link
                     href="/contacto"
-                    className="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors"
+                    className="block w-full bg-gradient-to-r from-indigo-500 to-violet-600 text-white text-center px-6 py-3.5 rounded-full font-medium hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     Cotización Gratis

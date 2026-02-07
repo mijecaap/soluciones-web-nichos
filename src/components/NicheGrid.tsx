@@ -99,8 +99,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const premiumNiches: Niche[] = [
   {
-    title: "Clínicas Veterinarias",
-    description: "Sistema de citas online, gestión de pacientes y visibilidad en Google.",
+    title: "Cl\u00ednicas Veterinarias",
+    description: "Sistema de citas online, gesti\u00f3n de pacientes y visibilidad en Google.",
     href: "/veterinarias",
     icon: "veterinary",
     priceRange: "S/3,500 - S/8,000",
@@ -108,7 +108,7 @@ const premiumNiches: Niche[] = [
   },
   {
     title: "Salones de Belleza",
-    description: "Reservas automáticas, galería de trabajos y programa de fidelización.",
+    description: "Reservas autom\u00e1ticas, galer\u00eda de trabajos y programa de fidelizaci\u00f3n.",
     href: "/salones-belleza",
     icon: "salon",
     priceRange: "S/3,000 - S/7,000",
@@ -116,14 +116,14 @@ const premiumNiches: Niche[] = [
   },
   {
     title: "Restaurantes y Bares",
-    description: "Menú digital, sistema de reservas y pedidos online con pasarela de pago.",
+    description: "Men\u00fa digital, sistema de reservas y pedidos online con pasarela de pago.",
     href: "/restaurantes",
     icon: "restaurant",
     priceRange: "S/4,000 - S/9,500",
     color: "from-orange-500 to-red-600",
   },
   {
-    title: "Consultorios Odontológicos",
+    title: "Consultorios Odontol\u00f3gicos",
     description: "Presencia profesional, citas online y contenido educativo para pacientes.",
     href: "/odontologia",
     icon: "dental",
@@ -132,7 +132,7 @@ const premiumNiches: Niche[] = [
   },
   {
     title: "Agencias de Viajes",
-    description: "Catálogo de tours, reservas multiidioma y pagos internacionales.",
+    description: "Cat\u00e1logo de tours, reservas multiidioma y pagos internacionales.",
     href: "/agencias-viajes",
     icon: "travel",
     priceRange: "S/5,500 - S/12,000",
@@ -143,15 +143,15 @@ const premiumNiches: Niche[] = [
 const economicNiches: Niche[] = [
   {
     title: "Tiendas de Ropa",
-    description: "Catálogo digital de productos, galería de colecciones y WhatsApp integrado.",
+    description: "Cat\u00e1logo digital de productos, galer\u00eda de colecciones y WhatsApp integrado.",
     href: "/tiendas-ropa",
     icon: "clothing",
     priceRange: "S/800 - S/1,200",
     color: "from-fuchsia-500 to-pink-600",
   },
   {
-    title: "Artesanía y Productos Locales",
-    description: "Galería de productos, historia del artesano y sistema de cotización.",
+    title: "Artesan\u00eda y Productos Locales",
+    description: "Galer\u00eda de productos, historia del artesano y sistema de cotizaci\u00f3n.",
     href: "/artesania",
     icon: "craft",
     priceRange: "S/900 - S/1,300",
@@ -159,7 +159,7 @@ const economicNiches: Niche[] = [
   },
   {
     title: "Servicios de Transporte",
-    description: "Información de servicios, zonas de cobertura y contacto directo 24/7.",
+    description: "Informaci\u00f3n de servicios, zonas de cobertura y contacto directo 24/7.",
     href: "/transporte",
     icon: "transport",
     priceRange: "S/700 - S/1,000",
@@ -167,15 +167,15 @@ const economicNiches: Niche[] = [
   },
   {
     title: "Limpieza y Mantenimiento",
-    description: "Portafolio antes/después, testimonios y lista de servicios con precios.",
+    description: "Portafolio antes/despu\u00e9s, testimonios y lista de servicios con precios.",
     href: "/limpieza",
     icon: "cleaning",
     priceRange: "S/800 - S/1,200",
     color: "from-emerald-500 to-green-600",
   },
   {
-    title: "Cafeterías y Comidas Rápidas",
-    description: "Menú digital con fotos, horarios claros y pedidos por WhatsApp.",
+    title: "Cafeter\u00edas y Comidas R\u00e1pidas",
+    description: "Men\u00fa digital con fotos, horarios claros y pedidos por WhatsApp.",
     href: "/cafeterias",
     icon: "coffee",
     priceRange: "S/1,000 - S/1,500",
@@ -190,24 +190,24 @@ const economicNiches: Niche[] = [
     color: "from-indigo-500 to-violet-600",
   },
   {
-    title: "Reparación y Servicios Técnicos",
-    description: "Lista de servicios, precios y oferta de diagnóstico gratis.",
+    title: "Reparaci\u00f3n y Servicios T\u00e9cnicos",
+    description: "Lista de servicios, precios y oferta de diagn\u00f3stico gratis.",
     href: "/reparaciones",
     icon: "repair",
     priceRange: "S/700 - S/1,000",
     color: "from-slate-500 to-gray-600",
   },
   {
-    title: "Productores Agrícolas",
-    description: "Catálogo de productos, certificaciones y proceso productivo.",
+    title: "Productores Agr\u00edcolas",
+    description: "Cat\u00e1logo de productos, certificaciones y proceso productivo.",
     href: "/agricola",
     icon: "agriculture",
     priceRange: "S/900 - S/1,300",
     color: "from-lime-500 to-green-600",
   },
   {
-    title: "Salones de Belleza Pequeños",
-    description: "Reservas simples online, galería de trabajos y recordatorios.",
+    title: "Salones de Belleza Peque\u00f1os",
+    description: "Reservas simples online, galer\u00eda de trabajos y recordatorios.",
     href: "/belleza-economico",
     icon: "salonSmall",
     priceRange: "S/1,000 - S/1,500",
@@ -215,89 +215,13 @@ const economicNiches: Niche[] = [
   },
   {
     title: "Consultores y Freelancers",
-    description: "Portafolio profesional, casos de éxito y CV descargable.",
+    description: "Portafolio profesional, casos de \u00e9xito y CV descargable.",
     href: "/freelancers",
     icon: "freelancer",
     priceRange: "S/800 - S/1,200",
     color: "from-gray-500 to-slate-600",
   },
 ];
-
-interface NicheGridSectionProps {
-  niches: Niche[];
-  badge?: string;
-  badgeColor?: string;
-  isPremium?: boolean;
-}
-
-function NicheGridSection({ niches, badge, badgeColor = "bg-blue-600", isPremium = false }: NicheGridSectionProps) {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-
-  return (
-    <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {niches.map((niche, index) => (
-        <motion.div
-          key={niche.href}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <Link
-            href={niche.href}
-            onClick={() => trackNicheCardClick({
-              niche: niche.title,
-              isPremium: isPremium,
-              priceRange: niche.priceRange,
-            })}
-            className="group block h-full bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            <div
-              className={`h-2 bg-gradient-to-r ${niche.color}`}
-            />
-            <div className="p-6">
-              {badge && (
-                <span className={`inline-block px-2 py-1 text-xs font-medium text-white ${badgeColor} rounded-full mb-3`}>
-                  {badge}
-                </span>
-              )}
-              <div
-                className={`w-16 h-16 rounded-xl bg-gradient-to-br ${niche.color} text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-              >
-                {iconMap[niche.icon]}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {niche.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{niche.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-500">
-                  {niche.priceRange}
-                </span>
-                <span className="text-blue-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Ver más
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </Link>
-        </motion.div>
-      ))}
-    </div>
-  );
-}
 
 export default function NicheGrid() {
   const premiumRef = useRef(null);
@@ -308,7 +232,7 @@ export default function NicheGrid() {
   return (
     <>
       {/* Premium Section */}
-      <section ref={premiumRef} className="py-20 bg-white">
+      <section ref={premiumRef} className="py-20 bg-[#09090B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -316,62 +240,131 @@ export default function NicheGrid() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-purple-600 rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-full mb-4">
               Premium
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
               Soluciones Premium
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
               Para negocios establecidos que buscan crecer con funcionalidades avanzadas
             </p>
           </motion.div>
 
-          <NicheGridSection niches={premiumNiches} isPremium={true} />
-        </div>
-      </section>
-
-      {/* Transition Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            ¿Recién empezando tu negocio?
-          </h2>
-          <p className="text-lg text-blue-100 mb-6">
-            Tenemos soluciones económicas perfectas para emprendedores y pequeños negocios.
-            Presencia web profesional desde <span className="font-bold text-white">S/700</span>.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
-            <span className="flex items-center gap-1">
-              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              Dominio incluido
-            </span>
-            <span className="flex items-center gap-1">
-              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              Hosting incluido
-            </span>
-            <span className="flex items-center gap-1">
-              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              WhatsApp integrado
-            </span>
-            <span className="flex items-center gap-1">
-              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              Google My Business
-            </span>
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+            {premiumNiches.map((niche, index) => (
+              <motion.div
+                key={niche.href}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isPremiumInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative group ${
+                  index === 0 ? "md:col-span-4" : "md:col-span-2"
+                }`}
+              >
+                {/* Hover glow */}
+                <div
+                  className={`absolute -inset-1 bg-gradient-to-br ${niche.color} rounded-2xl opacity-0 group-hover:opacity-20 blur-[80px] transition-opacity duration-500`}
+                />
+                <Link
+                  href={niche.href}
+                  onClick={() =>
+                    trackNicheCardClick({
+                      niche: niche.title,
+                      isPremium: true,
+                      priceRange: niche.priceRange,
+                    })
+                  }
+                  className="relative block h-full bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="p-6">
+                    <div
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${niche.color} text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                    >
+                      {iconMap[niche.icon]}
+                    </div>
+                    <h3 className="text-xl font-bold text-white font-[family-name:var(--font-display)] mb-2">
+                      {niche.title}
+                    </h3>
+                    <p className="text-slate-400 mb-4">{niche.description}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                      <span className="text-sm font-medium text-slate-300">
+                        {niche.priceRange}
+                      </span>
+                      <span className="text-slate-300 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ver m\u00e1s
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Transition Section */}
+      <section className="relative py-16 bg-[#09090B]">
+        {/* Top gradient line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
+            \u00bfReci\u00e9n empezando tu negocio?
+          </h2>
+          <p className="text-lg text-slate-400 mb-6">
+            Tenemos soluciones econ\u00f3micas perfectas para emprendedores y peque\u00f1os negocios.
+            Presencia web profesional desde{" "}
+            <span className="font-bold text-white">S/700</span>.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            {[
+              "Dominio incluido",
+              "Hosting incluido",
+              "WhatsApp integrado",
+              "Google My Business",
+            ].map((feature) => (
+              <span
+                key={feature}
+                className="flex items-center gap-1.5 px-4 py-2 bg-white/[0.05] border border-white/[0.08] text-slate-300 rounded-full"
+              >
+                <svg
+                  className="w-4 h-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                {feature}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Bottom gradient line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      </section>
+
       {/* Economic Section */}
-      <section ref={economicRef} id="economicos" className="py-20 bg-gray-50">
+      <section ref={economicRef} id="economicos" className="py-20 bg-[#09090B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -379,18 +372,78 @@ export default function NicheGrid() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full mb-4">
               Desde S/700
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Soluciones Económicas
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
+              Soluciones Econ\u00f3micas
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Perfectas para emprendedores y pequeños negocios que quieren dar el salto digital
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Perfectas para emprendedores y peque\u00f1os negocios que quieren dar el salto digital
             </p>
           </motion.div>
 
-          <NicheGridSection niches={economicNiches} isPremium={false} />
+          {/* 5-column grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {economicNiches.map((niche, index) => (
+              <motion.div
+                key={niche.href}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isEconomicInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative group"
+              >
+                {/* Hover glow */}
+                <div
+                  className={`absolute -inset-1 bg-gradient-to-br ${niche.color} rounded-2xl opacity-0 group-hover:opacity-20 blur-[80px] transition-opacity duration-500`}
+                />
+                <Link
+                  href={niche.href}
+                  onClick={() =>
+                    trackNicheCardClick({
+                      niche: niche.title,
+                      isPremium: false,
+                      priceRange: niche.priceRange,
+                    })
+                  }
+                  className="relative block h-full bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="p-6">
+                    <div
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${niche.color} text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                    >
+                      {iconMap[niche.icon]}
+                    </div>
+                    <h3 className="text-xl font-bold text-white font-[family-name:var(--font-display)] mb-2">
+                      {niche.title}
+                    </h3>
+                    <p className="text-slate-400 mb-4">{niche.description}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                      <span className="text-sm font-medium text-slate-300">
+                        {niche.priceRange}
+                      </span>
+                      <span className="text-slate-300 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ver m\u00e1s
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </>

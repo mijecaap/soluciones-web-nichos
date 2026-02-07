@@ -104,38 +104,53 @@ export default function SolutionCards({
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="relative py-24 bg-zinc-950 overflow-hidden">
+      {/* Subtle cyan ambient glow */}
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-cyan-500/5 blur-[150px]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={
+                isInView
+                  ? { opacity: 1, y: 0, scale: 1 }
+                  : { opacity: 0, y: 30, scale: 0.95 }
+              }
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              whileHover={{ y: -5 }}
+              className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 hover:border-indigo-500/30 transition-all duration-500"
             >
-              <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-4">
+              {/* Top gradient accent line */}
+              <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-shadow duration-300">
                 {iconMap[solution.icon] || iconMap.check}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {solution.title}
               </h3>
-              <p className="text-gray-600 mb-3">{solution.description}</p>
+              <p className="text-slate-400 mb-3">{solution.description}</p>
               {solution.highlight && (
-                <span className="inline-block bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full">
+                <span className="inline-block bg-emerald-500/10 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full border border-emerald-500/20">
                   {solution.highlight}
                 </span>
               )}

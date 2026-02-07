@@ -4,7 +4,7 @@ import Image from "next/image";
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51999999999";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@webparatunegocio.pe";
 
-// Función para formatear el número de teléfono
+// Funcion para formatear el numero de telefono
 const formatPhoneNumber = (num: string) => {
   return `+${num.slice(0, 2)} ${num.slice(2, 5)} ${num.slice(5, 8)} ${num.slice(8)}`;
 };
@@ -32,10 +32,13 @@ const nichosEconomicos = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-zinc-950 text-gray-300">
+      {/* Top gradient divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Logo y descripción */}
+          {/* Logo y descripcion */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
@@ -45,21 +48,21 @@ export default function Footer() {
                 height={40}
                 className="w-10 h-10 object-contain"
               />
-              <span className="font-bold text-xl text-white">
+              <span className="font-[family-name:var(--font-display)] font-bold text-xl text-white">
                 Web Para Tu Negocio
               </span>
             </Link>
-            <p className="text-gray-400 mb-4 max-w-md">
+            <p className="text-slate-500 mb-4 max-w-md">
               Creamos páginas web profesionales optimizadas para SEO y
               conversión. Especializados en negocios locales que quieren crecer
               en el mundo digital.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <a
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-green-500 transition-colors"
+                className="text-slate-500 hover:text-emerald-400 transition-colors p-2 rounded-lg hover:bg-emerald-500/10"
                 aria-label="WhatsApp"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -68,7 +71,7 @@ export default function Footer() {
               </a>
               <a
                 href={`mailto:${contactEmail}`}
-                className="text-gray-400 hover:text-blue-500 transition-colors"
+                className="text-slate-500 hover:text-emerald-400 transition-colors p-2 rounded-lg hover:bg-emerald-500/10"
                 aria-label="Email"
               >
                 <svg
@@ -90,13 +93,13 @@ export default function Footer() {
 
           {/* Servicios Premium */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Premium</h3>
+            <h3 className="font-[family-name:var(--font-display)] font-semibold text-slate-200 mb-4">Premium</h3>
             <ul className="space-y-2">
               {nichosPremium.map((nicho) => (
                 <li key={nicho.href}>
                   <Link
                     href={nicho.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm"
                   >
                     {nicho.name}
                   </Link>
@@ -105,15 +108,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Servicios Económicos */}
+          {/* Servicios Economicos */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Económicos</h3>
+            <h3 className="font-[family-name:var(--font-display)] font-semibold text-slate-200 mb-4">Económicos</h3>
             <ul className="space-y-2">
               {nichosEconomicos.map((nicho) => (
                 <li key={nicho.href}>
                   <Link
                     href={nicho.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm"
                   >
                     {nicho.name}
                   </Link>
@@ -124,8 +127,8 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-2 text-gray-400">
+            <h3 className="font-[family-name:var(--font-display)] font-semibold text-slate-200 mb-4">Contacto</h3>
+            <ul className="space-y-2 text-slate-400">
               <li className="flex items-center gap-2">
                 <svg
                   className="w-5 h-5"
@@ -184,22 +187,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-white/[0.06] mt-10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+            <p className="text-slate-600 text-sm">
               © {new Date().getFullYear()} Web Para Tu Negocio. Todos los
               derechos reservados.
             </p>
             <div className="flex gap-6">
               <Link
                 href="/privacidad"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
+                className="text-slate-400 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 Política de Privacidad
               </Link>
               <Link
                 href="/terminos"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
+                className="text-slate-400 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 Términos y Condiciones
               </Link>
