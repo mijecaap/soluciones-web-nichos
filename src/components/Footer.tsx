@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           {/* Logo y descripcion */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
@@ -123,6 +123,38 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Servicios SEO */}
+          <div>
+            <h3 className="font-[family-name:var(--font-display)] font-semibold text-slate-200 mb-4">Servicios</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/paginas-web-peru" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Páginas Web en Perú
+                </Link>
+              </li>
+              <li>
+                <Link href="/paginas-web-lima" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Páginas Web en Lima
+                </Link>
+              </li>
+              <li>
+                <Link href="/diseno-paginas-web" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Diseño de Páginas Web
+                </Link>
+              </li>
+              <li>
+                <Link href="/desarrollo-web-peru" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Desarrollo Web
+                </Link>
+              </li>
+              <li>
+                <Link href="/cuanto-cuesta-pagina-web" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Precios
+                </Link>
+              </li>
             </ul>
           </div>
 

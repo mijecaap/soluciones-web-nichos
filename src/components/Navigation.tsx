@@ -146,6 +146,14 @@ export default function Navigation() {
             </div>
 
             <Link
+              href="/cuanto-cuesta-pagina-web"
+              className="relative text-slate-300 hover:text-white transition-colors font-medium group"
+            >
+              Precios
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
+            </Link>
+
+            <Link
               href="/contacto"
               className="relative text-slate-300 hover:text-white transition-colors font-medium group"
             >
@@ -255,6 +263,47 @@ export default function Navigation() {
                       {nicho.name}
                     </Link>
                   ))}
+                </div>
+
+                <div className="px-4 py-3 border-t border-white/[0.06]">
+                  <p className="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-3">
+                    Información
+                  </p>
+                  <Link
+                    href="/paginas-web-peru"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Páginas Web en Perú
+                  </Link>
+                  <Link
+                    href="/paginas-web-lima"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Páginas Web en Lima
+                  </Link>
+                  <Link
+                    href="/diseno-paginas-web"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Diseño de Páginas Web
+                  </Link>
+                  <Link
+                    href="/desarrollo-web-peru"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Desarrollo Web
+                  </Link>
+                  <Link
+                    href="/cuanto-cuesta-pagina-web"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Precios
+                  </Link>
                 </div>
 
                 <Link
