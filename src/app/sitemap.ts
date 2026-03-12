@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { allPosts } from "@/data/blog/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://webparatunegocio.pe";
@@ -57,6 +58,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.priority,
   }));
 
+  const blogRoutes = allPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -65,6 +73,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...seoRoutes,
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    ...blogRoutes,
     ...premiumNicheRoutes,
     ...economicNicheRoutes,
     {
