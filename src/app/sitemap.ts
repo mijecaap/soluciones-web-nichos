@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: "paginas-web-lima", priority: 0.95 },
     { slug: "diseno-paginas-web", priority: 0.9 },
     { slug: "desarrollo-web-peru", priority: 0.9 },
+    { slug: "cuanto-cuesta-pagina-web", priority: 0.9 },
   ];
 
   const premiumNicheRoutes = premiumRoutes.map((slug) => ({

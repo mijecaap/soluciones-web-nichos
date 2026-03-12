@@ -162,6 +162,14 @@ export default function Navigation() {
             </Link>
 
             <Link
+              href="/cuanto-cuesta-pagina-web"
+              className="relative text-slate-300 hover:text-white transition-colors font-medium group"
+            >
+              ¿Cuánto Cuesta?
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300 group-hover:w-full" />
+            </Link>
+
+            <Link
               href="/contacto"
               onClick={() => trackCTAClick({
                 location: 'navigation',
@@ -288,6 +296,13 @@ export default function Navigation() {
                     onClick={() => setIsOpen(false)}
                   >
                     Desarrollo Web
+                  </Link>
+                  <Link
+                    href="/cuanto-cuesta-pagina-web"
+                    className="block py-2.5 pl-4 text-slate-400 hover:text-white transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    ¿Cuánto Cuesta?
                   </Link>
                 </div>
 
