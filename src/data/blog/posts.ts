@@ -245,7 +245,263 @@ const cuantoCuesta: BlogPost = {
   ],
 };
 
-export const allPosts: BlogPost[] = [cuantoCuesta];
+const paginaWebORedesSociales: BlogPost = {
+  slug: 'pagina-web-o-redes-sociales-negocios-peru',
+  title: '¿Página Web o Redes Sociales? La Respuesta Definitiva para Negocios en Perú',
+  excerpt:
+    'La pregunta que todo emprendedor peruano se hace antes de invertir en digital. Datos reales del mercado: por qué depender solo de Instagram o Facebook puede costarte clientes — y cuándo necesitas las dos cosas a la vez.',
+  category: 'Estrategia Digital',
+  tags: ['redes sociales', 'página web', 'Perú', 'estrategia digital', 'pymes', 'SEO'],
+  keywords: [
+    'pagina web o redes sociales',
+    'necesito pagina web si tengo instagram',
+    'pagina web vs redes sociales para negocios',
+    'diferencia pagina web y redes sociales',
+    'conviene mas pagina web o instagram',
+    'necesito web si tengo facebook peru',
+    'ventajas pagina web sobre redes sociales',
+    'redes sociales vs sitio web negocio peru',
+  ],
+  publishedAt: '2026-03-12',
+  updatedAt: '2026-03-12',
+  readingTime: 8,
+  featured: false,
+  tocItems: [
+    { id: 'el-mito', title: 'El mito de "con Instagram ya basta"' },
+    { id: 'lo-que-rrss-si-hace', title: 'Lo que las redes sí hacen bien' },
+    { id: 'el-problema-del-alcance', title: 'El problema del alcance orgánico' },
+    { id: 'lo-que-rrss-no-puede', title: 'Lo que las redes no pueden hacer' },
+    { id: 'ventaja-web-propia', title: 'La ventaja real de tener web propia' },
+    { id: 'comparativa', title: 'Comparativa directa: Web vs. Redes' },
+    { id: 'la-respuesta', title: 'La respuesta definitiva' },
+    { id: 'por-tipo-negocio', title: 'Qué necesita tu tipo de negocio' },
+  ],
+  content: [
+    {
+      type: 'paragraph',
+      text: '"Ya tengo Instagram con 3,000 seguidores, ¿para qué quiero una página web?" Es la pregunta que más escuchamos de emprendedores peruanos. Y es completamente válida — especialmente cuando las redes sociales son gratis y relativamente fáciles de manejar. Pero hay información que nadie te da antes de tomar esa decisión. Este artículo usa datos reales del mercado peruano y global para darte una respuesta concreta.',
+    },
+    {
+      type: 'callout',
+      variant: 'info',
+      title: 'Contexto digital Perú 2024',
+      text: 'Perú tiene 25,78 millones de usuarios de internet — 74,7% de penetración. Facebook alcanza a 24 millones de peruanos, Instagram a 10 millones, y TikTok al 37% de la población urbana. El mercado digital ya está maduro. La pregunta es: ¿en qué parte de ese mercado quieres aparecer?',
+    },
+    {
+      type: 'heading2',
+      text: 'El mito de "con Instagram ya me basta"',
+      id: 'el-mito',
+    },
+    {
+      type: 'paragraph',
+      text: 'La lógica parece sólida: "Mis clientes están en Instagram, publico todos los días, tengo comentarios y mensajes — ¿qué más necesito?" El problema no es que estés equivocado sobre el presente. El problema es lo que no estás viendo sobre el futuro de tu negocio digital.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Cuando tu negocio vive 100% en redes sociales, estás construyendo tu casa en terreno ajeno. Meta, TikTok y Google son empresas privadas con sus propias reglas — y esas reglas cambian cuando a ellos les conviene, no cuando a ti te conviene. Lo que hoy funciona, mañana puede dejar de hacerlo de un día para otro.',
+    },
+    {
+      type: 'heading2',
+      text: 'Lo que las redes sociales SÍ hacen bien (para ser justos)',
+      id: 'lo-que-rrss-si-hace',
+    },
+    {
+      type: 'paragraph',
+      text: 'Antes de hablar de las limitaciones, hay que reconocer lo que las redes hacen realmente bien para un negocio en Perú:',
+    },
+    {
+      type: 'list',
+      items: [
+        'Visibilidad inmediata — puedes crear un perfil hoy y empezar a publicar en minutos',
+        'Comunidad y engagement — comentarios, reacciones y conversaciones directas con clientes',
+        'Contenido visual e historias — ideal para mostrar productos, procesos y el día a día del negocio',
+        'Publicidad targetizada — Facebook e Instagram Ads permiten segmentar por edad, ubicación y comportamiento',
+        'Generación de confianza social — reseñas, recomendaciones y reposteos son prueba social poderosa',
+        'WhatsApp Business — el canal de atención al cliente más usado en Perú (89% de penetración)',
+        'Costo de entrada cero — no necesitas inversión inicial para empezar a tener presencia',
+      ],
+    },
+    {
+      type: 'callout',
+      variant: 'tip',
+      title: 'Las redes sociales son herramientas reales',
+      text: 'No se trata de elegir entre "web o redes" como si fueran opuestas. Se trata de entender para qué sirve cada una — y por qué sin página web estás dejando dinero sobre la mesa.',
+    },
+    {
+      type: 'heading2',
+      text: 'El problema del alcance orgánico que nadie te cuenta',
+      id: 'el-problema-del-alcance',
+    },
+    {
+      type: 'paragraph',
+      text: 'Aquí está el dato que cambia toda la conversación. El alcance orgánico en Facebook — es decir, cuántos de tus seguidores ven realmente tus publicaciones sin que pagues publicidad — ha caído de manera dramática en la última década:',
+    },
+    {
+      type: 'table',
+      headers: ['Año', 'Alcance orgánico promedio en Facebook', 'Qué significa para ti'],
+      rows: [
+        ['2012', '~16%', 'De cada 100 fans, 16 veían tus posts'],
+        ['2018', '~5%', 'Solo 5 de cada 100 seguidores los veían'],
+        ['2022', '~2.2%', 'La mayoría de contenido se vuelve invisible'],
+        ['2024', '1.37%', 'De 1,000 seguidores, solo 13 ven tu publicación'],
+        ['2025', '1–2%', 'Sin pagar, casi no existes en el feed (Hootsuite)'],
+      ],
+    },
+    {
+      type: 'callout',
+      variant: 'warning',
+      title: '"Tengo 2,000 seguidores" no significa 2,000 clientes potenciales',
+      text: 'Con un alcance orgánico del 1.37%, si tienes 2,000 seguidores en Facebook, solo 27 personas ven tu publicación. ¿Y si el contenido no enganchó ese día? Incluso menos. Estás construyendo una audiencia que no te escucha — a menos que pagues.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Instagram no es diferente. Según Hootsuite, el alcance orgánico en Instagram cayó 12% de 2024 a 2025. TikTok es la excepción momentánea — pero su historial demuestra que todo algoritmo eventualmente prioriza al anunciante sobre al creador de contenido orgánico.',
+    },
+    {
+      type: 'heading2',
+      text: 'Lo que las redes sociales NO pueden hacer por tu negocio',
+      id: 'lo-que-rrss-no-puede',
+    },
+    {
+      type: 'paragraph',
+      text: 'Más allá del alcance, hay limitaciones estructurales de las redes sociales que ningún algoritmo puede resolver:',
+    },
+    {
+      type: 'ordered-list',
+      items: [
+        'No apareces en Google — Cuando alguien busca "veterinaria en Lima" o "salón de belleza Miraflores", Google no muestra las páginas de Facebook en los primeros resultados. Muestra páginas web. Si no tienes web, ese cliente nunca te encuentra.',
+        'No eres dueño de nada — Tu cuenta puede ser hackeada, suspendida por error o simplemente desaparecer. Toda tu audiencia, contenido e historial desaparece contigo. Eso nunca puede pasar con tu propia web.',
+        'No controlas la experiencia — En redes sociales, el diseño lo define la plataforma. No puedes elegir qué ven primero tus visitantes, cómo navegan o cómo llegarán a contactarte.',
+        'No tienes datos reales de tus clientes — Las redes sociales no te dan los emails ni información de contacto de tus seguidores. Tu web sí puede capturarlos — y esa lista es tuya para siempre.',
+        'No puedes vender directamente (sin comisiones) — WhatsApp Business funciona, pero para transacciones propias, necesitas un sitio que no te cobre porcentaje de cada venta.',
+        'No se puede hacer SEO real — Las redes sociales no tienen posicionamiento orgánico en buscadores. Todo el tráfico que generas en Instagram se queda dentro de Instagram.',
+        'Cambios de reglas sin aviso — Facebook cerró páginas de negocio verificadas de un día para otro en 2020. Instagram eliminó likes en varios países. TikTok fue amenazado con cierre en EE.UU. Tu web nunca desaparece por decisión de una empresa externa.',
+      ],
+    },
+    {
+      type: 'heading2',
+      text: 'La ventaja real de tener página web propia',
+      id: 'ventaja-web-propia',
+    },
+    {
+      type: 'paragraph',
+      text: 'Una página web no es solo un "catálogo online". Es la única plataforma digital sobre la que tienes control total y donde puedes construir activos que te pertenecen. Estas son las ventajas que no puedes conseguir en ninguna red social:',
+    },
+    {
+      type: 'list',
+      items: [
+        'Apareces en Google — El 81% de consumidores usa Google para investigar negocios locales antes de comprar. Si no tienes web, no existes para ese 81%.',
+        'SEO local gratuito — Una web bien optimizada puede aparecer en la primera página de Google sin pagar publicidad, 24 horas al día, todos los días del año.',
+        'Credibilidad profesional — El 75% de los consumidores evalúa la credibilidad de un negocio por su sitio web. Instagram da visibilidad, pero la web da confianza.',
+        'Control total del contenido — Puedes mostrar exactamente lo que quieres: precios, portafolio, testimonios, videos — sin que un algoritmo decida si merece ser visto.',
+        'Datos y analítica propios — Google Analytics te dice exactamente quién visita tu web, desde dónde vienen, qué buscan y cuánto tiempo pasan. Esos datos son tuyos.',
+        'Generación de leads directos — Formularios de contacto, llamadas a la acción, número de WhatsApp prominente — todo diseñado para convertir visitantes en clientes.',
+        'Disponible 24/7 sin limite — Tu web trabaja mientras duermes. Clientes de madrugada, de domingo, de feriado — todos pueden encontrarte y contactarte.',
+        'Activo de largo plazo — Una buena web se valoriza con el tiempo. Más contenido, más backlinks, más posicionamiento en Google. Las redes te exigen crear contenido constantemente para sobrevivir.',
+      ],
+    },
+    {
+      type: 'callout',
+      variant: 'tip',
+      title: 'Dato clave: Google como canal de compra',
+      text: 'El 81% de los consumidores usa Google para investigar negocios locales antes de decidir visitar o contactar. Los negocios con presencia web completa tienen 50% más probabilidades de ser considerados para una compra. Sin página web, ese segmento de mercado simplemente no te ve.',
+    },
+    {
+      type: 'heading2',
+      text: 'Comparativa directa: Redes Sociales vs. Página Web',
+      id: 'comparativa',
+    },
+    {
+      type: 'table',
+      headers: ['Factor', 'Redes Sociales', 'Página Web Propia'],
+      rows: [
+        ['Costo inicial', 'Gratis', 'S/700 – S/3,500+ (inversión única)'],
+        ['Costo mensual', 'Gratis (ads opcional)', 'S/15–40 hosting + dominio/año'],
+        ['Aparece en Google', '❌ No', '✅ Sí (con SEO)'],
+        ['Control del contenido', '❌ Limitado por plataforma', '✅ Total'],
+        ['Datos de tus clientes', '❌ Pertenecen a la red social', '✅ Son tuyos'],
+        ['Alcance orgánico', '📉 1–5% de tus seguidores', '🔍 Todo el que busca en Google'],
+        ['Riesgo de cierre', '⚠️ Alto (cuenta suspendida)', '✅ Bajo (la controlas tú)'],
+        ['Credibilidad', '⚠️ Moderada', '✅ Alta (45% más confianza)'],
+        ['SEO y posicionamiento', '❌ No aplica', '✅ Crecimiento orgánico acumulado'],
+        ['Velocidad para empezar', '✅ Inmediata', '⏱️ 1–4 semanas'],
+        ['Engagement social', '✅ Alto', '⚠️ Necesita estrategia de contenido'],
+        ['Mejor para', 'Visibilidad y comunidad', 'Credibilidad, captación y ventas'],
+      ],
+    },
+    {
+      type: 'heading2',
+      text: 'La respuesta definitiva (y la que nadie quiere escuchar)',
+      id: 'la-respuesta',
+    },
+    {
+      type: 'paragraph',
+      text: 'Necesitas las dos. Pero no en igual proporción, y no por las mismas razones.',
+    },
+    {
+      type: 'paragraph',
+      text: 'La página web es el centro. Es donde viven tu información, tus precios, tu portafolio, tus testimonios, y tus conversiones. Es el único activo digital que te pertenece al 100% y que nadie puede quitarte. Es desde donde Google te va a encontrar y enviarte clientes que están buscando exactamente lo que vendes.',
+    },
+    {
+      type: 'paragraph',
+      text: 'Las redes sociales son los canales de distribución. Instagram, TikTok y Facebook son perfectos para generar visibilidad, construir comunidad y llevar tráfico hacia tu página web — donde ocurre la conversión real. Son la vitrina, pero tu web es la tienda.',
+    },
+    {
+      type: 'callout',
+      variant: 'info',
+      title: 'La regla del "hub digital"',
+      text: 'Piensa en tu estrategia como una rueda. La página web es el centro (hub). Las redes sociales, WhatsApp, Google Business y el email son los rayos que llevan tráfico al centro. Si no hay centro, los rayos no van a ningún lado — y cada canal trabaja de manera aislada sin acumularse.',
+    },
+    {
+      type: 'paragraph',
+      text: 'La pregunta real no es "¿web o redes?" sino "¿cuándo empiezo con la web?". Según CEPAL, el 70% de las pymes en Latinoamérica no tienen presencia online. Esa es la oportunidad. Los que construyen su web ahora, cuando la competencia aún no lo hace, acumulan autoridad en Google antes que nadie — y eso es muy difícil de revertir una vez establecido.',
+    },
+    {
+      type: 'heading2',
+      text: 'Qué necesita específicamente tu tipo de negocio',
+      id: 'por-tipo-negocio',
+    },
+    {
+      type: 'paragraph',
+      text: 'No todos los negocios tienen las mismas necesidades. Aquí un diagnóstico rápido por tipo de negocio en el mercado peruano:',
+    },
+    {
+      type: 'table',
+      headers: ['Tipo de Negocio', 'Urgencia de Web', 'Por qué', 'Qué tipo necesitas'],
+      rows: [
+        ['Restaurante / Cafetería', '🔴 Alta', 'Búsquedas "restaurante cerca" son masivas', 'Web con menú, ubicación, Google Maps'],
+        ['Veterinaria / Clínica', '🔴 Alta', 'Clientes buscan en Google antes de llamar', 'Web con citas online, servicios, equipo'],
+        ['Consultorio Dental', '🔴 Alta', '72% busca "dentista [ciudad]" antes de contactar', 'Web profesional con SEO local'],
+        ['Salón de Belleza / Spa', '🟠 Alta', 'Competencia fuerte — quien aparece primero, gana', 'Web con galería, servicios, reservas'],
+        ['Agencia de Viajes', '🔴 Alta', 'Clientes investigan mucho antes de comprar', 'Web con destinos, paquetes, testimonios'],
+        ['Tienda de Ropa / Moda', '🟠 Media-Alta', 'Instagram es clave, pero web aumenta credibilidad', 'Web con catálogo, tallas, WhatsApp'],
+        ['Servicio de Limpieza', '🟡 Media', 'Búsquedas locales en Google existen', 'Landing page con servicios y cotización'],
+        ['Freelancer / Consultor', '🔴 Alta', 'Tu web ES tu portafolio y tarjeta de presentación', 'Web con portafolio, servicios, blog'],
+        ['Artesanía / Manualidades', '🟠 Media', 'Instagram es fuerte, pero web amplía alcance a Google', 'Web con galería y tienda de productos'],
+        ['Transporte / Mudanzas', '🟡 Media', 'Búsquedas directas en Google son frecuentes', 'Landing clara con tarifas y WhatsApp'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      text: 'Si tu negocio aparece en la columna con urgencia alta, cada mes sin web es un mes de clientes que van donde tu competencia — especialmente si tu competencia ya tiene presencia en Google. El 52% de las pymes peruanas que adoptaron herramientas digitales reportaron aumento en ventas o productividad (Telefónica Empresas, 2024). No es coincidencia.',
+    },
+    {
+      type: 'callout',
+      variant: 'warning',
+      title: 'El costo de esperar',
+      text: 'El SEO es acumulativo: una web lanzada hoy empieza a ganar autoridad en Google desde el primer día. Una web lanzada en 6 meses empieza 6 meses tarde. Mientras tu competencia acumula posicionamiento, tú sigues dependiendo de un algoritmo de Instagram que muestra tu contenido al 1-5% de tus seguidores.',
+    },
+    {
+      type: 'cta-box',
+      title: '¿Listo para tener presencia real en Google?',
+      text: 'Creamos páginas web optimizadas para negocios en Perú: con SEO local, diseño mobile-first y conexión directa a WhatsApp. Cuéntanos sobre tu tipo de negocio y te enviamos una propuesta en 24 horas.',
+      buttonText: 'Ver Planes y Precios',
+      buttonHref: '/cuanto-cuesta-pagina-web',
+    },
+  ],
+};
+
+export const allPosts: BlogPost[] = [cuantoCuesta, paginaWebORedesSociales];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return allPosts.find((p) => p.slug === slug);

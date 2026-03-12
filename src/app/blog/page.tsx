@@ -56,6 +56,11 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
     text: 'text-cyan-400',
     border: 'border-cyan-500/20',
   },
+  'Estrategia Digital': {
+    bg: 'bg-violet-500/10',
+    text: 'text-violet-400',
+    border: 'border-violet-500/20',
+  },
 };
 
 function CategoryBadge({ category }: { category: string }) {
