@@ -6,7 +6,7 @@ export const salonesBellezaData: NicheData = {
   headline: "Salón de Belleza Digital: Reservas Online, Clientes Felices, Ingresos Crecientes",
   subtitle: "Reduce el caos de teléfono, aumenta la ocupación de tus estilistas y convierte tus clientes en promotores del salón.",
   metaTitle: "Páginas Web para Salones de Belleza | Sistema de Reservas Online",
-  metaDescription: "Desarrollamos páginas web para salones de belleza y spa. Reservas online 24/7, galería de trabajos y programa de fidelización. Desde S/3,000.",
+  metaDescription: "Desarrollamos páginas web para salones de belleza y spa. Reservas online 24/7, galería de trabajos y programa de fidelización.",
   category: "premium",
   problems: [
     {
@@ -72,10 +72,9 @@ export const salonesBellezaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 1.5 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/3,000",
       description: "Para salones que inician",
       features: [
         "Web de 5 páginas",
@@ -89,7 +88,6 @@ export const salonesBellezaData: NicheData = {
     },
     {
       name: "Profesional",
-      price: "S/4,500",
       description: "El más vendido",
       features: [
         "Todo lo del plan Básico",
@@ -106,7 +104,6 @@ export const salonesBellezaData: NicheData = {
     },
     {
       name: "Premium",
-      price: "S/7,000",
       description: "Para salones premium",
       features: [
         "Todo lo del plan Profesional",
@@ -120,7 +117,6 @@ export const salonesBellezaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/350/mes incluye hosting, actualizaciones y soporte técnico.",
   checklist: [
     "Diseño elegante y moderno",
     "Catálogo de servicios con precios",

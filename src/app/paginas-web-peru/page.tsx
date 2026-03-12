@@ -4,15 +4,16 @@ import { Search, Smartphone, TrendingUp, Zap, Target, ShieldCheck } from "lucide
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import CTASection from "@/components/CTASection";
-import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import Breadcrumb from "@/components/Breadcrumb";
 import NicheGrid from "@/components/NicheGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "Páginas Web en Perú | Diseño Web Profesional desde S/700",
+  title: "Páginas Web en Perú | Diseño Profesional desde S/699 | Web Para Tu Negocio",
   description:
-    "Creamos páginas web profesionales en Perú para todo tipo de negocios. Diseño moderno, optimizado para Google y móviles. 17+ industrias especializadas. Desde S/700. Cotización gratis en 24h.",
+    "Creamos páginas web profesionales en Perú desde S/699. Diseño moderno, mobile-first y optimizado para Google. 17+ industrias. Atendemos Lima, Arequipa, Trujillo, Cusco y todo el Perú. Cotización gratis en 24h.",
   keywords: [
     "paginas web peru",
     "paginas web en peru",
@@ -23,16 +24,19 @@ export const metadata: Metadata = {
     "páginas web profesionales peru",
     "diseño web peru",
     "desarrollo web peru",
-    "agencia digital",
     "agencia digital peru",
+    "hacer pagina web peru",
+    "empresa de paginas web peru",
+    "paginas web para negocios peru",
+    "web para mi negocio peru",
   ],
   alternates: {
     canonical: "https://webparatunegocio.pe/paginas-web-peru",
   },
   openGraph: {
-    title: "Páginas Web en Perú | Diseño Profesional desde S/700",
+    title: "Páginas Web en Perú | Diseño Profesional desde S/699",
     description:
-      "Diseño y desarrollo de páginas web profesionales en Perú. Especializados en 17+ industrias. Optimización SEO incluida. Cotización gratis.",
+      "Páginas web para negocios en Perú desde S/699. 17+ industrias, SEO incluido, mobile-first. Lima, Arequipa, Trujillo y todo el Perú. Cotización gratis.",
     url: "https://webparatunegocio.pe/paginas-web-peru",
     type: "website",
   },
@@ -75,7 +79,12 @@ const faqs = [
   {
     question: "¿Cuánto cuesta una página web en Perú?",
     answer:
-      "Nuestras páginas web en Perú van desde S/700 para soluciones económicas hasta S/12,000 para sistemas avanzados con funcionalidades premium. El precio depende de las características que necesite tu negocio. Ofrecemos cotización gratuita y personalizada.",
+      "El precio parte desde S/699 el Plan Esencial (diseño responsivo, WhatsApp, SSL y hosting). El Plan Profesional (desde S/1,500) incluye reservas online, SEO avanzado y blog. El Plan Avanzado (desde S/2,800) suma panel administrativo y pagos online. Cada cotización es personalizada y gratuita.",
+  },
+  {
+    question: "¿Qué diferencia hay entre una página web económica y una profesional?",
+    answer:
+      "Una página económica cubre la presencia básica: información de tu negocio, galería, contacto y WhatsApp. Una profesional agrega sistemas de reservas, SEO avanzado, tienda virtual, blog y panel de administración. La elección depende de tu tipo de negocio y objetivos de crecimiento.",
   },
   {
     question: "¿Cuánto tiempo toma crear una página web profesional?",
@@ -90,7 +99,7 @@ const faqs = [
   {
     question: "¿Incluyen hosting y dominio?",
     answer:
-      "Sí, todos nuestros planes incluyen hosting de alta velocidad y certificado SSL. El dominio .pe o .com se adquiere por separado (desde S/40/año) o podemos gestionarlo por ti.",
+      "Sí, todos nuestros planes incluyen hosting de alta velocidad y certificado SSL. El dominio se adquiere por separado o podemos gestionarlo por ti.",
   },
   {
     question: "¿Puedo ver ejemplos de páginas web que han creado?",
@@ -110,7 +119,7 @@ const faqs = [
   {
     question: "¿Ofrecen mantenimiento después de la entrega?",
     answer:
-      "Sí, ofrecemos planes de mantenimiento mensual que incluyen actualizaciones de contenido, monitoreo de seguridad, backups y soporte técnico. Los planes van desde S/100/mes.",
+      "Sí, ofrecemos planes de mantenimiento mensual que incluyen actualizaciones de contenido, monitoreo de seguridad, backups y soporte técnico. Contáctanos para conocer los planes disponibles.",
   },
 ];
 
@@ -119,29 +128,34 @@ const serviceCategories = [
     title: "Servicios Premium",
     description: "Soluciones completas para negocios establecidos",
     services: [
-      { name: "Páginas Web para Veterinarias", href: "/veterinarias", price: "Desde S/3,500" },
-      { name: "Páginas Web para Salones de Belleza", href: "/salones-belleza", price: "Desde S/3,000" },
-      { name: "Páginas Web para Restaurantes", href: "/restaurantes", price: "Desde S/4,000" },
-      { name: "Páginas Web para Odontología", href: "/odontologia", price: "Desde S/5,000" },
-      { name: "Páginas Web para Agencias de Viajes", href: "/agencias-viajes", price: "Desde S/5,500" },
+      { name: "Páginas Web para Veterinarias", href: "/veterinarias" },
+      { name: "Páginas Web para Salones de Belleza", href: "/salones-belleza" },
+      { name: "Páginas Web para Restaurantes", href: "/restaurantes" },
+      { name: "Páginas Web para Odontología", href: "/odontologia" },
+      { name: "Páginas Web para Agencias de Viajes", href: "/agencias-viajes" },
     ],
   },
   {
     title: "Servicios Económicos",
     description: "Soluciones accesibles para emprendedores",
     services: [
-      { name: "Páginas Web para Tiendas de Ropa", href: "/tiendas-ropa", price: "Desde S/800" },
-      { name: "Páginas Web para Cafeterías", href: "/cafeterias", price: "Desde S/1,000" },
-      { name: "Páginas Web para Freelancers", href: "/freelancers", price: "Desde S/800" },
-      { name: "Páginas Web para Transporte", href: "/transporte", price: "Desde S/700" },
-      { name: "Páginas Web para Limpieza", href: "/limpieza", price: "Desde S/800" },
-      { name: "Páginas Web para Artesanía", href: "/artesania", price: "Desde S/900" },
-      { name: "Páginas Web para Instructores", href: "/instructores", price: "Desde S/800" },
-      { name: "Páginas Web para Reparaciones", href: "/reparaciones", price: "Desde S/700" },
-      { name: "Páginas Web para Agrícola", href: "/agricola", price: "Desde S/900" },
-      { name: "Páginas Web para Belleza Económico", href: "/belleza-economico", price: "Desde S/1,000" },
+      { name: "Páginas Web para Tiendas de Ropa", href: "/tiendas-ropa" },
+      { name: "Páginas Web para Cafeterías", href: "/cafeterias" },
+      { name: "Páginas Web para Freelancers", href: "/freelancers" },
+      { name: "Páginas Web para Transporte", href: "/transporte" },
+      { name: "Páginas Web para Limpieza", href: "/limpieza" },
+      { name: "Páginas Web para Artesanía", href: "/artesania" },
+      { name: "Páginas Web para Instructores", href: "/instructores" },
+      { name: "Páginas Web para Reparaciones", href: "/reparaciones" },
+      { name: "Páginas Web para Agrícola", href: "/agricola" },
+      { name: "Páginas Web para Belleza Económico", href: "/belleza-economico" },
     ],
   },
+];
+
+const peruCities = [
+  "Lima", "Arequipa", "Trujillo", "Chiclayo", "Piura", "Iquitos",
+  "Cusco", "Huancayo", "Tacna", "Pucallpa", "Chimbote", "Juliaca",
 ];
 
 export default function PaginasWebPeruPage() {
@@ -162,6 +176,25 @@ export default function PaginasWebPeruPage() {
         secondaryCtaText="Ver Nuestros Servicios"
         secondaryCtaLink="#servicios"
       />
+
+      {/* Stats E-E-A-T */}
+      <section className="py-10 bg-[#09090B] border-y border-white/[0.06]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "50+", label: "Proyectos entregados en Perú" },
+              { value: "17+", label: "Industrias especializadas" },
+              { value: "87%", label: "Peruanos buscan en Google" },
+              { value: "S/699", label: "Precio desde Plan Esencial" },
+            ].map((s, i) => (
+              <div key={i}>
+                <p className="text-3xl font-bold text-indigo-400 mb-1">{s.value}</p>
+                <p className="text-slate-500 text-sm">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Por qué tu negocio necesita una página web */}
       <section className="py-20 bg-[#09090B]">
@@ -252,19 +285,43 @@ export default function PaginasWebPeruPage() {
                   <Link
                     key={i}
                     href={service.href}
-                    className="flex items-center justify-between p-4 bg-white/[0.03] border border-white/[0.06] rounded-xl hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all duration-300 group"
+                    className="flex items-center p-4 bg-white/[0.03] border border-white/[0.06] rounded-xl hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all duration-300 group"
                   >
                     <span className="text-slate-300 group-hover:text-white transition-colors">
                       {service.name}
-                    </span>
-                    <span className="text-indigo-400 text-sm font-medium whitespace-nowrap ml-2">
-                      {service.price}
                     </span>
                   </Link>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
+      {/* Cobertura nacional */}
+      <section className="py-16 bg-[#09090B]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-white mb-4">
+            Atendemos Negocios en Todo el Perú
+          </h2>
+          <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+            Trabajamos de forma remota con clientes en las principales ciudades del país.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {peruCities.map((city, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400"
+              >
+                {city}
+              </span>
+            ))}
+            <span className="px-4 py-2 bg-white/[0.03] border border-indigo-500/20 rounded-full text-sm text-indigo-400">
+              + cualquier ciudad del Perú
+            </span>
+          </div>
         </div>
       </section>
 
@@ -295,7 +352,7 @@ export default function PaginasWebPeruPage() {
             "@type": "Service",
             name: "Diseño y Desarrollo de Páginas Web en Perú",
             description:
-              "Creamos páginas web profesionales para negocios en Perú. Especializados en 17+ industrias con optimización SEO incluida. Desde S/700.",
+              "Creamos páginas web profesionales para negocios en Perú desde S/699. Especializados en 17+ industrias con optimización SEO incluida. Atendemos Lima, Arequipa, Trujillo, Cusco y todo el país.",
             provider: {
               "@type": "LocalBusiness",
               name: "Web Para Tu Negocio",
@@ -307,7 +364,6 @@ export default function PaginasWebPeruPage() {
                 addressRegion: "Lima",
                 addressCountry: "PE",
               },
-              priceRange: "S/700 - S/12,000",
             },
             serviceType: "Diseño y Desarrollo Web",
             areaServed: {
@@ -316,10 +372,9 @@ export default function PaginasWebPeruPage() {
             },
             offers: {
               "@type": "AggregateOffer",
-              lowPrice: "700",
-              highPrice: "12000",
               priceCurrency: "PEN",
-              offerCount: "17",
+              lowPrice: "699",
+              offerCount: "3",
             },
           }),
         }}

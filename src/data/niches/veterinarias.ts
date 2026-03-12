@@ -6,7 +6,7 @@ export const veterinariasData: NicheData = {
   headline: "Clínica Veterinaria Digital: Más Clientes. Menos Llamadas. Más Ingresos.",
   subtitle: "Convierte tu clínica en un negocio digital que atrae 30-40 clientes nuevos cada mes automatizando reservas y mejorando tu visibilidad en Google.",
   metaTitle: "Páginas Web para Clínicas Veterinarias | Sistema de Citas Online",
-  metaDescription: "Desarrollamos páginas web profesionales para clínicas veterinarias. Sistema de citas online 24/7, gestión de pacientes y SEO local. Desde S/3,500.",
+  metaDescription: "Desarrollamos páginas web profesionales para clínicas veterinarias. Sistema de citas online 24/7, gestión de pacientes y SEO local.",
   category: "premium",
   problems: [
     {
@@ -68,10 +68,9 @@ export const veterinariasData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/3,500",
       description: "Ideal para clínicas pequeñas",
       features: [
         "Web de 5 páginas",
@@ -85,7 +84,6 @@ export const veterinariasData: NicheData = {
     },
     {
       name: "Profesional",
-      price: "S/5,000",
       description: "La opción más popular",
       features: [
         "Todo lo del plan Básico",
@@ -102,7 +100,6 @@ export const veterinariasData: NicheData = {
     },
     {
       name: "Premium",
-      price: "S/8,000",
       description: "Para clínicas en crecimiento",
       features: [
         "Todo lo del plan Profesional",
@@ -116,7 +113,6 @@ export const veterinariasData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/300/mes incluye hosting, actualizaciones y soporte técnico.",
   checklist: [
     "Diseño profesional y moderno",
     "Optimizado para móviles",
@@ -148,7 +144,7 @@ export const veterinariasData: NicheData = {
     },
     {
       question: "¿El precio incluye el dominio y hosting?",
-      answer: "El primer año de hosting está incluido. El dominio tiene un costo adicional de aproximadamente S/50-80/año.",
+      answer: "El primer año de hosting está incluido. El dominio tiene un costo adicional que varía según el proveedor.",
     },
   ],
   testimonials: [

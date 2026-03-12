@@ -151,8 +151,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/cuanto-cuesta-pagina-web" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
-                  Precios
+                  ¿Cuánto Cuesta?
                 </Link>
               </li>
             </ul>

@@ -6,7 +6,7 @@ export const limpiezaData: NicheData = {
   headline: "Tu Empresa de Limpieza Visible: Más Clientes. Más Contratos. Más Ingresos.",
   subtitle: "Deja de depender solo de tarjetas de presentación. Aparece en Google cuando buscan servicios de limpieza.",
   metaTitle: "Páginas Web para Empresas de Limpieza | Servicios Profesionales",
-  metaDescription: "Desarrollamos páginas web para servicios de limpieza y mantenimiento. Portafolio de trabajos, testimonios y WhatsApp directo. Desde S/800.",
+  metaDescription: "Desarrollamos páginas web para servicios de limpieza y mantenimiento. Portafolio de trabajos, testimonios y WhatsApp directo.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const limpiezaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/800",
       description: "Para emprendedores que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,13 +84,12 @@ export const limpiezaData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,000",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
         "Galería antes/después",
         "Testimonios de clientes",
-        "Precios referenciales",
+        "Servicios referenciales",
         "WhatsApp integrado",
         "SEO básico",
         "2 meses de soporte",
@@ -101,7 +99,6 @@ export const limpiezaData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,200",
       description: "Para empresas en crecimiento",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const limpiezaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional y limpio",
     "Lista de servicios detallada",

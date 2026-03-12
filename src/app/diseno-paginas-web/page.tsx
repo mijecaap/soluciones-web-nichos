@@ -1,19 +1,21 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { XCircle, CheckCircle } from "lucide-react";
+import { XCircle, CheckCircle, HeartPulse, Utensils, Scissors, Smile, Plane, ShoppingBag, Coffee, Laptop, Truck, Wrench } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import CTASection from "@/components/CTASection";
-import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import Breadcrumb from "@/components/Breadcrumb";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "Diseño de Páginas Web Profesional | Desarrollo Web a Medida",
+  title: "Diseño de Páginas Web en Perú | Profesional y a Medida desde S/699",
   description:
-    "Servicio profesional de diseño de páginas web en Perú. Diseños modernos, responsivos y optimizados para SEO. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más. Desde S/700.",
+    "Diseño de páginas web en Perú desde S/699. Diseños modernos, mobile-first y optimizados para Google. 17+ industrias especializadas: veterinarias, restaurantes, salones de belleza y más. Cotización gratis en 24h.",
   keywords: [
     "diseño de paginas web",
+    "diseño de paginas web peru",
     "diseño de pagina web",
     "diseño de páginas web",
     "diseño de páginas web profesionales",
@@ -23,7 +25,9 @@ export const metadata: Metadata = {
     "diseño de páginas web económicas",
     "diseño de páginas web precios",
     "empresa de diseño de páginas web",
+    "empresa de diseño de paginas web peru",
     "diseño web",
+    "diseño web peru",
     "diseño de tiendas virtuales",
     "posicionamiento web",
   ],
@@ -31,9 +35,9 @@ export const metadata: Metadata = {
     canonical: "https://webparatunegocio.pe/diseno-paginas-web",
   },
   openGraph: {
-    title: "Diseño de Páginas Web Profesional | Desde S/700",
+    title: "Diseño de Páginas Web en Perú | Profesional desde S/699",
     description:
-      "Diseño de páginas web moderno y profesional para negocios en Perú. 17+ industrias especializadas. SEO incluido.",
+      "Diseño de páginas web en Perú desde S/699. 17+ industrias especializadas, SEO incluido, mobile-first. Cotización gratis en 24h.",
     url: "https://webparatunegocio.pe/diseno-paginas-web",
     type: "website",
   },
@@ -76,7 +80,7 @@ const faqs = [
   {
     question: "¿Cuánto cuesta el diseño de una página web?",
     answer:
-      "El costo del diseño de páginas web varía según la complejidad: Páginas económicas desde S/700, páginas profesionales desde S/3,000, y proyectos avanzados desde S/5,000. Cada cotización es personalizada según las necesidades exactas de tu negocio.",
+      "El costo del diseño de páginas web varía según la complejidad y las necesidades de tu negocio. Cada cotización es personalizada: contáctanos para recibir una propuesta adaptada a tus objetivos sin compromiso.",
   },
   {
     question: "¿Qué incluye el servicio de diseño de páginas web?",
@@ -104,10 +108,51 @@ const faqs = [
       "Sí, incluimos un periodo de revisiones después de la entrega donde puedes solicitar ajustes. Además, con nuestro plan de mantenimiento puedes actualizar contenido y hacer cambios menores de forma continua.",
   },
   {
-    question: "¿Cómo es el proceso de diseño de páginas web?",
+    question: "¿Cuánto tiempo tarda el diseño de una página web?",
     answer:
-      "Nuestro proceso tiene 5 etapas: 1) Consulta inicial gratuita, 2) Propuesta y wireframes, 3) Diseño visual y aprobación, 4) Desarrollo y programación, 5) Pruebas, ajustes y lanzamiento. Te mantenemos informado en cada paso.",
+      "El plazo varía según la complejidad del proyecto. Un sitio web básico (Plan Esencial) se entrega en 1-2 semanas. Un proyecto más completo con sistema de reservas o tienda virtual (Plan Profesional o Avanzado) toma entre 3-6 semanas. Siempre acordamos el plazo exacto en la cotización.",
   },
+  {
+    question: "¿Diseñan páginas web para negocios pequeños en Perú?",
+    answer:
+      "Sí, nos especializamos en diseño de páginas web para pequeños y medianos negocios en Perú. Desde un emprendedor que necesita presencia online básica hasta una empresa establecida que quiere automatizar sus procesos. Tenemos planes desde S/699 adaptados a todo tipo de presupuesto.",
+  },
+  {
+    question: "¿Incluye el diseño web posicionamiento en Google (SEO)?",
+    answer:
+      "Sí, todos nuestros diseños incluyen SEO técnico y on-page: estructura de URLs optimizada, meta etiquetas, velocidad de carga, schema markup, sitemap XML y robots.txt. Esto sienta las bases para que tu página aparezca en Google. Para resultados más avanzados ofrecemos servicios de SEO adicionales.",
+  },
+];
+
+const stats = [
+  { value: "50+", label: "Proyectos entregados" },
+  { value: "17+", label: "Industrias especializadas" },
+  { value: "<2s", label: "Tiempo de carga" },
+  { value: "5★", label: "Satisfacción de clientes" },
+];
+
+const includesItems = [
+  { title: "Diseño UI/UX personalizado", desc: "Interfaz única para tu marca e industria, sin plantillas genéricas." },
+  { title: "SEO técnico incluido", desc: "Meta etiquetas, schema markup, sitemap XML y velocidad core web vitals." },
+  { title: "100% Mobile-First", desc: "Diseñado primero para celulares — donde está el 80% de tus clientes." },
+  { title: "WhatsApp integrado", desc: "Botón flotante y CTAs de WhatsApp para convertir visitas en consultas." },
+  { title: "Certificado SSL", desc: "Conexión segura HTTPS que Google exige y da confianza a tus clientes." },
+  { title: "Hosting en Vercel", desc: "Infraestructura global de alta disponibilidad incluida en todos los planes." },
+  { title: "Google Analytics", desc: "Seguimiento de visitas, fuentes de tráfico y comportamiento de usuarios." },
+  { title: "Capacitación incluida", desc: "Te enseñamos a gestionar tu contenido. No dependerás de nadie." },
+];
+
+const industries = [
+  { name: "Veterinarias", href: "/veterinarias", Icon: HeartPulse },
+  { name: "Restaurantes", href: "/restaurantes", Icon: Utensils },
+  { name: "Salones de Belleza", href: "/salones-belleza", Icon: Scissors },
+  { name: "Odontología", href: "/odontologia", Icon: Smile },
+  { name: "Agencias de Viajes", href: "/agencias-viajes", Icon: Plane },
+  { name: "Tiendas de Ropa", href: "/tiendas-ropa", Icon: ShoppingBag },
+  { name: "Cafeterías", href: "/cafeterias", Icon: Coffee },
+  { name: "Freelancers", href: "/freelancers", Icon: Laptop },
+  { name: "Transporte", href: "/transporte", Icon: Truck },
+  { name: "Reparaciones", href: "/reparaciones", Icon: Wrench },
 ];
 
 const processSteps = [
@@ -151,6 +196,20 @@ export default function DisenoPaginasWebPage() {
         secondaryCtaText="Ver Proceso de Diseño"
         secondaryCtaLink="#proceso"
       />
+
+      {/* Stats de autoridad */}
+      <section className="py-10 bg-[#09090B] border-y border-white/[0.06]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map((s, i) => (
+              <div key={i}>
+                <p className="text-3xl font-bold text-indigo-400 mb-1">{s.value}</p>
+                <p className="text-slate-500 text-sm">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Proceso de diseño */}
       <section id="proceso" className="py-20 bg-[#09090B]">
@@ -264,109 +323,62 @@ export default function DisenoPaginasWebPage() {
         </div>
       </section>
 
-      {/* Precios de diseño */}
+      {/* Qué incluye el diseño web */}
       <section className="py-20 bg-[#09090B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mb-4">
-              Precios de Diseño de Páginas Web
+            <p className="text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">Sin letra chica</p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white">
+              ¿Qué Incluye el Diseño de Tu Página Web?
             </h2>
-            <p className="text-slate-400 text-lg max-w-3xl mx-auto">
-              Transparencia total: conoce exactamente lo que incluye cada plan
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              Todo lo que necesitas para tener presencia profesional en internet, incluido desde el primer día.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Económico",
-                price: "S/700",
-                subtitle: "Para emprendedores",
-                features: [
-                  "Diseño web responsivo",
-                  "Hasta 5 secciones",
-                  "Formulario de contacto",
-                  "WhatsApp integrado",
-                  "SEO básico",
-                  "SSL incluido",
-                  "Entrega en 1-2 semanas",
-                ],
-                highlighted: false,
-              },
-              {
-                name: "Profesional",
-                price: "S/3,000",
-                subtitle: "Para negocios establecidos",
-                features: [
-                  "Diseño premium personalizado",
-                  "Secciones ilimitadas",
-                  "Sistema de reservas/citas",
-                  "Galería de servicios",
-                  "SEO avanzado",
-                  "Google Analytics",
-                  "Blog/Noticias",
-                  "Capacitación incluida",
-                  "Entrega en 3-4 semanas",
-                ],
-                highlighted: true,
-              },
-              {
-                name: "Avanzado",
-                price: "S/5,000+",
-                subtitle: "Para máximo crecimiento",
-                features: [
-                  "Todo lo del plan Profesional",
-                  "Dashboard administrativo",
-                  "Integraciones personalizadas",
-                  "Multi-idioma",
-                  "E-commerce básico",
-                  "Estrategia SEO personalizada",
-                  "Soporte prioritario",
-                  "Entrega en 4-6 semanas",
-                ],
-                highlighted: false,
-              },
-            ].map((plan, i) => (
-              <div
-                key={i}
-                className={`p-8 rounded-2xl border ${
-                  plan.highlighted
-                    ? "bg-gradient-to-b from-indigo-500/10 to-transparent border-indigo-500/30 shadow-[0_0_30px_rgba(99,102,241,0.1)]"
-                    : "bg-white/[0.03] border-white/[0.06]"
-                }`}
-              >
-                {plan.highlighted && (
-                  <div className="text-indigo-400 text-sm font-semibold mb-2">Más Popular</div>
-                )}
-                <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
-                <p className="text-slate-400 text-sm mb-4">{plan.subtitle}</p>
-                <div className="text-4xl font-bold text-white mb-6">
-                  {plan.price}
-                  <span className="text-lg text-slate-500 font-normal"> + IGV</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {includesItems.map((item, i) => (
+              <div key={i} className="p-5 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-indigo-500/20 transition-colors">
+                <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-3">
+                  <span className="text-indigo-400 text-sm font-bold">{String(i + 1).padStart(2, "0")}</span>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, fi) => (
-                    <li key={fi} className="flex items-start gap-2 text-slate-300 text-sm">
-                      <svg className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/contacto"
-                  className={`block text-center py-3 rounded-full font-medium transition-all duration-300 ${
-                    plan.highlighted
-                      ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]"
-                      : "border border-white/20 text-white hover:bg-white/[0.05]"
-                  }`}
-                >
-                  Solicitar Cotización
-                </Link>
+                <h3 className="text-white font-semibold mb-1 text-sm">{item.title}</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
+      {/* Diseño web por industria */}
+      <section className="py-20 bg-[#09090B]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">No somos genéricos</p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white">
+              Diseño Web Especializado por Industria en Perú
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              Cada industria tiene necesidades distintas. Tenemos diseños y funcionalidades pensadas específicamente para tu tipo de negocio.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            {industries.map((ind, i) => (
+              <Link
+                key={i}
+                href={ind.href}
+                className="group flex flex-col items-center gap-2 p-4 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all text-center"
+              >
+                <ind.Icon className="w-6 h-6 text-indigo-400" />
+                <span className="text-slate-300 text-sm font-medium group-hover:text-white transition-colors leading-tight">{ind.name}</span>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-8">
+            ¿Tu industria no está en la lista?{" "}
+            <Link href="/contacto" className="text-indigo-400 hover:underline">Contáctanos</Link> — trabajamos con cualquier tipo de negocio en Perú.
+          </p>
         </div>
       </section>
 
@@ -393,20 +405,27 @@ export default function DisenoPaginasWebPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Diseño de Páginas Web Profesional",
-            description: "Servicio de diseño y desarrollo de páginas web profesionales para negocios en Perú.",
+            name: "Diseño de Páginas Web en Perú",
+            description: "Servicio de diseño y desarrollo de páginas web profesionales para negocios en Perú. Diseños modernos, mobile-first y optimizados para SEO desde S/699.",
             provider: {
-              "@type": "Organization",
+              "@type": "LocalBusiness",
               name: "Web Para Tu Negocio",
               url: "https://webparatunegocio.pe",
+              telephone: formatPhoneSchema(whatsappNumber),
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Lima",
+                addressRegion: "Lima",
+                addressCountry: "PE",
+              },
             },
             serviceType: "Diseño Web",
             areaServed: { "@type": "Country", name: "Perú" },
             offers: {
               "@type": "AggregateOffer",
-              lowPrice: "700",
-              highPrice: "12000",
               priceCurrency: "PEN",
+              lowPrice: "699",
+              offerCount: "3",
             },
           }),
         }}

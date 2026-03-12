@@ -6,7 +6,7 @@ export const instructoresData: NicheData = {
   headline: "Tu Marca Personal Online: Más Alumnos. Más Credibilidad. Más Ingresos.",
   subtitle: "Deja de competir solo en redes sociales. Crea tu sitio profesional y atrae alumnos que buscan entrenadores en Google.",
   metaTitle: "Páginas Web para Instructores y Coaches | Portafolio Profesional",
-  metaDescription: "Desarrollamos páginas web para instructores, coaches y entrenadores personales. Bio profesional, servicios y testimonios. Desde S/800.",
+  metaDescription: "Desarrollamos páginas web para instructores, coaches y entrenadores personales. Bio profesional, servicios y testimonios.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const instructoresData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2-3 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/800",
       description: "Para instructores que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,13 +84,12 @@ export const instructoresData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,000",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
         "Galería de resultados",
         "Testimonios de alumnos",
-        "Precios de servicios",
+        "Servicios destacados",
         "WhatsApp integrado",
         "SEO básico",
         "2 meses de soporte",
@@ -101,7 +99,6 @@ export const instructoresData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,200",
       description: "Para coaches establecidos",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const instructoresData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional y motivador",
     "Bio completa con foto",

@@ -3,11 +3,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { trackPricingClick } from "@/lib/analytics";
 
-interface PricingTier {
+interface PlanTier {
   name: string;
-  price: string;
   description: string;
   features: string[];
   highlighted?: boolean;
@@ -16,19 +14,17 @@ interface PricingTier {
   ctaLink?: string;
 }
 
-interface PricingCardsProps {
+interface PlanCardsProps {
   title?: string;
   subtitle?: string;
-  tiers: PricingTier[];
-  maintenanceNote?: string;
+  tiers: PlanTier[];
 }
 
-export default function PricingCards({
+export default function PlanCards({
   title = "Elige Tu Plan",
-  subtitle = "Inversión que se paga sola en semanas",
+  subtitle = "Selecciona la opción que mejor se adapte a tu negocio",
   tiers,
-  maintenanceNote,
-}: PricingCardsProps) {
+}: PlanCardsProps) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -82,19 +78,10 @@ export default function PricingCards({
               )}
 
               <div className="text-center mb-6">
-                <h3 className="font-[family-name:var(--font-display)] text-xl font-bold mb-2 text-white">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-bold mb-2 text-white">
                   {tier.name}
                 </h3>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span
-                    className={`text-4xl font-bold ${
-                      tier.highlighted ? "text-gradient-primary" : "text-white"
-                    }`}
-                  >
-                    {tier.price}
-                  </span>
-                </div>
-                <p className="mt-2 text-sm text-slate-500">
+                <p className="text-sm text-slate-400">
                   {tier.description}
                 </p>
               </div>
@@ -122,12 +109,6 @@ export default function PricingCards({
 
               <Link
                 href={tier.ctaLink || "/contacto"}
-                onClick={() =>
-                  trackPricingClick({
-                    planName: tier.name,
-                    isHighlighted: tier.highlighted || false,
-                  })
-                }
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all ${
                   tier.highlighted
                     ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]"
@@ -139,17 +120,6 @@ export default function PricingCards({
             </motion.div>
           ))}
         </div>
-
-        {maintenanceNote && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-center text-slate-500 mt-8"
-          >
-            {maintenanceNote}
-          </motion.p>
-        )}
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export const agenciasViajesData: NicheData = {
   headline: "Agencia de Viajes Digital: Vende Más Tours. Reservas Automáticas. Alcanza el Mundo.",
   subtitle: "Llega a turistas que buscan en línea, automatiza reservas de tours y crea un negocio que vende sin que estés.",
   metaTitle: "Páginas Web para Agencias de Viajes | Sistema de Reservas de Tours",
-  metaDescription: "Desarrollamos páginas web para agencias de viajes. Catálogo de tours, reservas online y pagos internacionales. Desde S/5,500.",
+  metaDescription: "Desarrollamos páginas web para agencias de viajes. Catálogo de tours, reservas online y pagos internacionales.",
   category: "premium",
   problems: [
     {
@@ -77,10 +77,9 @@ export const agenciasViajesData: NicheData = {
     },
     roi: "Recuperas tu inversión en 1 mes",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/5,500",
       description: "Para agencias que inician",
       features: [
         "Web de 8 páginas",
@@ -95,7 +94,6 @@ export const agenciasViajesData: NicheData = {
     },
     {
       name: "Profesional",
-      price: "S/8,000",
       description: "Para agencias en crecimiento",
       features: [
         "Todo lo del plan Básico",
@@ -112,7 +110,6 @@ export const agenciasViajesData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/12,000",
       description: "Para agencias establecidas",
       features: [
         "Todo lo del plan Profesional",
@@ -128,7 +125,6 @@ export const agenciasViajesData: NicheData = {
       badge: "Recomendado",
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/600/mes incluye hosting, actualizaciones y soporte técnico.",
   checklist: [
     "Catálogo de tours con itinerarios",
     "Galería de fotos por destino",
