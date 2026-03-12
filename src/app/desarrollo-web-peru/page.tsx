@@ -9,29 +9,29 @@ import Breadcrumb from "@/components/Breadcrumb";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "Desarrollo Web en Perú | Desarrolladores Web Profesionales",
+  title: "Desarrollo Web en Perú | Next.js, React y SEO Incluido desde S/699",
   description:
-    "Servicio de desarrollo web profesional en Perú. Desarrolladores especializados en Next.js, React y tecnologías modernas. Páginas web rápidas, seguras y optimizadas para SEO. 17+ industrias.",
+    "Desarrollo web profesional en Perú con Next.js y React. Sistemas de reservas, tiendas online, PWA e integraciones a medida. Carga en menos de 2s, Core Web Vitals perfectos. 17+ industrias. Cotización gratis en 24h.",
   keywords: [
     "desarrollo web peru",
     "desarrolladores de paginas web",
-    "desarrollador web freelance",
+    "desarrollador web peru",
+    "desarrollo web profesional peru",
+    "desarrollo web nextjs peru",
     "desarrollo y diseño de páginas web",
     "diseño y desarrollo de páginas web",
-    "desarrollo web profesional",
     "empresas de desarrollo web peru",
     "agencia de desarrollo web lima",
-    "agencia digital",
-    "agencia digital peru",
     "tienda virtual peru",
-    "diseño de tiendas virtuales",
+    "sistema de reservas online peru",
+    "desarrollo web personalizdo peru",
   ],
   alternates: {
     canonical: "https://webparatunegocio.pe/desarrollo-web-peru",
   },
   openGraph: {
-    title: "Desarrollo Web en Perú | Desarrolladores Web Profesionales",
-    description: "Desarrolladores web profesionales en Perú. Next.js, React y tecnologías modernas. 17+ industrias especializadas.",
+    title: "Desarrollo Web en Perú | Next.js + SEO desde S/699",
+    description: "Desarrollo web con Next.js y React para negocios en Perú. Sistemas de reservas, e-commerce y PWA. Carga < 2s. Cotización gratis.",
     url: "https://webparatunegocio.pe/desarrollo-web-peru",
     type: "website",
   },
@@ -79,7 +79,12 @@ const faqs = [
   {
     question: "¿Cuánto cuesta el desarrollo web en Perú?",
     answer:
-      "El desarrollo web profesional en Perú varía según la complejidad y funcionalidades requeridas. El costo depende del tipo de negocio y las necesidades específicas. Contáctanos para una cotización gratuita.",
+      "El desarrollo web profesional en Perú parte desde S/699 el Plan Esencial. Para proyectos con sistemas de reservas o integraciones avanzadas (Plan Profesional), el precio parte desde S/1,500. E-commerce y paneles administrativos (Plan Avanzado) desde S/2,800. Siempre cotizamos gratis según tus necesidades exactas.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre diseño web y desarrollo web?",
+    answer:
+      "El diseño web se enfoca en la apariencia visual: la interfaz, los colores, tipografías y cómo luce tu sitio. El desarrollo web es la parte técnica: el código que hace que tu sitio funcione, los sistemas de reservas, la base de datos, las integraciones con apps externas y la lógica del negocio. Nosotros hacemos ambas cosas de forma integrada.",
   },
   {
     question: "¿Pueden integrar sistemas de pago o reservas?",
@@ -132,6 +137,64 @@ export default function DesarrolloWebPeruPage() {
         secondaryCtaText="Ver Tecnologías"
         secondaryCtaLink="#tecnologias"
       />
+
+      {/* Diferenciación: Diseño vs Desarrollo */}
+      <section className="py-20 bg-[#09090B] border-b border-white/[0.06]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">Resuelve tu duda</p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white">
+              ¿Diseño Web o Desarrollo Web? ¿Cuál Necesito?
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              Son conceptos relacionados pero distintos. Esto te ayuda a entender qué aplica a tu negocio.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-7 bg-white/[0.03] border border-indigo-500/20 rounded-2xl">
+              <h3 className="text-xl font-semibold text-indigo-400 mb-5">Necesitas Diseño Web si...</h3>
+              <ul className="space-y-3 text-slate-300 text-sm">
+                {[
+                  "Quieres presencia online profesional para tu negocio",
+                  "Necesitas mostrar tus servicios, precios o menú",
+                  "Quieres que los clientes te contacten por WhatsApp",
+                  "Necesitas una galería de trabajos o productos",
+                  "Quieres aparecer en Google con tu marca",
+                  "Buscas credibilidad ante nuevos clientes",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-indigo-400 mt-0.5">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/diseno-paginas-web" className="mt-6 inline-flex items-center gap-2 text-indigo-400 text-sm hover:underline">
+                Ver Diseño de Páginas Web →
+              </Link>
+            </div>
+            <div className="p-7 bg-white/[0.03] border border-violet-500/20 rounded-2xl">
+              <h3 className="text-xl font-semibold text-violet-400 mb-5">Necesitas Desarrollo Web si...</h3>
+              <ul className="space-y-3 text-slate-300 text-sm">
+                {[
+                  "Quieres un sistema de reservas o citas online",
+                  "Necesitas una tienda virtual con carrito y pagos",
+                  "Requieres un panel para gestionar tu negocio",
+                  "Quieres integrar pagos (Niubiz, MercadoPago)",
+                  "Necesitas automatizaciones o flujos personalizados",
+                  "Tu negocio requiere una app web a medida",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-violet-400 mt-0.5">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-slate-500 text-sm">Esta es la página correcta para ti. Continúa leyendo.</p>
+            </div>
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-8">
+            ¿No estás seguro? <Link href="/contacto" className="text-indigo-400 hover:underline">Contáctanos</Link> — en 10 minutos te decimos qué plan se adapta a tu negocio.
+          </p>
+        </div>
+      </section>
 
       {/* Nuestro Stack Tecnológico */}
       <section id="tecnologias" className="py-20 bg-[#09090B]">

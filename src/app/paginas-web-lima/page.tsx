@@ -10,9 +10,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "Diseño de Páginas Web en Lima | Desarrollo Web Profesional",
+  title: "Diseño de Páginas Web en Lima 2026 | Desde S/699 | Web Para Tu Negocio",
   description:
-    "Diseño y desarrollo de páginas web profesionales en Lima, Perú. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más. Optimización SEO y Core Web Vitals.",
+    "Diseño de páginas web en Lima desde S/699. Especializados en negocios limeños: veterinarias, restaurantes, salones de belleza y más. SEO local, mobile-first. Atendemos los 43 distritos. Cotización gratis en 24h.",
   keywords: [
     "paginas web lima",
     "pagina web lima",
@@ -25,14 +25,18 @@ export const metadata: Metadata = {
     "diseño paginas web lima",
     "agencia de diseño web en lima",
     "empresa de diseño web en lima",
+    "crear pagina web lima",
+    "hacer pagina web lima",
+    "web para negocio lima",
+    "pagina web para empresa lima",
   ],
   alternates: {
     canonical: "https://webparatunegocio.pe/paginas-web-lima",
   },
   openGraph: {
-    title: "Diseño de Páginas Web en Lima",
+    title: "Diseño de Páginas Web en Lima | Desde S/699",
     description:
-      "Desarrollo de páginas web profesionales en Lima. 17+ industrias especializadas. SEO optimizado. Cotización gratis.",
+      "Páginas web profesionales para negocios en Lima desde S/699. SEO local, mobile-first, 43 distritos. Cotización gratis en 24h.",
     url: "https://webparatunegocio.pe/paginas-web-lima",
     type: "website",
   },
@@ -75,7 +79,17 @@ const faqs = [
   {
     question: "¿Cuánto cuesta diseñar una página web en Lima?",
     answer:
-      "El costo de diseño web en Lima varía según las necesidades de tu proyecto. Incluimos diseño responsivo, SEO básico y hosting. Contáctanos para una cotización gratuita y personalizada.",
+      "El precio de una página web en Lima depende de la complejidad. El Plan Esencial parte desde S/699 e incluye diseño responsivo, WhatsApp, SSL y hosting. El Plan Profesional (desde S/1,500) agrega reservas online y SEO avanzado. Contáctanos para una cotización gratis y personalizada.",
+  },
+  {
+    question: "¿Por qué es importante tener una página web si mi negocio está en Lima?",
+    answer:
+      "Lima concentra más del 30% de las búsquedas de negocios locales en Google Perú. Con más de 10 millones de habitantes, miles de personas buscan a diario servicios como el tuyo en Google. Sin página web, toda esa demanda va a tu competencia. Una web profesional bien posicionada puede triplicar tus consultas.",
+  },
+  {
+    question: "¿Ofrecen SEO local para Lima?",
+    answer:
+      "Sí. Incluimos optimización SEO local: Google Business Profile, schema de LocalBusiness, palabras clave por distrito, optimización para búsquedas '[servicio] cerca de mí' y señales de autoridad local. Esto es esencial para aparecer en Google Maps y en las búsquedas locales de Lima.",
   },
   {
     question: "¿Cuánto tiempo tarda el diseño de una página web en Lima?",
@@ -130,6 +144,25 @@ export default function PaginasWebLimaPage() {
         secondaryCtaText="Ver Nuestros Servicios"
         secondaryCtaLink="#servicios-lima"
       />
+
+      {/* Stats Lima */}
+      <section className="py-10 bg-[#09090B] border-y border-white/[0.06]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "+10M", label: "habitantes en Lima" },
+              { value: "30%", label: "búsquedas locales en Lima" },
+              { value: "78%", label: "limeños buscan en móvil" },
+              { value: "43", label: "distritos que atendemos" },
+            ].map((s, i) => (
+              <div key={i}>
+                <p className="text-3xl font-bold text-indigo-400 mb-1">{s.value}</p>
+                <p className="text-slate-500 text-sm">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Ventajas de tener una web en Lima */}
       <section className="py-20 bg-[#09090B]">
