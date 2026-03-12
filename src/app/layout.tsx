@@ -35,11 +35,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://webparatunegocio.pe"),
   title: {
-    default: "Diseño de Páginas Web en Lima y Perú | Desde S/700 | Web Para Tu Negocio",
+    default: "Diseño de Páginas Web en Lima y Perú | Web Para Tu Negocio",
     template: "%s | Web Para Tu Negocio",
   },
   description:
-    "Diseño y desarrollo de páginas web profesionales en Lima, Perú. Especializados en veterinarias, restaurantes, salones de belleza, consultorios dentales y más. Optimizadas para Google y conversión. Desde S/700. ¡Cotización gratis!",
+    "Diseño y desarrollo de páginas web profesionales en Lima, Perú. Especializados en veterinarias, restaurantes, salones de belleza, consultorios dentales y más. Optimizadas para Google y conversión. ¡Cotización gratis!",
   keywords: [
     "páginas web peru",
     "paginas web en peru",
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: "https://webparatunegocio.pe",
     siteName: "Web Para Tu Negocio",
-    title: "Diseño de Páginas Web Profesionales en Lima y Perú | Desde S/700",
+    title: "Diseño de Páginas Web Profesionales en Lima y Perú",
     description:
-      "Creamos páginas web profesionales para negocios en Perú. Especializados en 17+ industrias. Optimizadas para Google. Desde S/700. ¡Cotización gratis!",
+      "Creamos páginas web profesionales para negocios en Perú. Especializados en 17+ industrias. Optimizadas para Google. ¡Cotización gratis!",
     images: [
       {
         url: "/og-image.jpg",
@@ -96,9 +96,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diseño de Páginas Web en Lima y Perú | Desde S/700",
+    title: "Diseño de Páginas Web en Lima y Perú",
     description:
-      "Páginas web profesionales para negocios locales. 17+ nichos especializados. Desde S/700.",
+      "Páginas web profesionales para negocios locales. 17+ nichos especializados.",
     images: ["/og-image.jpg"],
     creator: "@webparatunegocio",
   },

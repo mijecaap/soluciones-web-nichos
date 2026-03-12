@@ -6,7 +6,7 @@ export const transporteData: NicheData = {
   headline: "Tu Servicio de Transporte en Google: Más Llamadas. Más Viajes. Más Ingresos.",
   subtitle: "Deja de depender solo de recomendaciones. Aparece cuando buscan taxi, transporte o remis en tu zona.",
   metaTitle: "Páginas Web para Servicios de Transporte | Taxi y Remis Online",
-  metaDescription: "Desarrollamos páginas web económicas para servicios de transporte, taxi y remis. Contacto directo, zonas de servicio y WhatsApp. Desde S/700.",
+  metaDescription: "Desarrollamos páginas web económicas para servicios de transporte, taxi y remis. Contacto directo, zonas de servicio y WhatsApp.",
   category: "economico",
   problems: [
     {
@@ -66,10 +66,9 @@ export const transporteData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/700",
       description: "Para transportistas independientes",
       features: [
         "Dominio 1 año incluido",
@@ -84,13 +83,12 @@ export const transporteData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/850",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
         "Galería de vehículos",
         "Zonas de servicio con mapa",
-        "Tarifas referenciales",
+        "Servicios referenciales",
         "Formulario de reserva",
         "SEO básico",
         "2 meses de soporte",
@@ -100,7 +98,6 @@ export const transporteData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,000",
       description: "Para flotas pequeñas",
       features: [
         "Todo lo del plan Estándar",
@@ -113,7 +110,6 @@ export const transporteData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/80/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional y limpio",
     "Teléfono y WhatsApp visibles",

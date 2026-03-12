@@ -11,7 +11,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 export const metadata: Metadata = {
   title: "Diseño de Páginas Web Profesional | Desarrollo Web a Medida",
   description:
-    "Servicio profesional de diseño de páginas web en Perú. Diseños modernos, responsivos y optimizados para SEO. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más. Desde S/700.",
+    "Servicio profesional de diseño de páginas web en Perú. Diseños modernos, responsivos y optimizados para SEO. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más.",
   keywords: [
     "diseño de paginas web",
     "diseño de pagina web",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     canonical: "https://webparatunegocio.pe/diseno-paginas-web",
   },
   openGraph: {
-    title: "Diseño de Páginas Web Profesional | Desde S/700",
+    title: "Diseño de Páginas Web Profesional",
     description:
       "Diseño de páginas web moderno y profesional para negocios en Perú. 17+ industrias especializadas. SEO incluido.",
     url: "https://webparatunegocio.pe/diseno-paginas-web",
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: "¿Cuánto cuesta el diseño de una página web?",
     answer:
-      "El costo del diseño de páginas web varía según la complejidad: Páginas económicas desde S/700, páginas profesionales desde S/3,000, y proyectos avanzados desde S/5,000. Cada cotización es personalizada según las necesidades exactas de tu negocio.",
+      "El costo del diseño de páginas web varía según la complejidad y las necesidades de tu negocio. Cada cotización es personalizada: contáctanos para recibir una propuesta adaptada a tus objetivos sin compromiso.",
   },
   {
     question: "¿Qué incluye el servicio de diseño de páginas web?",
@@ -264,114 +264,6 @@ export default function DisenoPaginasWebPage() {
         </div>
       </section>
 
-      {/* Precios de diseño */}
-      <section className="py-20 bg-[#09090B]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mb-4">
-              Precios de Diseño de Páginas Web
-            </h2>
-            <p className="text-slate-400 text-lg max-w-3xl mx-auto">
-              Transparencia total: conoce exactamente lo que incluye cada plan
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Económico",
-                price: "S/700",
-                subtitle: "Para emprendedores",
-                features: [
-                  "Diseño web responsivo",
-                  "Hasta 5 secciones",
-                  "Formulario de contacto",
-                  "WhatsApp integrado",
-                  "SEO básico",
-                  "SSL incluido",
-                  "Entrega en 1-2 semanas",
-                ],
-                highlighted: false,
-              },
-              {
-                name: "Profesional",
-                price: "S/3,000",
-                subtitle: "Para negocios establecidos",
-                features: [
-                  "Diseño premium personalizado",
-                  "Secciones ilimitadas",
-                  "Sistema de reservas/citas",
-                  "Galería de servicios",
-                  "SEO avanzado",
-                  "Google Analytics",
-                  "Blog/Noticias",
-                  "Capacitación incluida",
-                  "Entrega en 3-4 semanas",
-                ],
-                highlighted: true,
-              },
-              {
-                name: "Avanzado",
-                price: "S/5,000+",
-                subtitle: "Para máximo crecimiento",
-                features: [
-                  "Todo lo del plan Profesional",
-                  "Dashboard administrativo",
-                  "Integraciones personalizadas",
-                  "Multi-idioma",
-                  "E-commerce básico",
-                  "Estrategia SEO personalizada",
-                  "Soporte prioritario",
-                  "Entrega en 4-6 semanas",
-                ],
-                highlighted: false,
-              },
-            ].map((plan, i) => (
-              <div
-                key={i}
-                className={`p-8 rounded-2xl border ${
-                  plan.highlighted
-                    ? "bg-gradient-to-b from-indigo-500/10 to-transparent border-indigo-500/30 shadow-[0_0_30px_rgba(99,102,241,0.1)]"
-                    : "bg-white/[0.03] border-white/[0.06]"
-                }`}
-              >
-                {plan.highlighted && (
-                  <div className="text-indigo-400 text-sm font-semibold mb-2">Más Popular</div>
-                )}
-                <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
-                <p className="text-slate-400 text-sm mb-4">{plan.subtitle}</p>
-                <div className="text-4xl font-bold text-white mb-6">
-                  {plan.price}
-                  <span className="text-lg text-slate-500 font-normal"> + IGV</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, fi) => (
-                    <li key={fi} className="flex items-start gap-2 text-slate-300 text-sm">
-                      <svg className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/contacto"
-                  className={`block text-center py-3 rounded-full font-medium transition-all duration-300 ${
-                    plan.highlighted
-                      ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]"
-                      : "border border-white/20 text-white hover:bg-white/[0.05]"
-                  }`}
-                >
-                  Solicitar Cotización
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-
       <TestimonialCarousel testimonials={testimonials} />
 
       <FAQAccordion
@@ -402,12 +294,6 @@ export default function DisenoPaginasWebPage() {
             },
             serviceType: "Diseño Web",
             areaServed: { "@type": "Country", name: "Perú" },
-            offers: {
-              "@type": "AggregateOffer",
-              lowPrice: "700",
-              highPrice: "12000",
-              priceCurrency: "PEN",
-            },
           }),
         }}
       />

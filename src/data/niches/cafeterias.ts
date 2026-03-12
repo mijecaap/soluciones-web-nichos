@@ -6,7 +6,7 @@ export const cafeteriasData: NicheData = {
   headline: "Tu Cafetería Online: Menú Digital. Más Pedidos. Delivery Incluido.",
   subtitle: "Deja de perder clientes por no tener menú online. Muestra tus productos y recibe pedidos por WhatsApp.",
   metaTitle: "Páginas Web para Cafeterías | Menú Digital y Pedidos Online",
-  metaDescription: "Desarrollamos páginas web para cafeterías y comidas rápidas. Menú digital con fotos, ubicación y pedidos por WhatsApp. Desde S/1,000.",
+  metaDescription: "Desarrollamos páginas web para cafeterías y comidas rápidas. Menú digital con fotos, ubicación y pedidos por WhatsApp.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const cafeteriasData: NicheData = {
     },
     roi: "Recuperas tu inversión en 3 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/1,000",
       description: "Para cafeterías pequeñas",
       features: [
         "Dominio 1 año incluido",
@@ -85,7 +84,6 @@ export const cafeteriasData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,250",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const cafeteriasData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,500",
       description: "Para negocios en crecimiento",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const cafeteriasData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/120/mes incluye hosting, actualizaciones de menú y soporte.",
   checklist: [
     "Diseño atractivo y apetitoso",
     "Menú digital organizado",

@@ -4,8 +4,8 @@ import HeroSection from "@/components/HeroSection";
 import ProblemCards from "@/components/ProblemCards";
 import SolutionCards from "@/components/SolutionCards";
 import TransformationChart from "@/components/TransformationChart";
+import PlanCards from "@/components/PlanCards";
 import Checklist from "@/components/Checklist";
-import PricingCards from "@/components/PricingCards";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -65,8 +65,8 @@ export default function NichePage({ nicheData }: NichePageProps) {
         subtitle={nicheData.subtitle}
         ctaText="Solicitar Cotización"
         ctaLink="/contacto"
-        secondaryCtaText="Ver Precios"
-        secondaryCtaLink="#precios"
+        secondaryCtaText="Ver Planes"
+        secondaryCtaLink="#planes"
         backgroundGradient={nicheData.gradientColors}
       />
 
@@ -96,6 +96,16 @@ export default function NichePage({ nicheData }: NichePageProps) {
 
       <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
+      <div id="planes">
+        <PlanCards
+          title="Elige Tu Plan"
+          subtitle="Selecciona la opción que mejor se adapte a tu negocio"
+          tiers={nicheData.plans}
+        />
+      </div>
+
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
       <Checklist
         title="Lo Que Incluye Tu Paquete"
         subtitle="Todo esto viene incluido con tu nueva web"
@@ -103,15 +113,6 @@ export default function NichePage({ nicheData }: NichePageProps) {
       />
 
       <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-
-      <div id="precios">
-        <PricingCards
-          title="Elige Tu Plan"
-          subtitle="Inversión que se paga sola en semanas"
-          tiers={nicheData.pricing}
-          maintenanceNote={nicheData.maintenanceNote}
-        />
-      </div>
 
       <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -168,12 +169,6 @@ export default function NichePage({ nicheData }: NichePageProps) {
             >
               Desarrollo Web
             </Link>
-            <Link
-              href="/cuanto-cuesta-pagina-web"
-              className="px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-slate-400 hover:text-white hover:border-indigo-500/20 transition-all duration-300"
-            >
-              Precios de Páginas Web
-            </Link>
           </div>
         </div>
       </section>
@@ -197,13 +192,6 @@ export default function NichePage({ nicheData }: NichePageProps) {
               "@type": "Country",
               name: "Perú",
             },
-            offers: nicheData.pricing.map((tier) => ({
-              "@type": "Offer",
-              name: tier.name,
-              price: tier.price.replace("S/", "").replace(",", ""),
-              priceCurrency: "PEN",
-              description: tier.description,
-            })),
           }),
         }}
       />

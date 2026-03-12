@@ -91,31 +91,10 @@ export function trackNichePageView(niche: string, isPremium: boolean) {
 export function trackNicheCardClick(data: {
   niche: string;
   isPremium: boolean;
-  priceRange: string;
 }) {
   track('niche_card_click', {
     niche: data.niche,
     is_premium: data.isPremium,
-    price_range: data.priceRange,
-  });
-}
-
-// ==========================================
-// EVENTOS DE PRECIOS
-// ==========================================
-
-/**
- * Se dispara cuando el usuario hace clic en un plan de precios
- */
-export function trackPricingClick(data: {
-  planName: string;
-  isHighlighted: boolean;
-  niche?: string;
-}) {
-  track('pricing_click', {
-    plan_name: data.planName,
-    is_highlighted: data.isHighlighted,
-    niche: data.niche || 'general',
   });
 }
 

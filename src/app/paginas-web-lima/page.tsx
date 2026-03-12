@@ -11,7 +11,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 export const metadata: Metadata = {
   title: "Diseño de Páginas Web en Lima | Desarrollo Web Profesional",
   description:
-    "Diseño y desarrollo de páginas web profesionales en Lima, Perú. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más. Optimización SEO y Core Web Vitals. Desde S/700.",
+    "Diseño y desarrollo de páginas web profesionales en Lima, Perú. Especializados en negocios locales: veterinarias, restaurantes, salones de belleza y más. Optimización SEO y Core Web Vitals.",
   keywords: [
     "paginas web lima",
     "pagina web lima",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: "https://webparatunegocio.pe/paginas-web-lima",
   },
   openGraph: {
-    title: "Diseño de Páginas Web en Lima | Desde S/700",
+    title: "Diseño de Páginas Web en Lima",
     description:
       "Desarrollo de páginas web profesionales en Lima. 17+ industrias especializadas. SEO optimizado. Cotización gratis.",
     url: "https://webparatunegocio.pe/paginas-web-lima",
@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "¿Cuánto cuesta diseñar una página web en Lima?",
     answer:
-      "El costo de diseño web en Lima varía según las necesidades: páginas económicas desde S/700, páginas profesionales desde S/3,000 y sistemas avanzados desde S/5,000. Incluimos diseño responsivo, SEO básico y hosting.",
+      "El costo de diseño web en Lima varía según las necesidades de tu proyecto. Incluimos diseño responsivo, SEO básico y hosting. Contáctanos para una cotización gratuita y personalizada.",
   },
   {
     question: "¿Cuánto tiempo tarda el diseño de una página web en Lima?",
@@ -94,7 +94,7 @@ const faqs = [
   {
     question: "¿Por qué elegirlos en vez de una agencia de diseño web tradicional en Lima?",
     answer:
-      "Nos diferenciamos por: 1) Especialización en nichos específicos (veterinarias, restaurantes, etc.), 2) Tecnología moderna (Next.js vs WordPress), 3) Velocidad de carga superior (Core Web Vitals perfectos), 4) Precios transparentes sin costos ocultos.",
+      "Nos diferenciamos por: 1) Especialización en nichos específicos (veterinarias, restaurantes, etc.), 2) Tecnología moderna (Next.js vs WordPress), 3) Velocidad de carga superior (Core Web Vitals perfectos), 4) Propuestas claras sin costos ocultos.",
   },
   {
     question: "¿La página web se verá bien en celulares?",
@@ -306,7 +306,6 @@ export default function PaginasWebLimaPage() {
                 name: "Perú",
               },
             },
-            priceRange: "S/700 - S/12,000",
             serviceType: "Diseño y Desarrollo de Páginas Web",
           }),
         }}

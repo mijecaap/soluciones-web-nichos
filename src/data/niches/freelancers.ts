@@ -6,7 +6,7 @@ export const freelancersData: NicheData = {
   headline: "Tu Portafolio Profesional: Más Clientes. Más Credibilidad. Mejores Proyectos.",
   subtitle: "Deja de depender solo de LinkedIn. Crea tu sitio profesional y atrae clientes que buscan consultores expertos.",
   metaTitle: "Páginas Web para Freelancers | Portafolio Profesional Online",
-  metaDescription: "Desarrollamos páginas web para freelancers y consultores independientes. Portafolio, casos de éxito y CV descargable. Desde S/800.",
+  metaDescription: "Desarrollamos páginas web para freelancers y consultores independientes. Portafolio, casos de éxito y CV descargable.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const freelancersData: NicheData = {
     },
     roi: "Recuperas tu inversión en 3 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/800",
       description: "Para freelancers que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,7 +84,6 @@ export const freelancersData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,000",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const freelancersData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,200",
       description: "Para consultores establecidos",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const freelancersData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional ejecutivo",
     "Bio completa con foto",

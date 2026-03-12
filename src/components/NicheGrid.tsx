@@ -10,7 +10,6 @@ interface Niche {
   description: string;
   href: string;
   icon: string;
-  priceRange: string;
   color: string;
 }
 
@@ -103,7 +102,6 @@ const premiumNiches: Niche[] = [
     description: "Sistema de citas online, gesti\u00f3n de pacientes y visibilidad en Google.",
     href: "/veterinarias",
     icon: "veterinary",
-    priceRange: "S/3,500 - S/8,000",
     color: "from-emerald-500 to-teal-600",
   },
   {
@@ -111,7 +109,7 @@ const premiumNiches: Niche[] = [
     description: "Reservas autom\u00e1ticas, galer\u00eda de trabajos y programa de fidelizaci\u00f3n.",
     href: "/salones-belleza",
     icon: "salon",
-    priceRange: "S/3,000 - S/7,000",
+
     color: "from-pink-500 to-rose-600",
   },
   {
@@ -119,7 +117,7 @@ const premiumNiches: Niche[] = [
     description: "Men\u00fa digital, sistema de reservas y pedidos online con pasarela de pago.",
     href: "/restaurantes",
     icon: "restaurant",
-    priceRange: "S/4,000 - S/9,500",
+
     color: "from-orange-500 to-red-600",
   },
   {
@@ -127,7 +125,7 @@ const premiumNiches: Niche[] = [
     description: "Presencia profesional, citas online y contenido educativo para pacientes.",
     href: "/odontologia",
     icon: "dental",
-    priceRange: "S/5,000 - S/12,000",
+
     color: "from-cyan-500 to-blue-600",
   },
   {
@@ -135,7 +133,7 @@ const premiumNiches: Niche[] = [
     description: "Cat\u00e1logo de tours, reservas multiidioma y pagos internacionales.",
     href: "/agencias-viajes",
     icon: "travel",
-    priceRange: "S/5,500 - S/12,000",
+
     color: "from-violet-500 to-purple-600",
   },
 ];
@@ -146,7 +144,7 @@ const economicNiches: Niche[] = [
     description: "Cat\u00e1logo digital de productos, galer\u00eda de colecciones y WhatsApp integrado.",
     href: "/tiendas-ropa",
     icon: "clothing",
-    priceRange: "S/800 - S/1,200",
+
     color: "from-fuchsia-500 to-pink-600",
   },
   {
@@ -154,7 +152,7 @@ const economicNiches: Niche[] = [
     description: "Galer\u00eda de productos, historia del artesano y sistema de cotizaci\u00f3n.",
     href: "/artesania",
     icon: "craft",
-    priceRange: "S/900 - S/1,300",
+
     color: "from-amber-500 to-orange-600",
   },
   {
@@ -162,15 +160,15 @@ const economicNiches: Niche[] = [
     description: "Informaci\u00f3n de servicios, zonas de cobertura y contacto directo 24/7.",
     href: "/transporte",
     icon: "transport",
-    priceRange: "S/700 - S/1,000",
+
     color: "from-sky-500 to-blue-600",
   },
   {
     title: "Limpieza y Mantenimiento",
-    description: "Portafolio antes/despu\u00e9s, testimonios y lista de servicios con precios.",
+    description: "Portafolio antes/después, testimonios y lista de servicios.",
     href: "/limpieza",
     icon: "cleaning",
-    priceRange: "S/800 - S/1,200",
+
     color: "from-emerald-500 to-green-600",
   },
   {
@@ -178,23 +176,23 @@ const economicNiches: Niche[] = [
     description: "Men\u00fa digital con fotos, horarios claros y pedidos por WhatsApp.",
     href: "/cafeterias",
     icon: "coffee",
-    priceRange: "S/1,000 - S/1,500",
+
     color: "from-amber-500 to-yellow-600",
   },
   {
     title: "Instructores y Coaches",
-    description: "Bio profesional, servicios y precios, testimonios de alumnos.",
+    description: "Bio profesional, servicios y testimonios de alumnos.",
     href: "/instructores",
     icon: "instructor",
-    priceRange: "S/800 - S/1,200",
+
     color: "from-indigo-500 to-violet-600",
   },
   {
     title: "Reparaci\u00f3n y Servicios T\u00e9cnicos",
-    description: "Lista de servicios, precios y oferta de diagn\u00f3stico gratis.",
+    description: "Lista de servicios y oferta de diagnóstico gratis.",
     href: "/reparaciones",
     icon: "repair",
-    priceRange: "S/700 - S/1,000",
+
     color: "from-slate-500 to-gray-600",
   },
   {
@@ -202,7 +200,7 @@ const economicNiches: Niche[] = [
     description: "Cat\u00e1logo de productos, certificaciones y proceso productivo.",
     href: "/agricola",
     icon: "agriculture",
-    priceRange: "S/900 - S/1,300",
+
     color: "from-lime-500 to-green-600",
   },
   {
@@ -210,7 +208,7 @@ const economicNiches: Niche[] = [
     description: "Reservas simples online, galer\u00eda de trabajos y recordatorios.",
     href: "/belleza-economico",
     icon: "salonSmall",
-    priceRange: "S/1,000 - S/1,500",
+
     color: "from-rose-500 to-pink-600",
   },
   {
@@ -218,7 +216,7 @@ const economicNiches: Niche[] = [
     description: "Portafolio profesional, casos de \u00e9xito y CV descargable.",
     href: "/freelancers",
     icon: "freelancer",
-    priceRange: "S/800 - S/1,200",
+
     color: "from-gray-500 to-slate-600",
   },
 ];
@@ -273,7 +271,6 @@ export default function NicheGrid() {
                     trackNicheCardClick({
                       niche: niche.title,
                       isPremium: true,
-                      priceRange: niche.priceRange,
                     })
                   }
                   className="relative block h-full bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
@@ -288,10 +285,7 @@ export default function NicheGrid() {
                       {niche.title}
                     </h3>
                     <p className="text-slate-400 mb-4">{niche.description}</p>
-                    <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-                      <span className="text-sm font-medium text-slate-300">
-                        {niche.priceRange}
-                      </span>
+                    <div className="flex items-center justify-end pt-4 border-t border-white/[0.06]">
                       <span className="text-slate-300 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                         Ver más
                         <svg
@@ -328,8 +322,7 @@ export default function NicheGrid() {
           </h2>
           <p className="text-lg text-slate-400 mb-6">
             Tenemos soluciones económicas perfectas para emprendedores y pequeños negocios.
-            Presencia web profesional desde{" "}
-            <span className="font-bold text-white">S/700</span>.
+            Presencia web profesional adaptada a tu presupuesto.
           </p>
           <div className="flex flex-wrap justify-center gap-3 text-sm">
             {[
@@ -375,7 +368,7 @@ export default function NicheGrid() {
             className="text-center mb-12"
           >
             <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full mb-4">
-              Desde S/700
+              Económico
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
               Soluciones Económicas
@@ -405,7 +398,6 @@ export default function NicheGrid() {
                     trackNicheCardClick({
                       niche: niche.title,
                       isPremium: false,
-                      priceRange: niche.priceRange,
                     })
                   }
                   className="relative block h-full bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
@@ -420,10 +412,7 @@ export default function NicheGrid() {
                       {niche.title}
                     </h3>
                     <p className="text-slate-400 mb-4">{niche.description}</p>
-                    <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-                      <span className="text-sm font-medium text-slate-300">
-                        {niche.priceRange}
-                      </span>
+                    <div className="flex items-center justify-end pt-4 border-t border-white/[0.06]">
                       <span className="text-slate-300 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                         Ver más
                         <svg

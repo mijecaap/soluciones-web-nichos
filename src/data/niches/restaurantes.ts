@@ -6,7 +6,7 @@ export const restaurantesData: NicheData = {
   headline: "Restaurante Digital: Más Clientes. Reservas Online. Pedidos Automáticos.",
   subtitle: "Aumenta tus mesas ocupadas, reduce esperas, y llega a clientes nuevos que te buscan en Google.",
   metaTitle: "Páginas Web para Restaurantes | Menú Digital y Reservas Online",
-  metaDescription: "Desarrollamos páginas web para restaurantes y bares. Menú digital interactivo, sistema de reservas y pedidos online. Desde S/4,000.",
+  metaDescription: "Desarrollamos páginas web para restaurantes y bares. Menú digital interactivo, sistema de reservas y pedidos online.",
   category: "premium",
   problems: [
     {
@@ -71,10 +71,9 @@ export const restaurantesData: NicheData = {
     },
     roi: "Recuperas tu inversión en 1 mes",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/4,000",
       description: "Para restaurantes pequeños",
       features: [
         "Web de 5 páginas",
@@ -88,7 +87,6 @@ export const restaurantesData: NicheData = {
     },
     {
       name: "Profesional",
-      price: "S/6,500",
       description: "Para restaurantes en crecimiento",
       features: [
         "Todo lo del plan Básico",
@@ -105,7 +103,6 @@ export const restaurantesData: NicheData = {
     },
     {
       name: "Premium",
-      price: "S/9,500",
       description: "Para restaurantes premium",
       features: [
         "Todo lo del plan Profesional",
@@ -119,7 +116,6 @@ export const restaurantesData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/400/mes incluye hosting, actualizaciones de menú y soporte.",
   checklist: [
     "Diseño atractivo con fotos de platos",
     "Menú digital actualizable",

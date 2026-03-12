@@ -6,7 +6,7 @@ export const reparacionesData: NicheData = {
   headline: "Tu Taller Visible en Google: Más Clientes. Más Reparaciones. Más Ingresos.",
   subtitle: "Deja de esperar clientes por recomendación. Aparece cuando buscan reparación de celulares, electrodomésticos o equipos.",
   metaTitle: "Páginas Web para Servicios de Reparación | Taller Técnico Online",
-  metaDescription: "Desarrollamos páginas web para talleres de reparación y servicios técnicos. Lista de servicios, precios y diagnóstico gratis. Desde S/700.",
+  metaDescription: "Desarrollamos páginas web para talleres de reparación y servicios técnicos. Lista de servicios y diagnóstico gratis.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const reparacionesData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/700",
       description: "Para técnicos independientes",
       features: [
         "Dominio 1 año incluido",
@@ -85,11 +84,10 @@ export const reparacionesData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/850",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
-        "Precios referenciales",
+        "Servicios referenciales",
         "Galería de trabajos",
         "Oferta diagnóstico gratis",
         "WhatsApp integrado",
@@ -101,7 +99,6 @@ export const reparacionesData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,000",
       description: "Para talleres establecidos",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const reparacionesData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/80/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional técnico",
     "Lista de servicios completa",

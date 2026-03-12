@@ -53,7 +53,6 @@ export default function NosotrosPage() {
               "@type": "Country",
               "name": "Perú"
             },
-            "priceRange": "S/700 - S/12,000",
             "openingHours": "Mo-Fr 09:00-18:00",
             "sameAs": [
               `https://wa.me/${whatsappNumber}`

@@ -6,7 +6,7 @@ export const tiendasRopaData: NicheData = {
   headline: "Tu Tienda de Ropa Online: Más Clientes. Catálogo Digital. Ventas 24/7.",
   subtitle: "Deja de depender solo de Facebook y WhatsApp. Crea tu catálogo profesional y llega a clientes que te buscan en Google.",
   metaTitle: "Páginas Web para Tiendas de Ropa | Catálogo Online Profesional",
-  metaDescription: "Desarrollamos páginas web económicas para tiendas de ropa y boutiques. Catálogo digital, galería de productos y WhatsApp integrado. Desde S/800.",
+  metaDescription: "Desarrollamos páginas web económicas para tiendas de ropa y boutiques. Catálogo digital, galería de productos y WhatsApp integrado.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const tiendasRopaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 1-2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/800",
       description: "Para emprendedores que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,7 +84,6 @@ export const tiendasRopaData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,000",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const tiendasRopaData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,200",
       description: "Para tiendas en crecimiento",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const tiendasRopaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño moderno y atractivo",
     "Catálogo de productos organizado",
@@ -146,7 +142,7 @@ export const tiendasRopaData: NicheData = {
     },
     {
       question: "¿Incluye el dominio .com?",
-      answer: "Sí, el primer año del dominio está incluido. Luego es aproximadamente S/50/año.",
+      answer: "Sí, el primer año del dominio está incluido. Luego tiene un costo adicional que varía según el proveedor.",
     },
   ],
   testimonials: [

@@ -30,15 +30,15 @@ export interface NicheData {
     };
     roi: string;
   };
-  pricing: {
+  plans: {
     name: string;
-    price: string;
     description: string;
     features: string[];
     highlighted?: boolean;
     badge?: string;
+    ctaText?: string;
+    ctaLink?: string;
   }[];
-  maintenanceNote: string;
   checklist: string[];
   faqs: {
     question: string;

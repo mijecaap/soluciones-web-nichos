@@ -6,7 +6,7 @@ export const bellezaEconomicoData: NicheData = {
   headline: "Tu Salón Pequeño Online: Menos No-Shows. Más Clientes. Más Ocupación.",
   subtitle: "Organiza tu agenda, reduce cancelaciones y llena tus horarios con clientes que te encuentran en Google.",
   metaTitle: "Páginas Web para Peluquerías Pequeñas | Reservas Simples Online",
-  metaDescription: "Desarrollamos páginas web económicas para salones de belleza pequeños. Servicios, galería de trabajos y reservas simples. Desde S/1,000.",
+  metaDescription: "Desarrollamos páginas web económicas para salones de belleza pequeños. Servicios, galería de trabajos y reservas simples.",
   category: "economico",
   problems: [
     {
@@ -67,17 +67,16 @@ export const bellezaEconomicoData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/1,000",
       description: "Para estilistas independientes",
       features: [
         "Dominio 1 año incluido",
         "Hosting incluido",
         "5 páginas básicas",
         "Lista de servicios",
-        "Precios visibles",
+        "Servicios visibles",
         "WhatsApp integrado",
         "Google My Business",
         "1 mes de soporte",
@@ -85,7 +84,6 @@ export const bellezaEconomicoData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,250",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const bellezaEconomicoData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,500",
       description: "Para salones con 2 estilistas",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const bellezaEconomicoData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/120/mes incluye hosting, actualizaciones y soporte.",
   checklist: [
     "Diseño elegante y moderno",
     "Lista de servicios y precios",

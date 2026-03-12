@@ -6,7 +6,7 @@ export const odontologiaData: NicheData = {
   headline: "Consultorio Digital: Más Pacientes. Citas Confirmadas. Reputación de Confianza.",
   subtitle: "Atrae pacientes nuevos con presencia profesional, automatiza citas y construye credibilidad.",
   metaTitle: "Páginas Web para Dentistas | Sistema de Citas Odontológicas",
-  metaDescription: "Desarrollamos páginas web para consultorios odontológicos. Sistema de citas online, blog educativo y presencia profesional. Desde S/5,000.",
+  metaDescription: "Desarrollamos páginas web para consultorios odontológicos. Sistema de citas online, blog educativo y presencia profesional.",
   category: "premium",
   problems: [
     {
@@ -72,10 +72,9 @@ export const odontologiaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 1.5 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/5,000",
       description: "Para consultorios que inician",
       features: [
         "Web de 6 páginas",
@@ -90,7 +89,6 @@ export const odontologiaData: NicheData = {
     },
     {
       name: "Profesional",
-      price: "S/7,500",
       description: "El más solicitado",
       features: [
         "Todo lo del plan Básico",
@@ -108,7 +106,6 @@ export const odontologiaData: NicheData = {
     },
     {
       name: "Premium",
-      price: "S/12,000",
       description: "Para clínicas odontológicas",
       features: [
         "Todo lo del plan Profesional",
@@ -123,7 +120,6 @@ export const odontologiaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/500/mes incluye hosting, actualizaciones y soporte técnico.",
   checklist: [
     "Diseño profesional médico",
     "Catálogo de tratamientos",

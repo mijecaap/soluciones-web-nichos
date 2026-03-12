@@ -6,7 +6,7 @@ export const artesaniaData: NicheData = {
   headline: "Tu Arte al Mundo: Vende Artesanía Todo el Año, No Solo en Ferias.",
   subtitle: "Deja de depender de ferias estacionales. Crea tu vitrina digital y llega a compradores que valoran lo hecho a mano.",
   metaTitle: "Páginas Web para Artesanos | Tienda Online de Artesanía Peruana",
-  metaDescription: "Desarrollamos páginas web para artesanos y productos locales. Galería de productos, historia del arte y sistema de cotización. Desde S/900.",
+  metaDescription: "Desarrollamos páginas web para artesanos y productos locales. Galería de productos, historia del arte y sistema de cotización.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const artesaniaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 2-3 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/900",
       description: "Para artesanos que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,7 +84,6 @@ export const artesaniaData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,100",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const artesaniaData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,300",
       description: "Para artesanos establecidos",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const artesaniaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño que resalta el arte",
     "Galería de productos detallada",

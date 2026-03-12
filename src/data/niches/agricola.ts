@@ -6,7 +6,7 @@ export const agricolaData: NicheData = {
   headline: "Tu Producción Visible: Nuevos Mercados. Mejores Precios. Más Compradores.",
   subtitle: "Deja de vender solo a minoristas locales. Llega a restaurantes, empresas y exportadores que buscan productores.",
   metaTitle: "Páginas Web para Productores Agrícolas | Catálogo de Productos",
-  metaDescription: "Desarrollamos páginas web para productores agrícolas y agroindustria. Catálogo de productos, certificaciones y contacto directo. Desde S/900.",
+  metaDescription: "Desarrollamos páginas web para productores agrícolas y agroindustria. Catálogo de productos, certificaciones y contacto directo.",
   category: "economico",
   problems: [
     {
@@ -67,10 +67,9 @@ export const agricolaData: NicheData = {
     },
     roi: "Recuperas tu inversión en 3-4 meses",
   },
-  pricing: [
+  plans: [
     {
       name: "Básico",
-      price: "S/900",
       description: "Para productores que inician",
       features: [
         "Dominio 1 año incluido",
@@ -85,7 +84,6 @@ export const agricolaData: NicheData = {
     },
     {
       name: "Estándar",
-      price: "S/1,100",
       description: "El más popular",
       features: [
         "Todo lo del plan Básico",
@@ -101,7 +99,6 @@ export const agricolaData: NicheData = {
     },
     {
       name: "Completo",
-      price: "S/1,300",
       description: "Para productores establecidos",
       features: [
         "Todo lo del plan Estándar",
@@ -114,7 +111,6 @@ export const agricolaData: NicheData = {
       ],
     },
   ],
-  maintenanceNote: "Mantenimiento mensual desde S/100/mes incluye hosting, actualizaciones y soporte básico.",
   checklist: [
     "Diseño profesional agrícola",
     "Catálogo de productos",

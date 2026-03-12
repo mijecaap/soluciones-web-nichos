@@ -150,11 +150,6 @@ export default function Footer() {
                   Desarrollo Web
                 </Link>
               </li>
-              <li>
-                <Link href="/cuanto-cuesta-pagina-web" className="text-slate-400 hover:text-indigo-400 transition-colors duration-200 text-sm">
-                  Precios
-                </Link>
-              </li>
             </ul>
           </div>
 

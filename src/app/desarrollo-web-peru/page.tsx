@@ -10,7 +10,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 export const metadata: Metadata = {
   title: "Desarrollo Web en Perú | Desarrolladores Web Profesionales",
   description:
-    "Servicio de desarrollo web profesional en Perú. Desarrolladores especializados en Next.js, React y tecnologías modernas. Páginas web rápidas, seguras y optimizadas para SEO. 17+ industrias. Desde S/700.",
+    "Servicio de desarrollo web profesional en Perú. Desarrolladores especializados en Next.js, React y tecnologías modernas. Páginas web rápidas, seguras y optimizadas para SEO. 17+ industrias.",
   keywords: [
     "desarrollo web peru",
     "desarrolladores de paginas web",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: "https://webparatunegocio.pe/desarrollo-web-peru",
   },
   openGraph: {
-    title: "Desarrollo Web en Perú | Desde S/700",
+    title: "Desarrollo Web en Perú | Desarrolladores Web Profesionales",
     description: "Desarrolladores web profesionales en Perú. Next.js, React y tecnologías modernas. 17+ industrias especializadas.",
     url: "https://webparatunegocio.pe/desarrollo-web-peru",
     type: "website",
@@ -78,7 +78,7 @@ const faqs = [
   {
     question: "¿Cuánto cuesta el desarrollo web en Perú?",
     answer:
-      "El desarrollo web profesional en Perú va desde S/700 para páginas web económicas hasta S/12,000+ para sistemas avanzados con funcionalidades personalizadas. El costo depende de la complejidad, funcionalidades requeridas y tipo de negocio.",
+      "El desarrollo web profesional en Perú varía según la complejidad y funcionalidades requeridas. El costo depende del tipo de negocio y las necesidades específicas. Contáctanos para una cotización gratuita.",
   },
   {
     question: "¿Pueden integrar sistemas de pago o reservas?",
@@ -301,12 +301,6 @@ export default function DesarrolloWebPeruPage() {
             },
             serviceType: "Desarrollo Web",
             areaServed: { "@type": "Country", name: "Perú" },
-            offers: {
-              "@type": "AggregateOffer",
-              lowPrice: "700",
-              highPrice: "12000",
-              priceCurrency: "PEN",
-            },
           }),
         }}
       />
