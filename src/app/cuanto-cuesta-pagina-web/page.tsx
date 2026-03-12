@@ -12,35 +12,40 @@ import {
   Wallet,
   type LucideProps,
 } from "lucide-react";
-import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import CTASection from "@/components/CTASection";
 import Breadcrumb from "@/components/Breadcrumb";
 
 type IconComponent = React.FC<LucideProps>;
 
 export const metadata: Metadata = {
-  title: "¿Cuánto Cuesta una Página Web en Perú? Cotización Gratis 2026",
+  title: "¿Cuánto Cuesta una Página Web en Perú? Precios y Cotización 2026",
   description:
-    "¿Cuánto cuesta una página web en Perú? El precio depende de tu negocio. Ofrecemos páginas web profesionales al mejor precio del mercado. Solicita tu cotización gratuita hoy.",
+    "Precios de páginas web en Perú 2026: desde S/699 el Plan Esencial. Diseño profesional, hosting, SSL y SEO incluidos. Cotización personalizada gratis en 24 horas. Compara planes y elige el ideal para tu negocio.",
   keywords: [
     "cuanto cuesta una pagina web peru",
     "cuanto cuesta una pagina web en peru",
+    "precio de pagina web peru",
+    "precio pagina web peru",
+    "precios de paginas web peru",
+    "precio de pagina web",
+    "precios de paginas web",
+    "paginas web precio",
+    "cotizacion pagina web peru",
     "cuanto cuesta hacer una pagina web peru",
     "cuanto cuesta crear una pagina web peru",
-    "precio de pagina web en peru",
-    "precio pagina web peru",
     "pagina web precio peru",
     "diseño de páginas web precios",
     "diseño de páginas web precio",
-    "cotizacion pagina web peru",
   ],
   alternates: {
     canonical: "https://webparatunegocio.pe/cuanto-cuesta-pagina-web",
   },
   openGraph: {
-    title: "¿Cuánto Cuesta una Página Web en Perú? Cotización Gratis 2026",
+    title: "¿Cuánto Cuesta una Página Web en Perú? Precios y Cotización 2026",
     description:
-      "El precio depende de tu negocio. Ofrecemos el mejor precio del mercado con calidad profesional. Cotización gratis y sin compromiso.",
+      "Precios desde S/699. Plan Esencial, Profesional y Avanzado para tu negocio. Cotización gratis y sin compromiso en 24 horas.",
     url: "https://webparatunegocio.pe/cuanto-cuesta-pagina-web",
     type: "article",
   },
@@ -254,7 +259,7 @@ export default function CuantoCuestaPaginaWebPage() {
         <div className="absolute bottom-1/4 right-1/3 w-64 h-64 rounded-full bg-violet-600/10 blur-[120px]" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <p className="text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-4">
-            Cotización Personalizada · Sin Compromiso · Respuesta en 24h
+            Precios desde S/699 · Cotización Gratis · Respuesta en 24h
           </p>
           <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]">
             ¿Cuánto Cuesta una <br className="hidden md:block" />
@@ -307,6 +312,65 @@ export default function CuantoCuestaPaginaWebPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Precios reales — Quick Win SEO section */}
+      <section className="py-20 bg-[#09090B]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">Precios reales, sin rodeos</p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white">
+              Precios de Páginas Web en Perú 2026
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              El precio varía según las funcionalidades de tu negocio. Aquí los rangos reales del mercado peruano para que tengas una referencia clara antes de cotizar.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                plan: "Plan Esencial",
+                range: "desde S/699",
+                desc: "Presencia digital profesional para emprendedores y negocios que arrancan. Diseño mobile-first, WhatsApp, formulario de contacto, SSL y hosting.",
+                ideal: ["Transporte", "Reparaciones", "Freelancers", "Tiendas pequeñas"],
+                color: "emerald",
+              },
+              {
+                plan: "Plan Profesional",
+                range: "desde S/1,500",
+                desc: "Para negocios establecidos que necesitan diferenciarse. Incluye reservas online, galería, SEO avanzado, blog y Google Analytics.",
+                ideal: ["Veterinarias", "Salones de Belleza", "Restaurantes", "Cafeterías"],
+                color: "indigo",
+              },
+              {
+                plan: "Plan Avanzado",
+                range: "desde S/2,800",
+                desc: "Funcionalidades completas: panel administrativo, pagos online, multi-idioma y gestión avanzada de citas o reservas.",
+                ideal: ["Clínicas", "Agencias de Viajes", "Odontología", "Portales"],
+                color: "violet",
+              },
+            ].map((item, i) => (
+              <div key={i} className={`p-6 bg-white/[0.03] border border-${item.color}-500/20 rounded-2xl flex flex-col gap-3`}>
+                <div className={`inline-block px-3 py-1 bg-${item.color}-500/10 border border-${item.color}-500/20 rounded-full text-${item.color}-400 text-xs font-semibold self-start`}>
+                  {item.plan}
+                </div>
+                <p className={`text-2xl font-bold text-${item.color}-400`}>{item.range}</p>
+                <p className="text-slate-400 text-sm">{item.desc}</p>
+                <div className="flex flex-wrap gap-1 mt-auto pt-2">
+                  {item.ideal.map((tag, j) => (
+                    <span key={j} className="px-2 py-0.5 bg-white/[0.04] border border-white/[0.06] rounded-full text-xs text-slate-500">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-8">
+            Estos son rangos orientativos. El precio exacto de tu página web lo definimos juntos en una{" "}
+            <Link href="/contacto" className="text-indigo-400 hover:underline">cotización personalizada gratis</Link>.
+          </p>
         </div>
       </section>
 
@@ -523,9 +587,9 @@ export default function CuantoCuestaPaginaWebPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "¿Cuánto Cuesta una Página Web en Perú? Cotización Gratis 2026",
+            headline: "¿Cuánto Cuesta una Página Web en Perú? Precios y Cotización 2026",
             description:
-              "El precio depende de tu negocio. Ofrecemos páginas web profesionales al mejor precio del mercado. Cotización gratis y sin compromiso.",
+              "Precios de páginas web en Perú 2026: desde S/699 el Plan Esencial. Cotización personalizada gratis en 24 horas.",
             author: {
               "@type": "Organization",
               name: "Web Para Tu Negocio",
@@ -537,7 +601,7 @@ export default function CuantoCuestaPaginaWebPage() {
               logo: { "@type": "ImageObject", url: "https://webparatunegocio.pe/logo.png" },
             },
             datePublished: "2026-02-01",
-            dateModified: "2026-03-11",
+            dateModified: "2026-03-12",
             mainEntityOfPage: "https://webparatunegocio.pe/cuanto-cuesta-pagina-web",
           }),
         }}

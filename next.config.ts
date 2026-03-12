@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
+  // Redirect www → non-www (consolidates domain authority)
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.webparatunegocio.pe" }],
+        destination: "https://webparatunegocio.pe/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   // Headers for SEO and security
   async headers() {
     return [

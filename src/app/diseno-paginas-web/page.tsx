@@ -4,7 +4,8 @@ import { XCircle, CheckCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import CTASection from "@/components/CTASection";
-import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import Breadcrumb from "@/components/Breadcrumb";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 

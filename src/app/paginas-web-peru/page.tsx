@@ -4,7 +4,8 @@ import { Search, Smartphone, TrendingUp, Zap, Target, ShieldCheck } from "lucide
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import CTASection from "@/components/CTASection";
-import FAQAccordion, { FAQSchema } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import Breadcrumb from "@/components/Breadcrumb";
 import NicheGrid from "@/components/NicheGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
